@@ -16,6 +16,11 @@ export default function Header() {
     navLinksClass += ' header__nav-box_active'
   }
 
+  let navContactsClass = 'header__contacts';
+  if(isChecked) {
+    navLinksClass += ' header__contacts_active'
+  }
+
   let overflowClass = 'header__overflow';
   if(!isChecked) {
     overflowClass += ' header__overflow_hidden'
@@ -90,7 +95,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <ul className='header__contacts'>
+      <ul className={navContactsClass}>
           <li className='header__item'>
             <a className='header__telegram-link' to='#start'>
               <img src={IMG_TELEGRAM_B} alt="Ссылка на телеграм" />

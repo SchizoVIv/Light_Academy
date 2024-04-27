@@ -1,6 +1,7 @@
 export default function ImageLogoSVG(props) {
   return(
     <svg
+      className="header__logo"
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
       width="111.626"

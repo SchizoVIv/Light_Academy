@@ -70,3 +70,9 @@ ol {
   background-image: url(../images/100-90-8.png);
   font-family: var(--main-font), serif;
 }
+
+.main {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}

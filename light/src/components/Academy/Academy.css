@@ -1,10 +1,17 @@
 .academy {
   margin: 187px 70px 0;
+  max-width: 1460px;
+  width: 100%;
+  margin: 187px auto 0;
+}
+
+.academy__conteiner {
+  margin: 0 70px;
 }
 
 .academy__title-first {
   font-family: var(--title-font), sans-serif;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 200;
 }
 
@@ -18,7 +25,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
 
+.academy__box-images {
+  justify-content: space-between;
+  max-width: 1460px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .academy__button {
@@ -33,12 +46,12 @@
   align-items: center;
   justify-content: end;
   transition: all 0.5s;
-  margin: 30px 0 0 308px;
+  margin: 30px 0 0;
 }
 
 .academy__image {
   margin: 30px 0 0 0;
-
+  width: 53%;
 }
 
 .academy__button-line::after {
