@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import Academy from './Academy/Academy';
 import Requests from './Requests/Requests';
 import Advantages from './Advantages/Advantages';
+import Coaching from './Coaching/Coaching';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Academy/>
         <Requests/>
         <Advantages/>
+        <Coaching/>
       </main>
     </>
   );
