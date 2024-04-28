@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './Header/Header';
 import Academy from './Academy/Academy';
+import Requests from './Requests/Requests';
+import Advantages from './Advantages/Advantages';
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Header/>
       <main className='main'>
         <Academy/>
+        <Requests/>
+        <Advantages/>
       </main>
     </>
   );

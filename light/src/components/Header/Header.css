@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.conteiner {
+.header__conteiner {
   padding: 77px 0 0;
   margin: 0 70px;
   display: flex;
@@ -27,7 +27,6 @@
   display: grid;
   grid-template-columns:  minmax(110px, 1fr) minmax(198px, 1fr) minmax(115px, 1fr) repeat(3, minmax(75px, 80px));
   grid-template-rows: 1fr;
-  gap: 0px 0px;
   grid-template-areas:
     ". . . . . .";
   grid-gap: 20px;
@@ -79,7 +78,7 @@
   display: block;
   background-color: var(--font-color);
   position: absolute;
-  right: 0;
+  right: 70;
   height: 4px;
   width: 30px;
   transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);

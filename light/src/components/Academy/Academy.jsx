@@ -4,7 +4,7 @@ import IMAGE_PEOPLE from '../../images/firstImagePeople.png'
 export default function Academy() {
   return(
     <section className='academy'>
-      <div className='academy__conteiner'>
+      <div className='conteiner'>
         <div className='academy__box'>
           <h1 className='academy__title-first'>
             АКАДЕМИЯ

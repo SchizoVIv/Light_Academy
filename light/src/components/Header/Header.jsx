@@ -28,7 +28,7 @@ export default function Header() {
 
   return(
     <header className='header'>
-      <div className='conteiner'>
+      <div className='header__conteiner'>
         <ImageLogoSVG
           baseColor= '#00b0b1'
           accentColor= '#2D2019'

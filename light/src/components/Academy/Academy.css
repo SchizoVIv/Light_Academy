@@ -1,22 +1,24 @@
 .academy {
-  margin: 187px 70px 0;
+  margin: 187px auto 0;
   max-width: 1460px;
   width: 100%;
-  margin: 187px auto 0;
+  /* margin: 187px auto 0; */
 }
 
-.academy__conteiner {
+.conteiner {
   margin: 0 70px;
 }
 
 .academy__title-first {
   font-family: var(--title-font), sans-serif;
-  font-size: 5rem;
+  /* font-size: clamp(1.875rem, 1.0129rem + 4.3103vw, 5rem); */
+  font-size: 80px;
   font-weight: 200;
 }
 
 .academy__title-second {
   font-family: var(--accent-font), 'Times New Roman', Times, serif;
+  /* font-size: clamp(2.5rem, 1.4655rem + 5.1724vw, 6.25rem); */
   font-size: 100px;
   margin: 48px 0 0 51px;
 }
@@ -30,6 +32,7 @@
 .academy__box-images {
   justify-content: space-between;
   max-width: 1460px;
+  width: 100%;
   display: flex;
   align-items: flex-start;
 }
@@ -51,7 +54,7 @@
 
 .academy__image {
   margin: 30px 0 0 0;
-  width: 53%;
+  width: 39.74vw;
 }
 
 .academy__button-line::after {
