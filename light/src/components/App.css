@@ -55,7 +55,10 @@ ol {
   --main-accent-font-weight: 500;
   --main-title-font-weight: 700;
   --font-color: #2D2019;
+  --font-color-ligt: #F9F3EF;
   --card-color: #F2E5D9;
+  --hover-color: #7FCDCD;
+  --bg-acent-colog: #6E9A9A;
 }
 
 *{
@@ -73,7 +76,7 @@ ol {
 }
 
 .main {
-  max-width: 1600px;
+  /* max-width: 1600px; */
   width: 100%;
   margin: 0 auto;
 }

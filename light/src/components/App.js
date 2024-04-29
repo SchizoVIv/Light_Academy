@@ -4,6 +4,7 @@ import Academy from './Academy/Academy';
 import Requests from './Requests/Requests';
 import Advantages from './Advantages/Advantages';
 import Coaching from './Coaching/Coaching';
+import Founders from './Founders/Founders';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Requests/>
         <Advantages/>
         <Coaching/>
+        <Founders/>
       </main>
     </>
   );

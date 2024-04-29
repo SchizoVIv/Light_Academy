@@ -1,6 +1,8 @@
 .requests {
   width: 100%;
   padding: 114px 0 850px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .requests__conteiner {

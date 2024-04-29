@@ -1,5 +1,6 @@
 .advantages {
-  margin: 100px 0;
+  margin: 100px auto;
+  max-width: 1600px;
 }
 
 .advantages__conteiner {
