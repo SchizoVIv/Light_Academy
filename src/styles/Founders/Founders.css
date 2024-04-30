@@ -1,5 +1,5 @@
 .founders {
-  margin: 300px 0 100px;
+  margin: 300px 0 0;
   width: 100%;
   background-color: var(--bg-acent-colog);
   padding: 143px 0 0;
@@ -13,7 +13,7 @@
 
 .founders__title {
   text-align: center;
-  color: #F9F3EF;
+  color: var(--font-color-light);
   max-width: 678px;
   margin: 0 auto 0;
 }
@@ -38,7 +38,7 @@
 }
 
 .founder__text-name, .founder__text-role, .founder__link, .founder__text {
-  color: var(--font-color-ligt);
+  color: var(--font-color-light);
 
 }
 
