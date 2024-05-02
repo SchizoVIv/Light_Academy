@@ -15,6 +15,7 @@
   text-align: center;
   color: var(--font-color-light);
   max-width: 678px;
+  width: 100%;
   margin: 0 auto 0;
 }
 
@@ -61,7 +62,7 @@
 .founder__image {
   z-index: 2;
   border-radius: 295px;
-  outline: 3px solid var(--font-color-ligt);
+  outline: 3px solid var(--font-color-light);
   width: 100%;
 }
 
