@@ -15,73 +15,126 @@
   grid-template-areas:
     "box2 line box1"
     "box4 line box3";
-    grid-gap: 0 50px;
+  grid-gap: 0 50px;
+  margin: 36px 0 100px;
 }
 
 .format__box-content {
-  margin: 36px 0 100px;
   display: flex;
   flex-direction: column;
 
   &:nth-child(1) {
     grid-area: box1;
+
+    & > .format__image {
+      max-width: 600px;
+      margin: 132px 0 0;
+      align-self: flex-end;
+    }
   }
   &:nth-child(2) {
     grid-area: box2;
     align-items: flex-end;
-  }
 
-  &:nth-child(2) > .format__text {
-    text-align: end;
-    max-width: 380px;
+    & > .format__image {
+      align-self: center;
+      transform: rotate(-15deg);
+      margin: 0 0 77px;
+    }
   }
-
-  &:nth-child(2) > .format__image {
-    align-self: center;
-    transform: rotate(-15deg);
-    margin: 0 0 77px;
-  }
-
   &:nth-child(3) {
     width: 100%;
     grid-area: box3;
     position: relative;
+    margin: 135px 0 0;
+
+    & > .format__image {
+      max-width: 407.89px;
+      max-height: 353.14px;
+      transform: rotate(5deg);
+      align-self: center;
+      margin: 100px 0 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../../../images/photographicFilm.png);
+      background-repeat: no-repeat;
+      background-position: 120% -40%;
+      mix-blend-mode: luminosity;
+    }
+  }
+  &:nth-child(4) {
+    grid-area: box4;
+    align-items: flex-end;
+    margin: 50px 0 0;
+
+    & > .format__image {
+      max-width: 410px;
+      margin: 0 0 128px 0;
+      align-self: flex-start;
+    }
   }
 
-  &:nth-child(3)::before {
+  &:nth-child(2) > .format__subtitle,
+  &:nth-child(4) > .format__subtitle,
+  &:nth-child(1) > .format__subtitle,
+  &:nth-child(3) > .format__subtitle{
+    position: relative;
+  }
+
+  &:nth-child(2) > .format__subtitle::after,
+  &:nth-child(4) > .format__subtitle::after {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../../../images/photographicFilm.png);
-    background-repeat: no-repeat;
-    background-position: 120% -40%;
-    mix-blend-mode: luminosity;
-
+    right: -78px;
+    background-image: url(../../../images/star-1.png);
+    width: 29px;
+    height: 30.5px;
+    z-index: 2;
   }
 
-  &:nth-child(1) > .format__text, &:nth-child(3) > .format__text {
+  &:nth-child(1) > .format__subtitle::after,
+  &:nth-child(3) > .format__subtitle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80px;
+    background-image: url(../../../images/star-1.png);
+    width: 29px;
+    height: 30.5px;
+    z-index: 2;
+  }
+
+  &:nth-child(2) > .format__text,
+  &:nth-child(4) > .format__text {
+    text-align: end;
+    max-width: 380px;
+  }
+
+  &:nth-child(1) > .format__text,
+  &:nth-child(3) > .format__text {
     max-width: 412px;
   }
 
-  &:nth-child(1) > .format__inscription, &:nth-child(3) > .format__inscription {
+  &:nth-child(1) > .format__inscription,
+  &:nth-child(3) > .format__inscription {
     text-align: center;
     transform: rotate(-13deg);
   }
+}
 
-  &:nth-child(4) {
-    grid-area: box4;
-  }
-
-  &:nth-child(3) > .format__image {
-    max-width: 407.89px;
-    max-height: 353.14px;
-    transform: rotate(5deg);
-    align-self: center;
-    margin: 100px 0 0;
-  }
+.format__link {
+  text-decoration: none;
+  background-color: var(--card-color);
+  padding: 23px 47px;
+  border-radius: 100px;
 }
 
 .format__text  {
@@ -90,4 +143,16 @@
 
 .scroll-line {
   grid-area: line;
+  position: relative;
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 100%;
+    background-color: var(--font-color);
+  }
 }
