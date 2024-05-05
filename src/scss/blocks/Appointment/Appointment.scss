@@ -1,0 +1,78 @@
+.appointment {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+
+.appointment__conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appointment__title {
+  text-align: center;
+  margin: 45px 0;
+}
+
+.appointment__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.appointment__box-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appointment__input, .appointment__select {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--font-color);
+  transition: all 0.3s;
+}
+
+.appointment__select {
+  border: 1px solid var(--font-color);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.appointment__select:focus {
+  outline: 1px solid var(--font-color);
+  border: none;
+}
+
+.appointment__input:focus {
+  outline: 1px solid var(--hover-color);
+  border-radius: 20px;
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.appointment__option {
+  background-color: var(--card-color);
+}
+
+.appointment__button {
+  padding: 20px 0;
+  width: 100%;
+  max-width: 360px;
+  background-color: var(--card-color);
+  border-radius: 30px;
+  border: none;
+  margin: 56px auto 18px;
+  justify-self: center;
+
+}
+
+.appointment__warning {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
