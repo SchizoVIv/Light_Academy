@@ -23,7 +23,9 @@
 
 .appointment__box-input {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px 20px;
 }
 
 .appointment__input, .appointment__select {
@@ -73,6 +75,10 @@
   max-width: 380px;
   text-align: center;
   margin: 0 auto;
+}
+
+@media (max-width: 1269px) {
+
 }
 
 

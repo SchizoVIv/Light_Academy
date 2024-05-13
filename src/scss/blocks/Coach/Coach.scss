@@ -1,3 +1,22 @@
+@keyframes drive {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20%, 0);
+  }
+  75% {
+    transform: translate(-10%, 0);
+  }
+  100% {
+    transform: translate(-30%, 0);
+  }
+
+}
+
 .coach{
   width: 100%;
   max-width: 1600px;
@@ -7,6 +26,7 @@
 .coach__box-request{
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .coach__list {
@@ -21,6 +41,8 @@
 .coach__item-accent{
   padding: 12px 0;
   position: relative;
+  font-family: 'NinaCTT';
+  font-size: 18px;
 
   &::before {
     content: '';
@@ -37,14 +59,56 @@
 
 .coach__introduction {
   max-width: 506px;
+  width: 100%;
 }
 
+.coach__introduction-text {
+  width: 100%;
+}
+
+// .coach__scheme {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin: 100px 0 0;
+// }
+
 .coach__scheme {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns:  128px repeat(2, 1fr) 128px;
+  grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
+  grid-template-areas:
+    "startA stroc1 car finishB"
+    "startA stroc2 stroc2 finishB"
+    ;
+  grid-gap: 0 20px;
   margin: 100px 0 0;
 }
+
+.coach__start {
+  grid-area: startA;
+}
+
+.coach__finish {
+  grid-area: finishB;
+}
+
+.coach__text-description {
+  grid-area: stroc1;
+}
+
+.coach__box-img-car {
+  grid-area: car;
+  align-self: flex-end;
+  border-bottom: 2px solid var(--font-color);
+  width: 100%;
+  z-index: -1;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .coach__box-description {
   display: flex;
@@ -52,15 +116,26 @@
   border-bottom: 2px solid var(--font-color);
 }
 
+.coach__box-content {
+  margin: 0 20px;
+}
+
 .coach__text-description {
-  margin: 0 80px 32px 0;
+  margin: 0 80px 32px 20px;
   max-width: 520px;
+  font-family: 'NinaCTT';
+  font-size: 18px;
 }
 
 .coach__box-text {
   display: flex;
   justify-content: space-between;
-  margin: 17px 0 0;
+  padding: 17px 0 0 20px;
+  font-family: 'NinaCTT';
+  font-size: 18px;
+  text-align: center;
+  gap: 30px;
+  grid-area: stroc2;
 }
 
 .coach__button {
@@ -71,4 +146,85 @@
   padding: 19px 0;
   max-width: 435px;
   width: 100%;
+}
+
+.coach__img-car {
+  animation: drive 5s ease-in-out infinite;
+  align-self: flex-end;
+}
+
+@media (max-width: 1300px) {
+
+  .coach__scheme {
+    display: grid;
+    grid-template-columns:  10vw 1fr 10vw;
+    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
+    grid-template-areas:
+      "stroc1 stroc1 stroc1"
+      "startA car finishB"
+      "startA stroc2 finishB"
+      ;
+    margin: 100px 0 0;
+  }
+
+  .coach__text-description {
+    align-self: baseline;
+    margin: 0 0 32px 20px;
+  }
+
+  .coach__img-car {
+    width: 40vw;
+    justify-self: center;
+
+  }
+
+  .coach__start, .coach__finish {
+    width: 10vw;
+  }
+
+}
+
+ @media (max-width:930px) {
+
+
+  .coach__box-text {
+    flex-direction: column;
+
+  }
+
+  .coach__button {
+    max-width: none;
+  }
+}
+
+@media (max-width:800px) {
+
+  .coach__scheme {
+    display: grid;
+    grid-template-columns:  10vw 1fr 10vw;
+    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
+    grid-template-areas:
+      "stroc1 stroc1 stroc1"
+      "startA car finishB"
+      "stroc2 stroc2 stroc2"
+      ;
+
+    margin: 100px 0 0;
+  }
+
+
+
+  .coach__box-request {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .coach__introduction {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  .coach__box-text {
+    flex-direction: column;
+  }
 }

@@ -7,6 +7,7 @@
 }
 
 .founders__conteiner {
+  width: 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -20,8 +21,11 @@
 }
 
 .founders__logo {
+  display: block;
+  margin: 50px auto 195px;
   width: 100%;
-  margin: 50px auto 0;
+  max-width: 113px;
+  height: auto;
 }
 
 .founders__box-grid {

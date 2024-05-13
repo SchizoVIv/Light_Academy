@@ -51,3 +51,12 @@
   font-display: swap;
   font-weight: 200;
 }
+
+@font-face {
+  font-family: 'NinaCTT';
+  src: local('NinaCTT Regular 400'), local('NinaCTT'),
+      url(./ninactt.woff) format('woff'),
+      url(./ninactt.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}

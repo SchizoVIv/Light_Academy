@@ -6,7 +6,7 @@
 .advantages__conteiner {
   display: grid;
   grid-template-columns:  repeat(3, 1fr);
-  grid-template-rows: repeat(auto-fil, minmax(251px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(251px, 1fr));
   grid-template-areas:
     "title title btn"
     "card1 . btn"
@@ -14,6 +14,7 @@
     "card3 card2 card4"
     "card3 . card4";
   grid-gap: 70px;
+  text-align: center;
 }
 
 .advantages__title {
@@ -23,16 +24,15 @@
 .advantages__button {
   grid-area: btn;
   grid-row: span 2;
-  width: 100%;
-  height: 100%;
-  max-width: 196px;
-  max-height: 196px;
+  width: 196px;
+  height: 196px;
   border-radius: 50%;
   border: none;
   background-color: #F9F3EF;
   position: relative;
   justify-self: center;
   align-self: center;
+  font-family: 'NinaCTT';
 }
 
 .advantages__button::after {
@@ -80,4 +80,42 @@
 
 .advantages__card-text {
   margin: 30px 0 12px;
+}
+
+@media (max-width: 1300px) {
+  .advantages__conteiner {
+    grid-gap: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .advantages__conteiner {
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-areas:
+      "title title"
+      "card1 card3"
+      "card1 card3"
+      "card1 btn"
+      "card2 btn"
+      "card2 card4";
+  }
+
+  .advantages__button {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .advantages__conteiner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:  repeat(auto-fill, minmax(51px, 1fr));
+    grid-template-areas:
+      "title"
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "btn";
+    justify-items: center;
+  }
 }
