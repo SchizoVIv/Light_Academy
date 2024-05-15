@@ -6,11 +6,11 @@
 .advantages__conteiner {
   display: grid;
   grid-template-columns:  repeat(3, 1fr);
-  grid-template-rows: repeat(auto-fill, minmax(251px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-areas:
-    "title title btn"
+    "title title ."
     "card1 . btn"
-    "card1 card2 ."
+    "card1 card2 btn"
     "card3 card2 card4"
     "card3 . card4";
   grid-gap: 70px;
@@ -59,18 +59,34 @@
 
 .advantages__card:nth-child(3) {
   grid-area: card1;
+  box-shadow:
+    -74px 66px 80px rgba(58, 63, 74, 7%),
+    -28px 25px 25px rgba(58, 63, 74, 5%),
+    -6px 5px 6px rgba(58, 63, 74, 3%);
 }
 
 .advantages__card:nth-child(4) {
   grid-area: card2;
+  box-shadow:
+    -74px 66px 80px rgba(58, 63, 74, 7%),
+    -28px 25px 25px rgba(58, 63, 74, 5%),
+    -6px 5px 6px rgba(58, 63, 74, 3%);
 }
 
 .advantages__card:nth-child(5) {
   grid-area: card3;
+  box-shadow:
+    -98px 17px 80px rgba(58, 63, 74, 7%),
+    -37px 6px 25px rgba(58, 63, 74, 5%),
+    -8px 1px 6px rgba(58, 63, 74, 3%);
 }
 
 .advantages__card:nth-child(6) {
   grid-area: card4;
+  box-shadow:
+    0px 100px 80px rgba(58, 63, 74, 7%),
+    0px 38px 25px rgba(58, 63, 74, 5%),
+    0px 8px 6px rgba(58, 63, 74, 3%);
 }
 
 .subtitle {

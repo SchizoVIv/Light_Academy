@@ -96,6 +96,7 @@
   align-items: baseline;
   justify-self: flex-end;
   align-self: flex-end;
+  text-align: center;
   margin: 0 0 59px 0;
   box-shadow:
   63px -18px 26px rgba(58, 63, 74, 1%),
@@ -171,6 +172,11 @@
   animation-iteration-count : 1;
   padding: 0;
   transform-origin: left top;
+
+  & > .requests__card-text {
+    align-items: baseline;
+    padding: 90px 30px 30px;
+  }
 }
 
 .requests__card-text {
@@ -218,6 +224,11 @@
 }
 
 @media (max-width:1250px) {
+
+  .requests {
+    padding: 114px 0 500px;
+  }
+
   .requests__card:nth-child(3){
     height: 300px;
   }

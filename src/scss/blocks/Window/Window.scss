@@ -1,0 +1,90 @@
+.popup{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.8s;
+}
+.popup__hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+// overflow_hidden
+.popup__overflow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.619);
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup__box {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 600px;
+  background-color: var(--card-color);
+  z-index: 5;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.popup__button-close{
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+
+.popup__image {
+  max-width: 600px;
+  width: 25vw;
+  height: 100%;
+  background-image: url(../../../images/for-popup.jpg);
+  background-position: 100%;
+  border-radius: 20px 0 0 20px;
+}
+
+.popup__title {
+  font-size: 48px;
+  text-align: center;
+  max-width: 420px;
+}
+
+.popup__form {
+  width: 100%;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  & > .appointment__form .appointment__box-input {
+
+    align-items: center;
+  }
+
+  & .appointment__button {
+    background-color: var(--hover-color);
+  }
+}
+
+@media (max-width: 900px) {
+  .popup__title {
+    font-size: clamp(1.5rem, 0.6724rem + 4.1379vw, 3rem);
+  }
+
+}

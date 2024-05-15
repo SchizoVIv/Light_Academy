@@ -1,0 +1,18 @@
+<form class="appointment__form" action="appointment__form" method="post">
+  <div class="appointment__box-input">
+    <input class="appointment__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+    <input class="appointment__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+    <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
+    <select class="appointment__select" id="option" name="option" required>
+      <option class="appointment__option" value="consultation">Консультация</option>
+      <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
+      <option class="appointment__option" value="course2">Интересует курс Light English</option>
+      <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
+      <option class="appointment__option" value="just_ask">Интересуют занятия с Коучем</option>
+    </select>
+  </div>
+  <button class="appointment__button" type="submit">Записаться</button>
+  <p class="appointment__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
+    <a class="appointment__warning-link" href="#">политикой конфиденциальности</a>
+  </p>
+</form>

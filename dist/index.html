@@ -12,12 +12,12 @@
   <body class="page">
     <header class="header" id="header">
   <div class="header__conteiner">
-    <img src="./images/logo-b.png" alt="Логотип академии">
-    <input id="menu-toggle" type="checkbox" checked>
+    <img class="header__logo" src="./images/logo-b.png" alt="Логотип академии">
+    <input id="menu-toggle" type="checkbox">
     <label class="header__button-container" for="menu-toggle">
       <div class="header__button"></div>
     </label>
-    <div class="header__overflow"></div>
+    <div class="header__overflow overflow_hidden"></div>
     <nav class="header__nav-box">
         <ul class="header__navigation">
             <li class="header__nav-link">
@@ -39,19 +39,19 @@
               <a class="header__link link-hover" href="#footer">Контакты</a>
             </li>
         </ul>
+        <ul class="header__contacts">
+            <li class="header__item">
+              <a class="header__telegram-link" href="#start">
+                <img class="icon-size" src="./images/telegramBlack.png" alt="Ссылка на телеграм">
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__whats-app-link" href="#start">
+                <img class="icon-size" src="./images/whatsapp.png" alt="Ссылка на вотсап">
+              </a>
+            </li>
+        </ul>
     </nav>
-    <ul class="header__contacts">
-        <li class="header__item">
-          <a class="header__telegram-link" href="#start">
-            <img src="./images/telegramBlack.png" alt="Ссылка на телеграм">
-          </a>
-        </li>
-        <li class="header__item">
-          <a class="header__whats-app-link" href="#start">
-            <img src="./images/telegramBlack.png" alt="Ссылка на вотсап">
-          </a>
-        </li>
-    </ul>
   </div>
 </header>
 
@@ -76,25 +76,25 @@
   <div class="requests__conteiner conteiner">
     <h3 class="requests__title title">Каждый из вас сталкивался с такими проблемами, как:</h3>
     <div class="requests__card">
-      <p class="requests__text">Планируете путешествовать или переехать в другую страну, но нет постоянной практики</p>
+      <p class="requests__text">Нужно сдавать экзамены, но понимаете, что не можете справиться сами</p>
     </div>
     <div class="requests__card">
       <p class="requests__text">Планируете путешествовать или переехать в другую страну, но нет постоянной практики</p>
     </div>
     <div class="requests__card">
-      <p class="requests__text">Планируете путешествовать или переехать в другую страну, но нет постоянной практики</p>
+      <p class="requests__text">Хотите получить более высокооплачиваемую работу, но знаний не хватает</p>
     </div>
     <div class="requests__card">
-      <p class="requests__text">Планируете путешествовать или переехать в другую страну, но нет постоянной практики</p>
+      <p class="requests__text">В планах поехать учиться за границу, но не хватает качественной подготовки</p>
     </div>
     <div class="requests__card">
-      <p class="requests__text">Планируете путешествовать или переехать в другую страну, но нет постоянной практики</p>
+      <p class="requests__text">Знаете язык, но в английской среде не можете начать говорить</p>
     </div>
-    <div class="requests__card">
+    <div class="requests__card anim">
       <div class="requests__card-text">
-        <p class="requests__text">Планируете путешествовать или переехать в другую страну, но нет постоянной практики</p>
+        <p class="requests__text">Хотите выучить язык, но не знаете с чего начать</p>
       </div>
-      <img class="requests__disk" src="./images/record-1.png" alt="Падающая пластина">
+      <img class="requests__disk anim" src="./images/record-1.png" alt="Падающая пластина">
     </div>
   </div>
 </section>
@@ -147,38 +147,39 @@
         <p class="coaching__text">Сессия с коучем Академии входит в обучение.</p>
         <p class="coaching__text">*У вас есть возможность взять личную работу с коучем помимо обучения.</p>
       </div>
+      <button class="coaching__button type1">
+        <p class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</p>
+      </button>
     </div>
     <!-- <button class="coaching__button">Записаться на бесплатную ознакомительную встречу</button> -->
-    <button class="coaching__button type1">
-      <p class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</p>
-    </button>
   </div>
 </section>
 
       <section class="founders" id="founders">
-  <div class="founders__conteiner conteiner">
+  <div class="founders__conteiner">
     <h3 class="founders__title title">Основатели Академии</h3>
     <img class="founders__logo" src="./images/logo-w.png" alt="Логотип академии">
-    <div class="founders__box-grid">
+    <div class="founders__box">
       <div class="founder__block-text">
-        <div>
+        <img class="founder__image" src="./images/founderRoman.jpg" alt="Фотография директора академии, Романа">
+        <div class="founder__block-about">
           <h4 class="founder__text-name">Роман Торони</h4>
           <p class="founder__text-role">Директор-коуч Академии</p>
-          <a class="founder__link  link-hover-wite" href="#">Сертификат</a></div>
+          <a class="founder__link  link-hover-wite" href="#">Сертификат</a>
+        </div>
         <p class="founder__text">Коуч ICF, основатель академии, более 8 лет опыта работы в продажах. Главное направление деятельности Романа коммуникация и понимание. Именно это создает ту атмосферу комфорта и стабильности в вашем обучении и нашей работе Академии</p>
       </div>
-      <img class="founder__image" src="./images/founderRoman.jpg" alt="Фотография директора академии, Романа">
+      <img class="founder__image-canyon" src="./images/canyon.jpg" alt="Пейзаж Каньона маслом">
       <div class="founder__block-text">
-        <div>
+        <img class="founder__image" src="./images/founderAlex.jpg" alt="Фотография Александры">
+        <div class="founder__block-about">
             <h4 class="founder__text-name">Александра Маврова</h4>
             <p class="founder__text">Дипломированный специалист-переводчик</p>
         </div>
         <p class="founder__text">Наш вдохновляющий лидер с богатым опытом в образовании и страстью к языку. Опыт работы переводчиком и опыт преподавания более 8 лет. Работала в международной компании KVINT, а также проходила стажировку в американской компании
-            Linguatrip, работала переводчиком в разных сферах. Команда Академии работает по методике обучения Александры, мы вместе составляем программу и корректируем её в процессе. Она - та, кто помогает чтобы английский язык стал вашим
+            Linguatrip, работала переводчиком в разных сферах. </br> Команда Академии работает по методике обучения Александры, мы вместе составляем программу и корректируем её в процессе. </br> Она - та, кто помогает чтобы английский язык стал вашим
             лучшим другом.</p>
       </div>
-      <img class="founder__image" src="./images/founderAlex.jpg" alt="Фотография Александры">
-      <img class="founder__image-canyon" src="./images/canyon.jpg" alt="Пейзаж Каньона маслом">
     </div>
   </div>
 </section>
@@ -231,9 +232,11 @@
       </div>
       <div class="format__box-content">
         <img class="format__image" src="./images/cassette.png" alt="пленочная касета">
+        <div class="format__box-text">
           <h4 class="format__subtitle subtitle">Создание программы</h4>
           <p class="format__text">Строим индивидуальную программу под ваш запрос. Подбираем преподавателя под ваше время и график занятий</p>
           <p class="format__inscription">Легко!</p>
+        </div>
       </div>
       <div class="format__box-content">
         <h4 class="format__subtitle subtitle">Комплексное обучение</h4>
@@ -245,12 +248,14 @@
       </div>
       <div class="format__box-content">
         <img class="format__image" src="./images/workFormat-2.jpg" alt="пленочная касета">
+        <div class="format__box-text">
           <h4 class="format__subtitle subtitle">Контроль за прогрессом</h4>
           <p class="format__text">После обучения вы получаете сертификат и можете продолжить изучать и закреплять свои знания в нашем разговорном клубе
             с преподавателем</p>
           <a class="format__link" href="#">Подробнее</a>
+        </div>
       </div>
-      <div class="scroll-line"></div>
+      <div class="scroll-line anim"></div>
     </div>
   </div>
 </section>
@@ -740,7 +745,7 @@
         </div>
       </div>
     </div> -->
-    <div class="reviews__box-button">
+    <!-- <div class="reviews__box-button">
       <img class="reviews__wing-left" src="./images/wing-2.png" alt="Стрелка влево">
       <div class="reviews__box-circle">
         <div class="reviews__circle"></div>
@@ -751,7 +756,7 @@
         <div class="reviews__circle"></div>
       </div>
       <img class="reviews__wing-right" src="./images/wing-2.png" alt="Стрелка вправо">
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -760,30 +765,32 @@
     <img class="appointment__logo" src="./images/logo.png" alt="Логотип академии">
     <h3 class="appointment__title title">Запишитесь</br> на консультацию</h3>
     <form class="appointment__form" action="appointment__form" method="post">
-      <div class="appointment__box-input">
-        <input class="appointment__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
-        <input class="appointment__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-        <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
-        <select class="appointment__select" id="option" name="option" required>
-          <option class="appointment__option" value="consultation">Консультация</option>
-          <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
-          <option class="appointment__option" value="course2">Интересует курс Light English</option>
-          <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
-          <option class="appointment__option" value="just_ask">Интересуют занятия с Коучем</option>
-        </select>
-      </div>
-      <button class="appointment__button" type="submit">Записаться</button>
-      <p class="appointment__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
-        <a class="appointment__warning-link" href="#">политикой конфиденциальности</a>
-      </p>
-    </form>
+  <div class="appointment__box-input">
+    <input class="appointment__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+    <input class="appointment__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+    <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
+    <select class="appointment__select" id="option" name="option" required>
+      <option class="appointment__option" value="consultation">Консультация</option>
+      <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
+      <option class="appointment__option" value="course2">Интересует курс Light English</option>
+      <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
+      <option class="appointment__option" value="just_ask">Интересуют занятия с Коучем</option>
+    </select>
+  </div>
+  <button class="appointment__button" type="submit">Записаться</button>
+  <p class="appointment__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
+    <a class="appointment__warning-link" href="#">политикой конфиденциальности</a>
+  </p>
+</form>
+
   </div>
 </section>
 
       <section class="faq" id="faq">
   <div class="conteiner">
     <h3 class="title">Часто задаваемые вопросы</h3>
-    <ul class="faq__list">
+
+    <!-- <ul class="faq__list">
       <li class="faq__question">
         <p class="faq__question-text">Можно ли обучаться дистанционно?</p>
       </li>
@@ -802,19 +809,55 @@
           Что делать если я не могу сформулировать запрос для коуча ?
         </p>
       </li>
-    </ul>
+    </ul> -->
     <h4 class="faq__question-social">Остались вопросы?</h4>
     <p class="faq__text-social">Напиши нам в мессенджеры</p>
     <ul class="faq__list-social">
       <li class="faq__icon-social">
-        <a class="faq__link-social" href="#"><img src="./images/telegramBlack.png" alt="Иконка телеграм"></a>
+        <a class="faq__link-social" href="#">
+          <img class="icon-size" src="./images/whatsapp.png" alt="Иконка whatsapp">
+        </a>
       </li>
       <li class="faq__icon-social">
-        <a class="faq__link-social" href="#"><img src="./images/telegramBlack.png" alt="Иконка телеграм"></a>
+        <a class="faq__link-social" href="#">
+          <img class="icon-size" src="./images/telegramBlack.png" alt="Иконка телеграм">
+        </a>
       </li>
     </ul>
   </div>
 </section>
+
+      <section class="popup popup__hidden">
+  <div class="popup__overflow"></div>
+  <div class="popup__box">
+    <button class="popup__button-close"></button>
+    <div class="popup__image"></div>
+    <!-- <img class="popup__image" src="../../../images/for-popup.jpg" alt="Картина маслом, ренесанс"> -->
+    <div class="popup__form">
+      <h3 class="popup__title title">Заполни форму и получи подарок!</h3>
+      <form class="appointment__form" action="appointment__form" method="post">
+  <div class="appointment__box-input">
+    <input class="appointment__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+    <input class="appointment__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+    <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
+    <select class="appointment__select" id="option" name="option" required>
+      <option class="appointment__option" value="consultation">Консультация</option>
+      <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
+      <option class="appointment__option" value="course2">Интересует курс Light English</option>
+      <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
+      <option class="appointment__option" value="just_ask">Интересуют занятия с Коучем</option>
+    </select>
+  </div>
+  <button class="appointment__button" type="submit">Записаться</button>
+  <p class="appointment__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
+    <a class="appointment__warning-link" href="#">политикой конфиденциальности</a>
+  </p>
+</form>
+
+    </div>
+  </div>
+</section>
+
 
     </main>
     <footer class="footer" id="footer">
@@ -860,26 +903,26 @@
     <div>
       <ul class="footer__list-contact">
         <li class="footer__item-contact">
-          <img class="footer__icon" src="./images/telegram.png" alt="Иконка телеграм">
+          <img class="icon-size" src="./images/telegram.png" alt="Иконка телеграм">
           <div class="footer__text-contact">
             <p class="footer__text">+37369310518</p>
             <p class="footer__text">+37368673443</p>
           </div>
         </li>
         <li class="footer__item-contact">
-          <img class="footer__icon" src="./images/telegram.png" alt="Иконка телеграм">
+          <img class="icon-size" src="./images/mail.png" alt="Иконка почта">
           <div class="footer__text-contact">
             <a class="footer__link link-hover-wite" href="#">mavrova12@mail.ru</a>
             <a class="footer__link link-hover-wite" href="">toroniroma6@gmail.com</a>
           </div>
         </li>
         <li class="footer__item-contact">
-          <img class="footer__icon" src="./images/telegram.png" alt="Иконка телеграм">
+          <img class="icon-size" src="./images/instagram.png" alt="Иконка инстаграм">
           <p class="footer__text">Александра</p>
         </li>
         <li class="footer__item-contact">
-          <img class="footer__icon" src="./images/telegram.png" alt="Иконка телеграм">
-          <img class="footer__icon" src="./images/telegram.png" alt="Иконка телеграм">
+          <img class="icon-size" src="./images/instagram.png" alt="Иконка инстаграм">
+          <img class="icon-size" src="./images/telegram.png" alt="Иконка телеграм">
           <p class="footer__text">Роман</p>
         </li>
       </ul>

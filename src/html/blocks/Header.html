@@ -1,11 +1,11 @@
 <header class="header" id="header">
   <div class="header__conteiner">
-    <img src="./images/logo-b.png" alt="Логотип академии">
-    <input id="menu-toggle" type="checkbox" checked>
+    <img class="header__logo" src="./images/logo-b.png" alt="Логотип академии">
+    <input id="menu-toggle" type="checkbox">
     <label class="header__button-container" for="menu-toggle">
       <div class="header__button"></div>
     </label>
-    <div class="header__overflow"></div>
+    <div class="header__overflow overflow_hidden"></div>
     <nav class="header__nav-box">
         <ul class="header__navigation">
             <li class="header__nav-link">
@@ -27,18 +27,18 @@
               <a class="header__link link-hover" href="#footer">Контакты</a>
             </li>
         </ul>
+        <ul class="header__contacts">
+            <li class="header__item">
+              <a class="header__telegram-link" href="#start">
+                <img class="icon-size" src="./images/telegramBlack.png" alt="Ссылка на телеграм">
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__whats-app-link" href="#start">
+                <img class="icon-size" src="./images/whatsapp.png" alt="Ссылка на вотсап">
+              </a>
+            </li>
+        </ul>
     </nav>
-    <ul class="header__contacts">
-        <li class="header__item">
-          <a class="header__telegram-link" href="#start">
-            <img src="./images/telegramBlack.png" alt="Ссылка на телеграм">
-          </a>
-        </li>
-        <li class="header__item">
-          <a class="header__whats-app-link" href="#start">
-            <img src="./images/telegramBlack.png" alt="Ссылка на вотсап">
-          </a>
-        </li>
-    </ul>
   </div>
 </header>
