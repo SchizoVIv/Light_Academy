@@ -228,3 +228,10 @@
     flex-direction: column;
   }
 }
+
+@media (max-width:400px) {
+
+  .coach__list {
+    padding: 40px 50px 40px;
+  }
+}

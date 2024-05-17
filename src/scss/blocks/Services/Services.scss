@@ -7,6 +7,7 @@
 
 .services__title {
   text-align: center;
+  margin: 0 0 40px 0;
 }
 
 .services__list-service {
@@ -23,7 +24,7 @@
 .services__item-service {
   flex: 1;
   width: 100%;
-  // max-width: 300px;
+  max-width: 300px;
   height: 100vh;
   min-height: 465px;
   max-height: 921px;
@@ -101,7 +102,7 @@
 .services__item-service:nth-child(3) {
   grid-area: price3;
   max-height: 500px;
-  position: relative;
+  // position: relative;
   z-index: 2;
   transform: rotate(-5deg);
   background-image: url(../../../images/services-2.jpg);
@@ -120,7 +121,57 @@
     background-color: var(--card-color);
     border-radius: 15.63vw 15.63vw 0 0;
   }
+
 }
+
+// .services__item-text {
+//   position: relative;
+
+// }
+
+.services__item-fill {
+  position: relative;
+}
+
+
+
+.services__item-tooltip {
+  max-width: 250px;
+  position: absolute;
+  // bottom: 0;
+  // left: -120%;
+  bottom: 30px;
+  left: 0;
+  transform: rotate(5deg);
+  background-color: var(--font-color-light);
+  padding: 20px;
+  border: 1px solid var(--font-color);
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: var(--font-color-light);
+    bottom: -6px;
+    right: 50%;
+    border-right: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+}
+
+.services__item-tooltip_active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .services__item-service:nth-child(4) {
   grid-area: price4;
   max-height: 800px;
@@ -151,6 +202,10 @@
   padding-bottom: 17px;
   margin-bottom: 17px;
   border-bottom: 1px solid black;
+}
+
+.services__cost {
+  margin: 10px 0 0;
 }
 
 .services__image {
@@ -186,6 +241,14 @@
 
 html {
   outline: red solid 1px;
+}
+
+@media (max-width: 1200px) {
+  .services__item-tooltip {
+    bottom: -50%;
+    left: 0;
+  }
+
 }
 
 @media (max-width:1115px) {
@@ -243,6 +306,13 @@ html {
   }
 }
 
+@media (max-width: 730px) {
+  .services__image {
+    width: 100%;
+    bottom: -7vw;
+  }
+}
+
 @media (max-width:462px) {
   .services__list-service {
     display: grid;
@@ -276,6 +346,77 @@ html {
   .services__item-service {
     padding: 93px 20px 40px;
   }
+
+  .services__image {
+    width: 100%;
+    bottom: -9vw;
+  }
 }
+
+
+
+// .uiverse {
+//   position: relative;
+//   background: #ffffff;
+//   color: #000;
+//   padding: 15px;
+//   margin: 10px;
+//   border-radius: 10px;
+//   width: 150px;
+//   height: 50px;
+//   font-size: 17px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+//   cursor: pointer;
+//   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+// }
+
+// .tooltip {
+//   position: absolute;
+//   top: 0;
+//   font-size: 14px;
+//   background: #ffffff;
+//   color: #ffffff;
+//   padding: 5px 8px;
+//   border-radius: 5px;
+//   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+//   opacity: 0;
+//   pointer-events: none;
+//   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+// }
+
+// .tooltip::before {
+//   position: absolute;
+//   content: "";
+//   height: 8px;
+//   width: 8px;
+//   background: #ffffff;
+//   bottom: -3px;
+//   left: 50%;
+//   transform: translate(-50%) rotate(45deg);
+//   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+// }
+
+// .uiverse:hover .tooltip {
+//   top: -45px;
+//   opacity: 1;
+//   visibility: visible;
+//   pointer-events: auto;
+// }
+
+// svg:hover span,
+// svg:hover .tooltip {
+//   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+// }
+
+// .uiverse:hover,
+// .uiverse:hover .tooltip,
+// .uiverse:hover .tooltip::before {
+//   background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
+//   color: #ffffff;
+// }
 
 

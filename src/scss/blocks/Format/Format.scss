@@ -90,6 +90,13 @@
     align-items: flex-end;
     margin: 50px 0 0;
 
+    & > .format__box-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: end;
+    }
+
     & > .format__image {
       width: 100%;
       max-width: 410px;
@@ -190,7 +197,7 @@
 }
 
 .anim {
-  
+
 }
 
 @media (max-width: 700px ) {

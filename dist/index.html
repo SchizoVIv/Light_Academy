@@ -10,6 +10,9 @@
       <link rel="stylesheet" href="./css/index.css">
   </head>
   <body class="page">
+      <!-- <div class="scrollbar">
+        <div class="overflow"></div>
+      </div> -->
     <header class="header" id="header">
   <div class="header__conteiner">
     <img class="header__logo" src="./images/logo-b.png" alt="Логотип академии">
@@ -101,7 +104,7 @@
 
       <section class="advantages" id="advantages">
   <div class="advantages__conteiner conteiner">
-    <h3 class="advantages__title title">Обучаясь у нас вы получаете:</h3>
+    <h3 class="advantages__title title">Обучаясь у нас, вы получаете:</h3>
     <button class="advantages__button">Получить подарок</button>
     <div class="advantages__card card">
       <h4 class="advantages__card-title subtitle">Гибкий график</h4>
@@ -120,7 +123,7 @@
     </div>
     <div class="advantages__card card">
       <h4 class="advantages__card-title subtitle">Эффективное обучение</h4>
-      <p class="advantages__card-text">Мы не обещаем нереальные результаты за короткий срок, а выстраиваем обучение таким образом, чтобы ваши знания были качественными и полными, а вам было интересно обучаться</p>
+      <p class="advantages__card-text">Мы не обучаем годами, мы экономим ваше время. Делаем так, чтобы ваши знания были качественными и полными, а вам было интересно обучаться</p>
     </div>
   </div>
 </section>
@@ -165,7 +168,7 @@
         <div class="founder__block-about">
           <h4 class="founder__text-name">Роман Торони</h4>
           <p class="founder__text-role">Директор-коуч Академии</p>
-          <a class="founder__link  link-hover-wite" href="#">Сертификат</a>
+          <a class="founder__link link link-hover-line" href="#">Сертификат</a>
         </div>
         <p class="founder__text">Коуч ICF, основатель академии, более 8 лет опыта работы в продажах. Главное направление деятельности Романа коммуникация и понимание. Именно это создает ту атмосферу комфорта и стабильности в вашем обучении и нашей работе Академии</p>
       </div>
@@ -174,7 +177,7 @@
         <img class="founder__image" src="./images/founderAlex.jpg" alt="Фотография Александры">
         <div class="founder__block-about">
             <h4 class="founder__text-name">Александра Маврова</h4>
-            <p class="founder__text">Дипломированный специалист-переводчик</p>
+            <p class="founder__text-role">Дипломированный специалист-переводчик</p>
         </div>
         <p class="founder__text">Наш вдохновляющий лидер с богатым опытом в образовании и страстью к языку. Опыт работы переводчиком и опыт преподавания более 8 лет. Работала в международной компании KVINT, а также проходила стажировку в американской компании
             Linguatrip, работала переводчиком в разных сферах. </br> Команда Академии работает по методике обучения Александры, мы вместе составляем программу и корректируем её в процессе. </br> Она - та, кто помогает чтобы английский язык стал вашим
@@ -328,16 +331,28 @@
         </ul>
         <ul class="services__list-fill">
           <li class="services__item-fill">
-            Неструктурированные разговоры
+            <div class="services__item-box">
+              <p class="services__item-text">Неструктурированные разговоры</p>
+              <span class="services__item-tooltip">Мы стараемся создать атмосферу дружелюбного и неформального общения. Участники могут свободно обсуждать различные темы, зарание подготовленные преподавателем Академии, делясь своими мыслями и идеями на английском языке.</span>
+            </div>
           </li>
           <li class="services__item-fill">
-            Тематические встречи
+            <div class="services__item-box">
+              <p class="services__item-text">Тематические встречи</p>
+              <span class="services__item-tooltip">Мы организуем встречи по различным темам, чтобы помочь участникам расширить свой словарный запас и практиковать английский язык в контексте конкретной области, будь то искусство, культура, наука или путешествия.</span>
+            </div>
           </li>
           <li class="services__item-fill">
-            Коррекция ошибок
+            <div class="services__item-box">
+              <p class="services__item-text">Коррекция ошибок</p>
+              <span class="services__item-tooltip">Наш опытный преподаватель всегда готов помочь участникам с исправлением ошибок и объяснением тонкостей английской грамматики и лексики.</span>
+            </div>
           </li>
           <li class="services__item-fill">
-            Развитие уверенности
+            <div class="services__item-box">
+              <p class="services__item-text">Развитие уверенности</p>
+              <span class="services__item-tooltip">Это не только место для изучения языка, но и для развития уверенности в его использовании. Мы поощряем участников выходить за пределы своей зоны комфорта и активно участвовать в обсуждениях.</span>
+            </div>
           </li>
         </ul>
         <p class="services__cost">10€ встреча</p>
@@ -353,7 +368,7 @@
             Достижение цели
           </li>
         </ul>
-        <a class="link-hover" href="#coach">Подробнее</a>
+        <a class="link_black link-hover-line" href="#coach">Подробнее</a>
         <p class="services__cost">ОТ 50€ сессия</p>
         <img class="services__image" src="./images/jazzMusician.png" alt="Луи Армстронг- американский джазист">
       </li>
@@ -365,20 +380,20 @@
   <div class="coach__conteiner conteiner">
     <div class="coach__box-request">
       <ul class="coach__list">
-        <li class="coach__item">Научиться ставить цели и управлять временеи</li>
+        <li class="coach__item">Научиться ставить цели и управлять временем</li>
         <li class="coach__item-accent">Взлянуть на свою картину мира под другим углом</li>
         <li class="coach__item">Определить путь перехода к новому</li>
         <li class="coach__item">Найти легкость и устойчивость на пути изменений</li>
         <li class="coach__item-accent">Сформировать новую систему ценностей</li>
         <li class="coach__item">Снижать уровень стресса</li>
-        <li class="coach__item">Улучшить коммуникации</li>
+        <li class="coach__item">Снизить коммуникацию</li>
         <li class="coach__item">Научиться находить баланс между работой и личной жизнью</li>
         <li class="coach__item-accent">Сделать личность целостной</li>
         <li class="coach__item">Понять как восстанавливать энергетический баланс</li>
       </ul>
       <div class="coach__introduction">
         <h3 class="coach__title title">Работа с Коучем</h3>
-        <p class="coach__introduction-text">Коуч - это не начальник, не доктор, не советчик, это спутник клиента по размышлениям.  В ходе работы мы погружаемся в четко структурированный процесс, с точками “старт” (цель клиента) и “финиш” (зарание оговоренный результат)</p>
+        <p class="coach__introduction-text">Коуч - это не начальник, не доктор, не советчик, это спутник клиента по размышлениям.  В ходе работы мы погружаемся в четко структурированный процесс, с точками “старт” (цель клиента) и “финиш” (заранее оговоренный результат)</p>
       </div>
     </div>
     <div class="coach__scheme">
@@ -392,7 +407,7 @@
 
         <div class="coach__box-text">
           <p class="coach__text">В жизни А >>> В</p>
-          <p class="coach__text">В долгострочной перспективе А >>> В</p>
+          <p class="coach__text">В долгосрочной перспективе А >>> В</p>
           <p class="coach__text">В сессии А >>> В</p>
         </div>
       <img class="coach__finish" src="./images/B.png" alt="Пункт В - финиш">
@@ -430,7 +445,7 @@
           <div class="reviews__about">
             <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
             <div>
-              <p class="reviews__name">Вугар, Тайланд</p>
+              <p class="reviews__name">Егор, Тайланд</p>
               <p class="reviews__age">2023</p>
             </div>
           </div>
@@ -459,7 +474,7 @@
           <div class="reviews__about">
             <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
             <div>
-              <p class="reviews__name">Вугар, Тайланд</p>
+              <p class="reviews__name">Александр, Молдова</p>
               <p class="reviews__age">2023</p>
             </div>
           </div>
@@ -472,15 +487,16 @@
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Переехал по работе в другую страну, нужен английский для работы и жизни. Устал объясняться жестами, не понимать людей и пользоваться переводчиком</p>
+            <p class="reviews__text">Говорить могу на бытовые темы, барьера и страха нет, но для работы нужно говорить более понятно и правильно. Необходимо знание языка для работы,
+              нужных терминов и фраз.</p>
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">Обучаем разговорному языку, в беседе, не нагружая сложными грамматическими конструкциями. Прокручиваем на занятиях жизненные ситуации</p>
+            <p class="reviews__text">На занятиях с учеником обсуждаем жизненные темы, беседуем и выявляем ошибки в грамматике и речи, сразу же их разбираем и учимся говорить правильно. Изучаем лексику для работы также в процессе общения. Все проходит интересно и на лайте.</p>
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">У нас уже прошло 12 занятий (месяц). Мужчина больше не боится делать ошибки и говорить сам, не пользуясь переводчиком. Теперь он понимает на работе 90% происходящего, что хотят от него и также может выразить свои мысли на английском языке. Дальше больше!</p>
+            <p class="reviews__text">Спустя 8 занятий пофиксили недочеты в грамматике, сделали речь более легкой. Теперь мужчина общается по работе на английском больше, так как есть знание терминологии.</p>
           </div>
           <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
         </div>
@@ -488,7 +504,7 @@
           <div class="reviews__about">
             <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
             <div>
-              <p class="reviews__name">Вугар, Тайланд</p>
+              <p class="reviews__name">Карина, Канада</p>
               <p class="reviews__age">2023</p>
             </div>
           </div>
@@ -501,15 +517,15 @@
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Переехал по работе в другую страну, нужен английский для работы и жизни. Устал объясняться жестами, не понимать людей и пользоваться переводчиком</p>
+            <p class="reviews__text">Переезд в другую страну. Поднять уровень языка для легкости в разговоре для жизни, работы и общения в англоязычной стране.</p>
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">Обучаем разговорному языку, в беседе, не нагружая сложными грамматическими конструкциями. Прокручиваем на занятиях жизненные ситуации</p>
+            <p class="reviews__text">не описан.</p>
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">У нас уже прошло 12 занятий (месяц). Мужчина больше не боится делать ошибки и говорить сам, не пользуясь переводчиком. Теперь он понимает на работе 90% происходящего, что хотят от него и также может выразить свои мысли на английском языке. Дальше больше!</p>
+            <p class="reviews__text">За 8 месяцев обучения поднялся уровень знания с А1 до Б1. Принимает участие в разговорном клубе с другими людьми, легче стало разговаривать, она уже использует более сложную лексику и конструкции. Стало более комфортно разговаривать на работе.</p>
           </div>
           <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
         </div>
@@ -517,7 +533,7 @@
           <div class="reviews__about">
             <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
             <div>
-              <p class="reviews__name">Вугар, Тайланд</p>
+              <p class="reviews__name">Роман, Молдова</p>
               <p class="reviews__age">2023</p>
             </div>
           </div>
@@ -530,15 +546,15 @@
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Переехал по работе в другую страну, нужен английский для работы и жизни. Устал объясняться жестами, не понимать людей и пользоваться переводчиком</p>
+            <p class="reviews__text">Есть немного знания базы грамматики и начальный словарный запас. Но в поездках и путешествиях все равно есть страх говорить, ошибиться или что неправильно поймут.</p>
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">Обучаем разговорному языку, в беседе, не нагружая сложными грамматическими конструкциями. Прокручиваем на занятиях жизненные ситуации</p>
+            <p class="reviews__text">Берем темы из учебника, понимаем их, слушаем носителей языка и прорабатываем данные темы на практике. Убираем страх ошибиться пониманием того, что носители языка нас и так поймут, а также они ошибаются сами.</p>
           </div>
           <div class="reviews__box-text">
             <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">У нас уже прошло 12 занятий (месяц). Мужчина больше не боится делать ошибки и говорить сам, не пользуясь переводчиком. Теперь он понимает на работе 90% происходящего, что хотят от него и также может выразить свои мысли на английском языке. Дальше больше!</p>
+            <p class="reviews__text">Спустя 9 занятий мужчина говорит более свободно на бытовые темы, страх ошибки сменился интересом к языку, а также пробовать новые темы и применять их на практике.</p>
           </div>
           <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
         </div>
@@ -762,7 +778,7 @@
 
       <section class="appointment" id="appointment">
   <div class="appointment__conteiner conteiner">
-    <img class="appointment__logo" src="./images/logo.png" alt="Логотип академии">
+    <img class="appointment__logo" src="./images/logo-b.png" alt="Логотип академии">
     <h3 class="appointment__title title">Запишитесь</br> на консультацию</h3>
     <form class="appointment__form" action="appointment__form" method="post">
   <div class="appointment__box-input">
@@ -790,37 +806,71 @@
   <div class="conteiner">
     <h3 class="title">Часто задаваемые вопросы</h3>
 
-    <!-- <ul class="faq__list">
+    <ul class="faq__list">
+      <li class="faq__question">
+        <p class="faq__question-text">
+          Какие языки вы преподаёте в Академии?
+        </p>
+        <p class="faq__answer-text">Мы обучаем английскому, французскому, китайскому, румынскому. В будущем планируем расширять базу языков.</p>
+      </li>
       <li class="faq__question">
         <p class="faq__question-text">Можно ли обучаться дистанционно?</p>
+        <p class="faq__answer-text">Мы как раз предоставляем онлайн обучение для удобства. У нас обучаются студенты со всего мира, поэтому онлайн обучение это легкий способ - никуда не нужно ехать и тратить время.</p>
+      </li>
+      <li class="faq__question">
+        <p class="faq__question-text">
+          В чем отличие индивидуальных занятий и курса Light English?
+        </p>
+        <p class="faq__answer-text">Индивидуальные занятия это занятия с преподавателем, где формат занятий и их программа готовится под ваш уровень языка и цель изучения английского. </br>Курс Light English же представляет собой Общий, базовый курс языка для тех, кто только начинает его изучать и хочет быстро заговорить либо для тех, кто продолжает изучение и в голове каша, а как говорить непонятно. В этом курсе обучение происходит на вебинарах с основателем Академии + практики в мини группах с преподавателем.</p>
       </li>
       <li class="faq__question">
         <p class="faq__question-text">
           Какие языковые уровни представлены в вашей школе, и как студенты распределяются по соответствующим уровням?
         </p>
+        <p class="faq__answer-text">Мы обучаем студентов любого уровня языка, с нуля или до С2 - не важно. Занятия у нас строго индивидуальные, поэтому программа строится под ваш уровень языка и запрос.</p>
+      </li>
+      <li class="faq__question">
+        <p class="faq__question-text">
+          Какие возрастные группы вы обучаете в вашей школе английского языка?
+        </p>
+        <p class="faq__answer-text">Мы обучаем детей с 7 лет и взрослых. Программа разрабатывается индивидуально под каждого, с учетом возрастных особенностей и уровня подготовки студентов, чтобы обеспечить оптимальное обучение и развитие навыков владения английским языком.</p>
       </li>
       <li class="faq__question">
         <p class="faq__question-text">
           Как узнать нужен ли мне коуч?
         </p>
+        <p class="faq__answer-text">Вы можете записаться на ознакомительную бесплатную встречу, где в течении 30 минут вы познакомьтесь и коуч расскажет вам подробности,  в том числе и как будет проходить работа.</p>
       </li>
       <li class="faq__question">
         <p class="faq__question-text">
-          Что делать если я не могу сформулировать запрос для коуча ?
+          Что делать если я не могу сформулировать запрос для коуча?
         </p>
+        <p class="faq__answer-text">Вы можете прийти на сессию, сказав что вы хотите,  коуч поможет вам сформулировать запрос, задавая вопросы.</p>
       </li>
-    </ul> -->
+      <li class="faq__question">
+        <p class="faq__question-text">
+          Можно ли брать только одну сессию с коучем?
+        </p>
+        <p class="faq__answer-text">Для наилучшего результата для вас, многие  берут пакет сессий от четырёх и более, это поможет вам не только поисследовать вашу цель или сформировать запрос, но и решить те факторы, которые мешают вам достичь данной цели.</p>
+      </li>
+      <li class="faq__question">
+        <p class="faq__question-text">
+          Каковы условия отмены или переноса занятий для студентов?
+        </p>
+        <p class="faq__answer-text">Условия отмена и переноса занятий мы прописываем с вами в договоре перед началом обучения. Мы просим учеников придерживаться графика 8-12 занятий в месяц для вашего прогресса и результата в обучении. А также необходимо предупреждать преподавателя о переносе занятие минимум за 3 часа до него.</p>
+      </li>
+    </ul>
     <h4 class="faq__question-social">Остались вопросы?</h4>
     <p class="faq__text-social">Напиши нам в мессенджеры</p>
     <ul class="faq__list-social">
       <li class="faq__icon-social">
         <a class="faq__link-social" href="#">
-          <img class="icon-size" src="./images/whatsapp.png" alt="Иконка whatsapp">
+          <img class="icon-size icon" src="./images/whatsapp.png" alt="Иконка whatsapp">
         </a>
       </li>
       <li class="faq__icon-social">
-        <a class="faq__link-social" href="#">
-          <img class="icon-size" src="./images/telegramBlack.png" alt="Иконка телеграм">
+        <a class="faq__link-social" href="https://t.me/light_english_admin">
+          <img class="icon-size icon" src="./images/telegramBlack.png" alt="Иконка телеграм">
         </a>
       </li>
     </ul>
@@ -905,24 +955,34 @@
         <li class="footer__item-contact">
           <img class="icon-size" src="./images/telegram.png" alt="Иконка телеграм">
           <div class="footer__text-contact">
-            <p class="footer__text">+37369310518</p>
-            <p class="footer__text">+37368673443</p>
+            <a class="link-hover-wite" href="https://t.me/light_english_admin">
+              <p class="footer__text">+37369310518</p>
+            </a>
+            <a class="link-hover-wite" href="https://t.me/Roman_Toroni">
+              <p class="footer__text">+37368673443</p>
+            </a>
           </div>
         </li>
         <li class="footer__item-contact">
           <img class="icon-size" src="./images/mail.png" alt="Иконка почта">
           <div class="footer__text-contact">
-            <a class="footer__link link-hover-wite" href="#">mavrova12@mail.ru</a>
-            <a class="footer__link link-hover-wite" href="">toroniroma6@gmail.com</a>
+            <p class="footer__link">mavrova12@mail.ru</p>
+            <p class="footer__link">toroniroma6@gmail.com</p>
           </div>
         </li>
         <li class="footer__item-contact">
-          <img class="icon-size" src="./images/instagram.png" alt="Иконка инстаграм">
+          <a href="https://www.instagram.com/mavrova_alexandra?igsh=MjY0b2lkanJ0dGN5&utm_source=qr">
+            <img class="icon-size icon" src="./images/instagram.png" alt="Иконка инстаграм">
+          </a>
           <p class="footer__text">Александра</p>
         </li>
         <li class="footer__item-contact">
-          <img class="icon-size" src="./images/instagram.png" alt="Иконка инстаграм">
-          <img class="icon-size" src="./images/telegram.png" alt="Иконка телеграм">
+          <a href="https://www.instagram.com/roman.toroni_coach?igsh=MWNsZXBhYzRpaXFoYw==qr">
+            <img class="icon-size icon" src="./images/instagram.png" alt="Иконка инстаграм">
+          </a>
+          <a href="https://t.me/Roman_Toroni">
+            <img class="icon-size icon" src="./images/telegram.png" alt="Иконка телеграм">
+          </a>
           <p class="footer__text">Роман</p>
         </li>
       </ul>

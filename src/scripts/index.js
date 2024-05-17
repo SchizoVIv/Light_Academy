@@ -1,4 +1,12 @@
-console.log('it"s works');
+// scrol
+(function(){
+  let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+  let scrollbarDiv = document.querySelector('.scrollbar');
+    if (!isChrome && !isSafari) {
+      scrollbarDiv.innerHTML = 'You need Webkit browser to run this code';
+    }
+})();
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -130,8 +138,12 @@ function enableScroll() {
 
 const header = document.querySelector('.header')
 const headerLogo = document.querySelector('.header__logo')
+const requestsDisk = document.querySelector('.requests__disk')
+const requestsCard = document.querySelector('.requests__card:last-child')
 let lastScroll = 0;
 const defaultOffset = 150;
+const startAnim = 2000;
+let screenWidth = 0;
 
 const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop
 const conteinHide = () => header.classList.contains('header_hide')
@@ -141,7 +153,6 @@ window.addEventListener('scroll', () => {
   console.log(`${scrollPosition()} \ ${lastScroll}`)
 
   if(scrollPosition() < lastScroll && conteinBorder() && scrollPosition() < defaultOffset) {
-    console.log('+')
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
     headerLogo.classList.remove('header__logo_hide')
@@ -149,7 +160,6 @@ window.addEventListener('scroll', () => {
   }
 
   if(scrollPosition() < lastScroll && conteinHide()) {
-    console.log('+')
     header.classList.remove('header_hide')
     header.classList.add('header_border')
     headerLogo.classList.add('header__logo_hide')
@@ -161,13 +171,46 @@ window.addEventListener('scroll', () => {
     headerLogo.classList.add('header__logo_hide')
   }
 
+
+  if(screenWidth < 1000 && scrollPosition() > 3000 && scrollPosition() < 3100) {
+    console.log('mobil')
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+  // анимация диска
+  if(screenWidth > 1000 && scrollPosition() < 3300 && scrollPosition() > 2500) {
+    console.log('run')
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+
   lastScroll = scrollPosition()
 })
 
 
 
+// Функция для обработки изменения размера экрана
+function handleResize() {
+  // Получаем текущую ширину экрана
+  screenWidth = window.innerWidth;
+
+  // Ваш код здесь для обработки изменений ширины экрана
+  console.log("Ширина экрана: " + screenWidth + "px");
+}
+
+// Добавляем обработчик события resize
+window.addEventListener("resize", handleResize);
+
+// Вызываем функцию handleResize() при загрузке страницы для отображения начальной ширины экрана
+handleResize();
+
+
+
 
 burgerButton.addEventListener('click', hendleOpenMenu)
+
+
+
 
 // window
 
@@ -194,3 +237,90 @@ academyButton.addEventListener('click', popupHandleOpen)
 presentButton.addEventListener('click', popupHandleOpen)
 coachingButton.addEventListener('click', popupHandleOpen)
 coachButton.addEventListener('click', popupHandleOpen)
+
+
+// faq
+
+const questionList = document.querySelectorAll('.faq__question')
+
+questionList.forEach((question, i) => {
+  question.addEventListener('click', () => {
+    const answerList = document.querySelectorAll('.faq__answer-text')
+    const questionAfterList = document.querySelectorAll('.faq__question-text')
+    answerList.forEach((answer, index) => {
+      if(i === index) {
+          answer.classList.toggle('faq__answer-text_active')
+      }
+    })
+
+    questionAfterList.forEach((after, index) => {
+      if(i === index) {
+        after.classList.toggle('hidden-after')
+      }
+    })
+  })
+})
+
+
+// form
+
+// Функция для проверки заполнения полей формы
+function validateForm() {
+  // Получаем ссылки на поля формы
+  const nameInput = document.querySelector("#name");
+  const phoneInput = document.querySelector("#phone");
+  const emailInput = document.querySelector("#email");
+  const submitButton = document.querySelector(".appointment__button");
+  const optionSelect = document.querySelector("#option");
+
+  // Проверяем, пустые ли поля
+  if (nameInput.value.trim() === '' || phoneInput.value.trim() === '' || emailInput.value.trim() === '' || optionSelect.value.trim() === '') {
+      // Если хотя бы одно поле пусто, блокируем кнопку отправки формы
+      submitButton.disabled = true;
+  } else {
+      // Если все поля заполнены, разблокируем кнопку отправки формы
+      submitButton.disabled = false;
+  }
+}
+
+// Находим все поля формы
+const nameInput = document.querySelector("#name");
+const phoneInput = document.querySelector("#phone");
+const emailInput = document.querySelector("#email");
+const optionSelect = document.querySelector("#option");
+
+// Навешиваем обработчик события input на каждое поле формы
+nameInput.addEventListener("input", validateForm);
+phoneInput.addEventListener("input", validateForm);
+emailInput.addEventListener("input", validateForm);
+optionSelect.addEventListener("input", validateForm);
+// Вызываем функцию проверки формы при загрузке страницы
+validateForm();
+
+// подсказка
+
+const servicesTextList = document.querySelectorAll('.services__item-text')
+
+
+servicesTextList.forEach((textItem, index) => {
+  textItem.addEventListener('mouseover', () => {
+    const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+    console.log('textItem')
+    servicesTooltipList.forEach((tooltipItem, i) => {
+      console.log(tooltipItem)
+      if(i === index) {
+        tooltipItem.classList.add('services__item-tooltip_active')
+      }
+    })
+  })
+  textItem.addEventListener('mouseout', () => {
+    const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+    console.log('textItem')
+    servicesTooltipList.forEach((tooltipItem, i) => {
+      console.log(tooltipItem)
+      if(i === index) {
+        tooltipItem.classList.remove('services__item-tooltip_active')
+      }
+    })
+  })
+})

@@ -46,6 +46,88 @@
   position: relative;
 }
 
+.link {
+  position: relative;
+  text-decoration: none;
+  padding: 0;
+  transition: all 0.5s ease;
+
+  &::before {
+    content: '->';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    margin: auto;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    left: 0;
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--font-color-light);
+  }
+}
+
+.link_black {
+  position: relative;
+  text-decoration: none;
+  padding: 0;
+  transition: all 0.5s ease;
+
+  &::before {
+    content: '->';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    margin: auto;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    left: 0;
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--font-color);
+  }
+}
+
+.link-hover-line {
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.link-hover-line:hover {
+  padding: 0 0 0 20px;
+}
+
+.founder__text-name {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.founder__text-role {
+  margin: 10px 0;
+}
+
 .founder__block-text:nth-child(1) {
   grid-area: box-text1;
   display: flex;
@@ -65,11 +147,12 @@
     bottom: 0;
     margin: auto;
   }
+
+  & > .founder__block-about {
+    min-width: 250px;
+  }
 }
 
-.founder__block-about {
-  min-width: 150px;
-}
 
 .founder__block-text:nth-child(3) {
   grid-area: box-text2;
@@ -88,6 +171,10 @@
     left: -60%;
     bottom: 0;
 
+  }
+
+  & > .founder__block-about {
+    min-width: 200px;
   }
 }
 
@@ -116,12 +203,20 @@
 }
 
 @media (max-width: 1200px) {
+
+  .founders__logo {
+    margin: 50px auto 95px;
+  }
   .founders__box {
     grid-template-columns:  7vw 2fr 2fr 2fr 7vw;
     grid-template-areas:
       ". box-text1 box-text1 . ."
       "canyon canyon canyon canyon canyon"
       ". . box-text2 box-text2 .";
+  }
+
+  .founders__title {
+    max-width: 500px;
   }
 
   .founder__block-text:nth-child(1) {
@@ -170,6 +265,10 @@
       "found2"
       "box-text2";
     margin: 0 30px 0;
+  }
+
+  .founders__title {
+    max-width: 300px;
   }
 
   .founder__block-text {

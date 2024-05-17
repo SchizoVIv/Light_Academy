@@ -26,6 +26,19 @@
   color: var(--font-color-light);
 }
 
+.footer__text {
+  align-self: center;
+}
+
+.icon {
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
 .footer__list-contact {
   display: flex;
   flex-direction: column;
@@ -46,6 +59,7 @@
 .footer__text-contact {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 // .footer__icon {
@@ -127,5 +141,13 @@
 
   .footer__logo {
     align-self: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__conteiner {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
   }
 }
