@@ -169,12 +169,7 @@
   font-size: 24px;
 }
 
-.format__link {
-  text-decoration: none;
-  background-color: var(--card-color);
-  padding: 23px 47px;
-  border-radius: 100px;
-}
+
 
 .format__text  {
   margin: 28px 0;
@@ -194,10 +189,6 @@
     height: 100%;
     background-color: var(--font-color);
   }
-}
-
-.anim {
-
 }
 
 @media (max-width: 700px ) {
@@ -239,6 +230,13 @@
       display: flex;
       flex-direction: column-reverse;
       margin: 100px 0 0;
+
+      & > .format__box-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+      }
 
       & > .format__image {
         margin: 80px 0 128px 0;

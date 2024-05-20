@@ -102,7 +102,6 @@ const navigation = document.querySelector('.header__nav-box')
 const contacts = document.querySelector('.header__contacts')
 
 function hendleOpenMenu() {
-  console.log(burgerOverflow)
   if(!burgerToggle.checked) {
     burgerOverflow.classList.remove('overflow_hidden')
     navigation.classList.add('header__nav-box_active')
@@ -149,37 +148,80 @@ const scrollPosition = () => window.pageXOffset || document.documentElement.scro
 const conteinHide = () => header.classList.contains('header_hide')
 const conteinBorder = () => header.classList.contains('header_border')
 
-window.addEventListener('scroll', () => {
-  console.log(`${scrollPosition()} \ ${lastScroll}`)
+let x = 0
+let y = 0
+let maxY = 80
 
-  if(scrollPosition() < lastScroll && conteinBorder() && scrollPosition() < defaultOffset) {
-    header.classList.remove('header_hide')
-    header.classList.remove('header_border')
-    headerLogo.classList.remove('header__logo_hide')
+document.addEventListener('mousemove', function(event) {
+  x = event.clientX; // Координата X курсора
+  y = event.clientY; // Координата Y курсора
+  // console.log('X: ' + x + ', Y: ' + y);
 
-  }
 
-  if(scrollPosition() < lastScroll && conteinHide()) {
+
+  if(y < maxY && scrollPosition() > defaultOffset) {
     header.classList.remove('header_hide')
     header.classList.add('header_border')
+    headerLogo.classList.remove('header__logo_hide')
+  }
+
+  if(y > maxY && scrollPosition() > defaultOffset) {
+    header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
+    header.classList.remove('header_border')
+  }
+});
+
+
+
+window.addEventListener('scroll', () => {
+  // console.log(`${scrollPosition()} \ ${lastScroll}`)
+
+
+  // if(scrollPosition() < lastScroll && conteinBorder() && scrollPosition() < defaultOffset) {
+  //   header.classList.remove('header_hide')
+  //   header.classList.remove('header_border')
+  //   headerLogo.classList.remove('header__logo_hide')
+
+  // }
+
+  // if(scrollPosition() < lastScroll && conteinHide()) {
+  //   header.classList.remove('header_hide')
+  //   header.classList.add('header_border')
+  //   headerLogo.classList.add('header__logo_hide')
+  // }
+
+  console.log(`${scrollPosition()} \ ${defaultOffset} \ ${lastScroll} \ ${!conteinHide()}`)
+
+  if(scrollPosition() < lastScroll && scrollPosition() < defaultOffset) {
+    header.classList.remove('header_hide')
+    headerLogo.classList.remove('header__logo_hide')
+    header.classList.remove('header_border')
   }
 
   if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
-    console.log('-')
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
+    header.classList.remove('header_border')
   }
 
 
-  if(screenWidth < 1000 && scrollPosition() > 3000 && scrollPosition() < 3100) {
-    console.log('mobil')
+  if(screenWidth < 860 && scrollPosition() > 2745 && scrollPosition() < 2750) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
   // анимация диска
-  if(screenWidth > 1000 && scrollPosition() < 3300 && scrollPosition() > 2500) {
-    console.log('run')
+  if(screenWidth < 1300 && scrollPosition() > 2155 && scrollPosition() < 2160) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+
+  if(screenWidth < 1240 && scrollPosition() > 1930 && scrollPosition() < 1940) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+
+  if(screenWidth > 1000 && scrollPosition() > 2500 && scrollPosition() < 2510) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
@@ -195,7 +237,7 @@ function handleResize() {
   screenWidth = window.innerWidth;
 
   // Ваш код здесь для обработки изменений ширины экрана
-  console.log("Ширина экрана: " + screenWidth + "px");
+  // console.log("Ширина экрана: " + screenWidth + "px");
 }
 
 // Добавляем обработчик события resize
@@ -225,7 +267,6 @@ const coachButton = document.querySelector('.coach__button')
 
 function popupHandleClose() {
   popup.classList.add('popup__hidden')
-  console.log('hi')
 }
 
 function popupHandleOpen() {
@@ -305,9 +346,7 @@ const servicesTextList = document.querySelectorAll('.services__item-text')
 servicesTextList.forEach((textItem, index) => {
   textItem.addEventListener('mouseover', () => {
     const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
-    console.log('textItem')
     servicesTooltipList.forEach((tooltipItem, i) => {
-      console.log(tooltipItem)
       if(i === index) {
         tooltipItem.classList.add('services__item-tooltip_active')
       }
@@ -315,12 +354,41 @@ servicesTextList.forEach((textItem, index) => {
   })
   textItem.addEventListener('mouseout', () => {
     const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
-    console.log('textItem')
     servicesTooltipList.forEach((tooltipItem, i) => {
-      console.log(tooltipItem)
       if(i === index) {
         tooltipItem.classList.remove('services__item-tooltip_active')
       }
     })
   })
 })
+
+// кнопка круг
+const rotateBetweenWords = (value) => {
+  const words = document.querySelectorAll('.advantages__wheel-inner')
+
+  let deg = -60
+
+  for (let word of words) {
+      word.style.transform = `rotate(${ deg }deg)`
+      deg += value
+  }
+}
+
+// расстояние между буквами
+const rotateBetweenLetters = (value) => {
+  const letters = document.querySelectorAll('.advantages__wheel-content')
+
+  let deg = 0
+
+  for (let letter of letters) {
+      letter.style.transform = `rotate(${ deg }deg)`
+      deg += value
+  }
+
+}
+
+// rotateBetweenWords(9)
+// rotateBetweenLetters(9)
+
+rotateBetweenWords(10)
+rotateBetweenLetters(5)

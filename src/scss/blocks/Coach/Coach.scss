@@ -79,6 +79,7 @@
   grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
   grid-template-areas:
     "startA stroc1 car finishB"
+    "startA lineC lineC finishB"
     "startA stroc2 stroc2 finishB"
     ;
   grid-gap: 0 20px;
@@ -100,12 +101,18 @@
 .coach__box-img-car {
   grid-area: car;
   align-self: flex-end;
-  border-bottom: 2px solid var(--font-color);
   width: 100%;
   z-index: -1;
   justify-self: center;
   display: flex;
   justify-content: center;
+}
+
+.coach__line {
+  grid-area: lineC;
+  height: 2px;
+  background-color: var(--font-color);
+  width: 100%;
 }
 
 
@@ -153,6 +160,18 @@
   align-self: flex-end;
 }
 
+.coach__backlight {
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 600px;
+  max-height: 600px;
+  background-color: #D3CAC3 !important;
+  filter: blur(200px);
+}
+
 @media (max-width: 1300px) {
 
   .coach__scheme {
@@ -162,6 +181,7 @@
     grid-template-areas:
       "stroc1 stroc1 stroc1"
       "startA car finishB"
+      "startA lineC finishB"
       "startA stroc2 finishB"
       ;
     margin: 100px 0 0;
@@ -206,6 +226,7 @@
     grid-template-areas:
       "stroc1 stroc1 stroc1"
       "startA car finishB"
+      "startA lineC finishB"
       "stroc2 stroc2 stroc2"
       ;
 

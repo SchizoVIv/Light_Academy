@@ -43,10 +43,30 @@
   -moz-appearance: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background-color: none;
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+.appointment__select option {
+  margin: 40px;
+  background: var(--card-color);
+  color: var(--font-color);
+  // text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
 .appointment__select:focus {
   outline: 1px solid var(--font-color);
   border: none;
 }
+
+// .appointment__select option:checked {
+//   margin: 40px;
+//   background: var(--hover-color);
+//   color: var(--font-color-light);
+// }
+
 
 .appointment__input:focus {
   outline: 1px solid var(--hover-color);

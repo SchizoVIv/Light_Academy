@@ -2,6 +2,7 @@
   max-width: 1600px;
   width: 100%;
   margin: 0 auto 100px;
+  position: relative;
 }
 
 .reviews__title {
@@ -53,6 +54,14 @@
   display: flex;
   align-items: center;
   grid-area: about;
+}
+
+.reviews__backlight {
+  right: 0;
+  bottom: 10%;
+  max-width: 600px;
+  max-height: 600px;
+  filter: blur(100px);
 }
 
 .reviews__name {
