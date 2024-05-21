@@ -45,7 +45,7 @@
     }
 
     & > .format__image {
-      filter: grayscale(100%);
+      // filter: grayscale(100%);
       align-self: center;
       transform: rotate(-15deg);
       margin: 0 0 77px;
@@ -53,9 +53,13 @@
       max-width: 600px;
 
       -webkit-filter:
+        grayscale(100%)
+        sepia(0.3)
         drop-shadow(-63px -16px 30px rgba(58, 63, 74, 27%))
         drop-shadow(-12px -3px 13px rgba(58, 63, 74, 13%));
       filter:
+        grayscale(100%)
+        sepia(0.3)
         drop-shadow(-63px -16px 30px rgba(58, 63, 74, 27%))
         drop-shadow(-22px -13px 13px rgba(58, 63, 74, 13%));
       // box-shadow:
@@ -177,9 +181,13 @@
   transform: rotate(30deg);
   margin: 70px 0;
   -webkit-filter:
+    grayscale(100%)
+    sepia(0.3)
     drop-shadow(-23px 66px 25px rgba(58, 63, 74, 17%))
     drop-shadow(-12px 23px 8px rgba(58, 63, 74, 10%));
   filter:
+    grayscale(100%)
+    sepia(0.3)
     drop-shadow(-23px 66px 25px rgba(58, 63, 74, 17%))
     drop-shadow(-12px 23px 8px rgba(58, 63, 74, 10%));
 }
