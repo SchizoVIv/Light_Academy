@@ -36,13 +36,18 @@
 
 .header__logo {
   width: 80px;
+  height: 74.91px;
   max-width: 100px;
   opacity: 1;
   visibility: visible;
   transition: all 0.8s;
 }
 
-
+.header__logo_hide {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
 
 /* .header__logo{
   width: 110px;
@@ -228,11 +233,6 @@
     border-radius: 50%;
     background-color: var(--font-color-light);
     border: 1px solid var(--font-color)
-  }
-
-  .header__logo_hide {
-    opacity: 0;
-    visibility: hidden;
   }
 
   .header_border {

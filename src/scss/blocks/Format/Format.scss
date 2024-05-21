@@ -51,6 +51,13 @@
       margin: 0 0 77px;
       width: 100%;
       max-width: 600px;
+
+      -webkit-filter:
+        drop-shadow(-63px -16px 30px rgba(58, 63, 74, 27%))
+        drop-shadow(-12px -3px 13px rgba(58, 63, 74, 13%));
+      filter:
+        drop-shadow(-63px -16px 30px rgba(58, 63, 74, 27%))
+        drop-shadow(-22px -13px 13px rgba(58, 63, 74, 13%));
       // box-shadow:
       //   -98px 17px 80px rgba(58, 63, 74, 7%),
       //   -37px 6px 25px rgba(58, 63, 74, 5%),
@@ -162,6 +169,19 @@
     align-self: center;
     transform: rotate(-13deg);
   }
+}
+
+.format__image-photographic {
+  width: 100%;
+  max-width: 280px;
+  transform: rotate(30deg);
+  margin: 70px 0;
+  -webkit-filter:
+    drop-shadow(-23px 66px 25px rgba(58, 63, 74, 17%))
+    drop-shadow(-12px 23px 8px rgba(58, 63, 74, 10%));
+  filter:
+    drop-shadow(-23px 66px 25px rgba(58, 63, 74, 17%))
+    drop-shadow(-12px 23px 8px rgba(58, 63, 74, 10%));
 }
 
 .format__inscription {

@@ -151,6 +151,7 @@ const conteinBorder = () => header.classList.contains('header_border')
 let x = 0
 let y = 0
 let maxY = 80
+let screenWidthOver = window.innerWidth;
 
 document.addEventListener('mousemove', function(event) {
   x = event.clientX; // Координата X курсора
@@ -159,13 +160,13 @@ document.addEventListener('mousemove', function(event) {
 
 
 // показать header после стандартной позиции при наведении мыши
-  if(y < maxY && scrollPosition() > defaultOffset) {
+  if(y < maxY && scrollPosition() > defaultOffset && conteinHide() && screenWidthOver > 991) {
     header.classList.remove('header_hide')
     header.classList.add('header_border')
-    headerLogo.classList.remove('header__logo_hide')
+    headerLogo.classList.add('header__logo_hide')
   }
 // скрыть header после стандартной позиции при наведении мыши
-  if(y > maxY && scrollPosition() > defaultOffset) {
+  if(y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidthOver > 991) {
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
@@ -182,14 +183,13 @@ window.addEventListener('scroll', () => {
   //   header.classList.remove('header_hide')
   //   header.classList.remove('header_border')
   //   headerLogo.classList.remove('header__logo_hide')
-
   // }
 
-  // if(scrollPosition() < lastScroll && conteinHide()) {
-  //   header.classList.remove('header_hide')
-  //   header.classList.add('header_border')
-  //   headerLogo.classList.add('header__logo_hide')
-  // }
+  if(scrollPosition() < lastScroll && conteinHide() && screenWidthOver < 992) {
+    header.classList.remove('header_hide')
+    header.classList.add('header_border')
+    headerLogo.classList.add('header__logo_hide')
+  }
 
   // console.log(`${scrollPosition()} \ ${defaultOffset} \ ${lastScroll} \ ${!conteinHide()}`)
 
