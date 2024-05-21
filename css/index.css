@@ -761,7 +761,7 @@ input:-webkit-autofill:focus {
   left: -40px;
   width: 100%;
   height: 100%;
-  background-image: url(../../../images/star-2.png);
+  background-image: url(../images/star-2.png);
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
@@ -1404,7 +1404,7 @@ input:-webkit-autofill:focus {
   position: absolute;
   top: 0;
   right: -78px;
-  background-image: url(../../../images/star-1.png);
+  background-image: url(../images/star-1.png);
   width: 29px;
   height: 30.5px;
   z-index: 2;
@@ -1416,7 +1416,7 @@ input:-webkit-autofill:focus {
   position: absolute;
   top: 0;
   left: -80px;
-  background-image: url(../../../images/star-1.png);
+  background-image: url(../images/star-1.png);
   width: 29px;
   height: 30.5px;
   z-index: 2;
@@ -1741,13 +1741,13 @@ input:-webkit-autofill:focus {
 .header__telegram-logo {
   width: 29px;
   height: 29px;
-  background-image: url(../../images/telegram.png);
+  background-image: url(images/telegram.png);
 }
 
 .header__whats-app-logo {
   width: 29px;
   height: 29px;
-  background-image: url(../../images/telegram.png);
+  background-image: url(images/telegram.png);
 }
 
 .header__button-container {
@@ -2463,7 +2463,7 @@ body {
   border-radius: 15.63vw 15.63vw 0 300px;
   position: relative;
   box-shadow: -22px 28px 70px rgba(58, 63, 74, 0.1), -5px 5px 11px rgba(58, 63, 74, 0.05);
-  background-image: url(../../../images/autograph.png);
+  background-image: url(../images/autograph.png);
   background-repeat: no-repeat;
   background-position: 80% 80%;
 }
@@ -2475,7 +2475,7 @@ body {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: url(../../../images/services-1.jpg);
+  background-image: url(../images/services-1.jpg);
   background-position: 0 100%;
   border-radius: 15.63vw 15.63vw 0 0;
   z-index: -1;
@@ -2504,7 +2504,7 @@ body {
   max-height: 500px;
   z-index: 2;
   transform: rotate(-5deg);
-  background-image: url(../../../images/services-2.jpg);
+  background-image: url(../images/services-2.jpg);
   background-position: 0;
   background-size: cover;
   border-radius: 0;
@@ -2748,7 +2748,7 @@ ol {
 .teachers__card:nth-child(1) {
   position: relative;
   z-index: 2;
-  background-image: url(../../../images/Christina.jpg);
+  background-image: url(../images/Christina.jpg);
   background-size: cover;
   background-position: 50%;
   box-shadow: -123px 240px 108px rgba(58, 63, 74, 0.01), -69px 135px 91px rgba(58, 63, 74, 0.15), -31px 60px 67px rgba(58, 63, 74, 0.19), -8px 15px 37px rgba(58, 63, 74, 0.2);
@@ -2757,7 +2757,7 @@ ol {
 .teachers__card:nth-child(2) {
   position: relative;
   z-index: 2;
-  background-image: url(../../../images/Juliana.jpg);
+  background-image: url(../images/Juliana.jpg);
   background-size: cover;
   background-position: 50%;
   box-shadow: -5px 11px 17px rgba(58, 63, 74, 0.25);
@@ -2766,7 +2766,7 @@ ol {
 .teachers__card:nth-child(3) {
   position: relative;
   z-index: 2;
-  background-image: url(../../../images/Sofia.jpg);
+  background-image: url(../images/Sofia.jpg);
   background-size: 150%;
   background-position: 50%;
   box-shadow: 63px 286px 117px rgba(58, 63, 74, 0.01), 35px 161px 99px rgba(58, 63, 74, 0.15), 16px 72px 73px rgba(58, 63, 74, 0.19), 4px 18px 40px rgba(58, 63, 74, 0.2);
@@ -2775,7 +2775,7 @@ ol {
 .teachers__card:nth-child(4) {
   position: relative;
   z-index: 2;
-  background-image: url(../../../images/Natalya.jpg);
+  background-image: url(../images/Natalya.jpg);
   background-size: cover;
   background-position: 50%;
   box-shadow: 51px 95px 43px rgba(58, 63, 74, 0.01), 29px 53px 36px rgba(58, 63, 74, 0.15), 13px 24px 27px rgba(58, 63, 74, 0.19), 3px 6px 15px rgba(58, 63, 74, 0.2);
@@ -2921,7 +2921,7 @@ ol {
   max-width: 600px;
   width: 25vw;
   height: 100%;
-  background-image: url(../../../images/for-popup.jpg);
+  background-image: url(../images/for-popup.jpg);
   background-position: 100%;
   border-radius: 20px 0 0 20px;
 }
@@ -3466,7 +3466,7 @@ ol {
     position: absolute;
     top: 0;
     left: -80px;
-    background-image: url(../../../images/star-1.png);
+    background-image: url(../images/star-1.png);
     width: 29px;
     height: 30.5px;
     z-index: 2;
