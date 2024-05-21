@@ -26,6 +26,41 @@
   width: 100%;
   max-width: 113px;
   height: auto;
+  position: relative;
+
+}
+.founders__stars-box {
+  grid-area: stars;
+  width: 130px;
+  height: 150px;
+  position: relative;
+  justify-self: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/star-3.png);
+    background-size: contain;
+  }
+
+  background-image: url(../images/star-3.png);
+  background-size: 55px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.founders__stars {
+  grid-area: stars-1;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/star-3.png);
+  background-size: contain;
+  margin: 100px 0 0;
+  justify-self: center;
 }
 
 .founders__box {
@@ -35,9 +70,11 @@
   grid-template-columns:  1fr 8vw 2fr 8vw 1fr;
   grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
   grid-template-areas:
+    "stars . . . ."
     ". box-text1 box-text1 . ."
     ". canyon canyon canyon ."
-    ". . box-text2 box-text2 .";
+    ". . box-text2 box-text2 ."
+    ". . . . stars-1";
 }
 
 .founder__text-name, .founder__text-role, .founder__link, .founder__text {
@@ -210,9 +247,15 @@
   .founders__box {
     grid-template-columns:  7vw 2fr 2fr 2fr 7vw;
     grid-template-areas:
+      "stars . . . ."
       ". box-text1 box-text1 . ."
       "canyon canyon canyon canyon canyon"
       ". . box-text2 box-text2 .";
+  }
+
+  .founders__stars-box {
+    margin: 0 auto 50px;
+
   }
 
   .founders__title {
