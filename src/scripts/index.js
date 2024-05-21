@@ -158,13 +158,13 @@ document.addEventListener('mousemove', function(event) {
   // console.log('X: ' + x + ', Y: ' + y);
 
 
-
+// показать header после стандартной позиции при наведении мыши
   if(y < maxY && scrollPosition() > defaultOffset) {
     header.classList.remove('header_hide')
     header.classList.add('header_border')
     headerLogo.classList.remove('header__logo_hide')
   }
-
+// скрыть header после стандартной позиции при наведении мыши
   if(y > maxY && scrollPosition() > defaultOffset) {
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
@@ -191,14 +191,16 @@ window.addEventListener('scroll', () => {
   //   headerLogo.classList.add('header__logo_hide')
   // }
 
-  console.log(`${scrollPosition()} \ ${defaultOffset} \ ${lastScroll} \ ${!conteinHide()}`)
+  // console.log(`${scrollPosition()} \ ${defaultOffset} \ ${lastScroll} \ ${!conteinHide()}`)
 
+
+  // показать header в базовой позиции при скроле
   if(scrollPosition() < lastScroll && scrollPosition() < defaultOffset) {
     header.classList.remove('header_hide')
     headerLogo.classList.remove('header__logo_hide')
     header.classList.remove('header_border')
   }
-
+// убрать header после базовой позиции при скроле
   if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
@@ -206,11 +208,11 @@ window.addEventListener('scroll', () => {
   }
 
 
+  // анимация диска
   if(screenWidth < 860 && scrollPosition() > 2745 && scrollPosition() < 2750) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  // анимация диска
   if(screenWidth < 1300 && scrollPosition() > 2155 && scrollPosition() < 2160) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
