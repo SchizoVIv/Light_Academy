@@ -5,7 +5,7 @@
 .footer__conteiner {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 100px 70px;
+  padding: 100px;
   display: flex;
   gap: 10vw;
   flex-wrap: wrap;
@@ -133,7 +133,7 @@
   transition-duration: 0.3s;
 }
 
-@media (max-width: 895px) {
+@media (max-width: 967px) {
   .footer__conteiner {
     flex-direction: column;
     text-align: center;
