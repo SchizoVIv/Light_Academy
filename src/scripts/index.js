@@ -267,19 +267,57 @@ const presentButton = document.querySelector('.advantages__button')
 const coachingButton = document.querySelector('.coaching__button')
 const coachButton = document.querySelector('.coach__button')
 
-function popupHandleClose() {
-  popup.classList.add('popup__hidden')
+function popupHandleClose(pop) {
+  pop.classList.add('popup__hidden')
 }
 
-function popupHandleOpen() {
-  popup.classList.remove('popup__hidden')
+function popupHandleOpen(pop) {
+  pop.classList.remove('popup__hidden')
 }
 
-popupButtonClose.addEventListener('click', popupHandleClose)
-academyButton.addEventListener('click', popupHandleOpen)
-presentButton.addEventListener('click', popupHandleOpen)
-coachingButton.addEventListener('click', popupHandleOpen)
-coachButton.addEventListener('click', popupHandleOpen)
+popupButtonClose.addEventListener('click', () => {
+  popupHandleClose(popup)
+})
+academyButton.addEventListener('click', () => {
+  popupHandleOpen(popup)
+})
+presentButton.addEventListener('click', () => {
+  popupHandleOpen(popup)
+})
+coachingButton.addEventListener('click', () => {
+  popupHandleOpen(popup)
+})
+coachButton.addEventListener('click', () => {
+  popupHandleOpen(popup)
+})
+
+// сертификаты
+
+const popupButtonCloseImg1 = document.querySelector('.popup-img1__button-close')
+const popupOverflowImg1 = document.querySelector('.popup-img1__overflow')
+const popupBoxImg1 = document.querySelector('.popup-img1__box')
+const popupImg1 = document.querySelector('.popup-img1')
+const founderLink = document.querySelector('.founder__link')
+
+popupButtonCloseImg1.addEventListener('click', () => {
+  popupHandleClose(popupImg1)
+})
+founderLink.addEventListener('click',  () => {
+  popupHandleOpen(popupImg1)
+})
+
+const popupButtonCloseImg2 = document.querySelector('.popup-img2__button-close')
+const popupOverflowImg2 = document.querySelector('.popup-img2__overflow')
+const popupBoxImg2 = document.querySelector('.popup-img2__box')
+const popupImg2 = document.querySelector('.popup-img2')
+const formatLink = document.querySelector('.format__certificate')
+
+popupButtonCloseImg2.addEventListener('click', () => {
+  popupHandleClose(popupImg2)
+})
+formatLink.addEventListener('click',  () => {
+  popupHandleOpen(popupImg2)
+})
 
 
 // faq
