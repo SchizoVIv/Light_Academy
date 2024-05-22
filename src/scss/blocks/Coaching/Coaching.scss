@@ -1,3 +1,49 @@
+@-webkit-keyframes drive {
+  0% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+  25% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 0);
+            transform: translate(-10%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+}
+
+@keyframes drive {
+  0% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+  25% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 0);
+            transform: translate(-10%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+}
+
 .coaching {
   max-width: 1600px;
   margin: 0 auto;
@@ -40,8 +86,6 @@
     max-width: 60vw;
   }
 }
-
-
 
 .coaching__grid-box {
   display: grid;
@@ -175,54 +219,11 @@
   gap: 10px;
 }
 
-// .coaching__button {
-//   max-width: 770px;
-//   max-height: 70px;
-//   padding: 25px 0;
-//   margin: 50px 0 0;
-//   width: 100%;
-//   border-radius: 35px;
-//   border: 1px solid var(--font-color);
-//   background-color: transparent;
-//   overflow: hidden;
-//   position: relative;
-//   font-size: 16px;
-//   font-weight: 500;
-//   transition: 300ms ease;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     z-index: -1;
-//     width: 100%;
-//     height: 100%;
-//     border-radius: 35px;
-//     background-color: var(--hover-color);
-//     top: 100%;
-//     left: 0;
-//     transition: 500ms ease;
-//   }
-
-//   &:hover {
-//     color: #fff;
-//     letter-spacing: 3px;
-//     border: 1px solid var(--hover-color);
-//   }
-
-//   &:hover::before {
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-
-// }
-
 .coaching__button {
   grid-area: button;
   max-width: 770px;
   max-height: 70px;
   padding: 25px 0;
-  // margin: 50px 0 0;
   width: 100%;
   border-radius: 35px;
   position: relative;
@@ -259,7 +260,6 @@
 
 .coaching__button:hover {
   border: 1px solid var(--hover-color);
-  // border: none;
 }
 
 .coaching__button:hover .coaching__button-text {
@@ -270,83 +270,6 @@
   visibility: visible;
   transform: scale(150) translateX(2px);
 }
-
-// .coaching__button {
-//   max-width: 770px;
-//   max-height: 70px;
-//   padding: 25px 0;
-//   margin: 50px 0 0;
-//   width: 100%;
-//   border-radius: 35px;
-//   border: 1px solid var(--font-color);
-//   background-color: transparent;
-//   overflow: hidden;
-//   position: relative;
-//   font-size: 16px;
-//   font-weight: 500;
-//   transition: 300ms ease;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     z-index: -1;
-//     width: 100%;
-//     height: 100%;
-//     border-radius: 35px;
-//     background-color: var(--hover-color);
-//     top: 100%;
-//     left: 0;
-//     transition: 500ms ease;
-//   }
-
-//   &:hover {
-//     color: #fff;
-//     letter-spacing: 3px;
-//     border: 1px solid var(--hover-color);
-//   }
-
-//   &:hover::before {
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-
-// }
-
-
-// @media (max-width: 1280px) {
-//   .coaching__title {
-//     max-width: 900px;
-//   }
-
-//   .coaching__grid-box {
-//     display: grid;
-//     grid-template-columns:  repeat(6, 1fr);
-//     grid-template-rows: repeat(auto-fill, minmax(120px, 1fr));
-//     grid-template-areas:
-//       "text1 text1 text1 wing1 text2 text2"
-//       "img2 img2 img3 img3 wing2 img1"
-//       "img2 img2 img3 img3 wing2 img1"
-//       "img2 img2 img3 img3 text3 text3"
-//       "button button button button text3 text3"
-//       ;
-//     grid-gap: 10px;
-//     justify-items: center;
-//     margin: 60px 0 0;
-//   }
-
-//   .coaching__image-box:nth-child(6), .coaching__image-box:nth-child(7) {
-//     justify-self: baseline;
-//     align-self: baseline;
-//   }
-
-//   .coaching__button {
-//     margin: 50px 0;
-//     width: 90%;
-//     justify-self: start;
-//   }
-
-// }
 
 @media (max-width: 1280px) {
   .coaching__title {
@@ -362,7 +285,7 @@
       "img2 img2 img3 img3 wing2 wing2 img1 img1"
       "img2 img2 img3 img3 text3 text3 text3 text3"
       "button button button button button button button button";
-    // grid-gap: 40px 70px;
+    grid-gap: 40px 70px;
     justify-items: center;
     margin: 60px 0 0;
   }
@@ -379,7 +302,6 @@
 }
 
 @media (max-width: 1000px) {
-
   .coaching__grid-box {
     display: grid;
     grid-template-columns:  repeat(5, 1fr);
@@ -405,17 +327,9 @@
     justify-self: baseline;
     align-self:flex-start;
   }
-
-  // .coaching__button {
-  //   margin: 50px 0;
-  //   width: 90%;
-  //   justify-self: start;
-  // }
-
 }
 
 @media (max-width: 740px) {
-
   .coaching__grid-box {
     display: grid;
     grid-template-columns:  repeat(5, 1fr);
@@ -451,11 +365,9 @@
   .coaching__wing-img:nth-child(2) {
     transform: rotate(45deg);
   }
-
 }
 
 @media (max-width: 605px) {
-
   .coaching__grid-box {
     display: grid;
     grid-template-columns:  repeat(2, 1fr);
@@ -491,6 +403,4 @@
   .coaching__wing-img:nth-child(2) {
     transform: rotate(90deg);
   }
-
 }
-

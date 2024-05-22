@@ -2,7 +2,6 @@
   margin: 287px auto 0;
   max-width: 1460px;
   width: 100%;
-  /* margin: 187px auto 0; */
 }
 
 .conteiner {
@@ -12,21 +11,23 @@
 
 .academy__title-first {
   font-family: var(--title-font), sans-serif;
-  /* font-size: clamp(1.875rem, 1.0129rem + 4.3103vw, 5rem); */
   font-size: 80px;
   font-weight: 200;
 }
 
 .academy__title-second {
   font-family: var(--accent-font), 'Times New Roman', Times, serif;
-  /* font-size: clamp(2.5rem, 1.4655rem + 5.1724vw, 6.25rem); */
   font-size: 100px;
   margin: 48px 0 0 51px;
 }
 
 .academy__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
   justify-content: center;
 }
 
@@ -34,8 +35,12 @@
   justify-content: space-between;
   max-width: 1460px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
 }
 
 .academy__button {
@@ -45,10 +50,13 @@
   border: none;
   border-right: 2px solid var(--font-color);
   position: relative;
-  display: inline-block;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: flex-end;
   transition: all 0.5s;
   margin: 30px 0 0;
 }
@@ -67,6 +75,7 @@
   left: 0;
   transition: all 0.5s;
   background: rgb(127,205,205);
+  background: -webkit-linear-gradient(0deg, rgba(127,205,205,1) 32%, rgba(45,32,25,1) 100%);
   background: linear-gradient(0deg, rgba(127,205,205,1) 32%, rgba(45,32,25,1) 100%);
 }
 
@@ -98,6 +107,7 @@
 .academy__button:hover .academy__text-button::after {
   width: 100%;
   background: rgb(127,205,205);
+  background: -webkit-linear-gradient(90deg, rgba(127,205,205,1) 24%, rgba(45,32,25,1) 100%);
   background: linear-gradient(90deg, rgba(127,205,205,1) 24%, rgba(45,32,25,1) 100%);
 }
 
@@ -108,10 +118,16 @@
 @media (max-width:900px) {
 
   .academy__box {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .academy__box-images {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 
   .academy__image {
@@ -148,4 +164,3 @@
   }
 
 }
-

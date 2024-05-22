@@ -1,20 +1,47 @@
-@keyframes drive {
+@-webkit-keyframes drive {
   0% {
-    transform: translate(-30%, 0);
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
   }
   25% {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
   50% {
-    transform: translate(-20%, 0);
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
   }
   75% {
-    transform: translate(-10%, 0);
+    -webkit-transform: translate(-10%, 0);
+            transform: translate(-10%, 0);
   }
   100% {
-    transform: translate(-30%, 0);
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
   }
+}
 
+@keyframes drive {
+  0% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+  25% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 0);
+            transform: translate(-10%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
 }
 
 .coach{
@@ -66,13 +93,6 @@
   width: 100%;
 }
 
-// .coach__scheme {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin: 100px 0 0;
-// }
-
 .coach__scheme {
   display: grid;
   grid-template-columns:  128px repeat(2, 1fr) 128px;
@@ -115,8 +135,6 @@
   width: 100%;
 }
 
-
-
 .coach__box-description {
   display: flex;
   align-items: flex-end;
@@ -156,7 +174,8 @@
 }
 
 .coach__img-car {
-  animation: drive 5s ease-in-out infinite;
+  -webkit-animation: drive 5s ease-in-out infinite;
+          animation: drive 5s ease-in-out infinite;
   align-self: flex-end;
 }
 
@@ -173,7 +192,6 @@
 }
 
 @media (max-width: 1300px) {
-
   .coach__scheme {
     display: grid;
     grid-template-columns:  10vw 1fr 10vw;
@@ -195,21 +213,16 @@
   .coach__img-car {
     width: 40vw;
     justify-self: center;
-
   }
 
   .coach__start, .coach__finish {
     width: 10vw;
   }
-
 }
 
- @media (max-width:930px) {
-
-
+@media (max-width:930px) {
   .coach__box-text {
     flex-direction: column;
-
   }
 
   .coach__button {
@@ -218,7 +231,6 @@
 }
 
 @media (max-width:800px) {
-
   .coach__scheme {
     display: grid;
     grid-template-columns:  10vw 1fr 10vw;
@@ -229,11 +241,8 @@
       "startA lineC finishB"
       "stroc2 stroc2 stroc2"
       ;
-
     margin: 100px 0 0;
   }
-
-
 
   .coach__box-request {
     flex-direction: column-reverse;
@@ -251,7 +260,6 @@
 }
 
 @media (max-width:400px) {
-
   .coach__list {
     padding: 40px 50px 40px;
   }

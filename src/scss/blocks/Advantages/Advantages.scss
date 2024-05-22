@@ -4,8 +4,10 @@
 }
 
 .advantages__conteiner {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns:  repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-areas:
     "title title ."
@@ -19,9 +21,11 @@
 
 .advantages__title {
   max-width: 1000px;
+  text-align: left;
 }
 
 .advantages__button {
+  -ms-grid-row-span: 2;
   grid-area: btn;
   grid-row: span 2;
   width: 196px;
@@ -53,7 +57,6 @@
   left: -30px;
   width: calc(100% + 60px);
   height: calc(100% + 60px);
-  // border: 1px solid black;
   border-radius: 50%;
   animation: rotate-wheel 45s linear infinite;
 }
@@ -64,7 +67,6 @@
   bottom: 50%;
   width: 0;
   transform-origin: 0% 100%;
-
 }
 
 @keyframes rotate-wheel {
@@ -83,14 +85,15 @@
   font-family: var(--main-font);
   color: var(--hover-color);
   font-weight: normal;
-  // font-size: 24px;
-
 }
 
 .advantages__card {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: baseline;
+      align-items: baseline;
   width: 100%;
   height: 100%;
   min-height: 251px;
@@ -99,6 +102,7 @@
 }
 
 .advantages__card:nth-child(3) {
+  -ms-grid-row: 2;
   grid-area: card1;
   box-shadow:
     -74px 66px 80px rgba(58, 63, 74, 7%),
@@ -107,6 +111,7 @@
 }
 
 .advantages__card:nth-child(4) {
+  -ms-grid-row: 3;
   grid-area: card2;
   box-shadow:
     -74px 66px 80px rgba(58, 63, 74, 7%),
@@ -115,6 +120,7 @@
 }
 
 .advantages__card:nth-child(5) {
+  -ms-grid-row: 4;
   grid-area: card3;
   box-shadow:
     -98px 17px 80px rgba(58, 63, 74, 7%),
@@ -123,6 +129,7 @@
 }
 
 .advantages__card:nth-child(6) {
+  -ms-grid-row: 5;
   grid-area: card4;
   box-shadow:
     0px 100px 80px rgba(58, 63, 74, 7%),
@@ -147,7 +154,8 @@
 
 @media (max-width: 1000px) {
   .advantages__conteiner {
-    grid-template-columns:  repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "title title"
       "card1 card3"
@@ -164,8 +172,9 @@
 
 @media (max-width: 700px) {
   .advantages__conteiner {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows:  repeat(auto-fill, minmax(51px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(51px, 1fr));
     grid-template-areas:
       "title"
       "card1"
@@ -187,7 +196,6 @@
 
   .advantages__wheel-content {
     padding: 0 0 100px;
-
   }
 }
 
