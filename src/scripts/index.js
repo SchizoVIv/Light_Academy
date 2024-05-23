@@ -237,21 +237,21 @@ window.addEventListener('scroll', () => {
 
 
   // анимация диска
-  if(screenWidth < 860 && scrollPosition() > 2745 && scrollPosition() < 2750) {
+  if(screenWidth < 860 && scrollPosition() > 2740 && scrollPosition() < 2790) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  if(screenWidth < 1300 && scrollPosition() > 2155 && scrollPosition() < 2160) {
-    requestsDisk.classList.add('requests__disk_anim')
-    requestsCard.classList.add('requests__card_anim')
-  }
-
-  if(screenWidth < 1240 && scrollPosition() > 1930 && scrollPosition() < 1940) {
+  if(screenWidth < 1300 && scrollPosition() > 2150 && scrollPosition() < 2200) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
 
-  if(screenWidth > 1000 && scrollPosition() > 2500 && scrollPosition() < 2510) {
+  if(screenWidth < 1240 && scrollPosition() > 1930 && scrollPosition() < 1970) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+
+  if(screenWidth > 1000 && scrollPosition() > 2500 && scrollPosition() < 2600) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
