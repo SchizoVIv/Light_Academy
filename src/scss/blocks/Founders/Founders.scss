@@ -212,6 +212,7 @@
 
   & > .founder__block-about {
     min-width: 200px;
+    margin: 0 0 0 30px;
   }
 }
 
@@ -250,7 +251,8 @@
       "stars . . . ."
       ". box-text1 box-text1 . ."
       "canyon canyon canyon canyon canyon"
-      ". . box-text2 box-text2 .";
+      ". . box-text2 box-text2 ."
+      ". . . . stars-1";
   }
 
   .founders__stars-box {
@@ -281,15 +283,25 @@
   .founders__box {
     grid-template-columns:  7vw 2fr 2fr 2fr 7vw;
     grid-template-areas:
+      "stars . . . ."
       "box-text1 box-text1 box-text1 . ."
       "canyon canyon canyon canyon canyon"
-      ". . box-text2 box-text2 box-text2";
+      ". . box-text2 box-text2 box-text2"
+      ". . . . stars-1";
   }
 
   .founder__block-text {
     flex-direction: column;
   }
 
+  .founders__logo {
+    margin: 50px auto 0;
+  }
+
+
+  .founder__block-text:nth-child(3) > .founder__block-about {
+    margin: 0;
+  }
   .founder__block-text:nth-child(3) {
 
     & > .founder__image {
@@ -302,12 +314,25 @@
   .founders__box {
     grid-template-columns:  1fr;
     grid-template-areas:
+      "stars"
       "found1"
       "box-text1"
       "canyon"
       "found2"
-      "box-text2";
+      "box-text2"
+      "stars-1";
     margin: 0 30px 0;
+  }
+
+  .founders__stars-box {
+    margin: 30px 0;
+    justify-self: start;
+    margin-left: 30px;
+  }
+
+  .founders__stars {
+    justify-self:end;
+    margin-right: 30px;
   }
 
   .founders__logo {
