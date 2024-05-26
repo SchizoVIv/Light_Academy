@@ -258,17 +258,8 @@
   z-index: -1;
 }
 
-.coaching__button:hover {
-  border: 1px solid var(--hover-color);
-}
-
-.coaching__button:hover .coaching__button-text {
-  color: var(--font-color-light);
-}
-
-.type1:hover::after {
-  visibility: visible;
-  transform: scale(150) translateX(2px);
+.coaching__button:active {
+  transform: scale(0.8);
 }
 
 @media (max-width: 1280px) {
@@ -326,6 +317,21 @@
   .coaching__image-box:nth-child(7) {
     justify-self: baseline;
     align-self:flex-start;
+  }
+}
+
+@media (min-width:993px) {
+  .coaching__button:hover {
+    border: 1px solid var(--hover-color);
+  }
+
+  .coaching__button:hover .coaching__button-text {
+    color: var(--font-color-light);
+  }
+
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(150) translateX(2px);
   }
 }
 

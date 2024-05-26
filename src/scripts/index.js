@@ -122,6 +122,7 @@ function disableScroll() {
   document.body.style.position = 'fixed';
   document.body.style.top = `-${scrollY}px`;
   document.body.style.width = '100%';
+
 }
 
 function enableScroll() {
@@ -161,6 +162,17 @@ anchorMenu.addEventListener('click', function(event) {
   }
 });
 
+//
+
+const popupButtonClose = document.querySelector('.popup__button-close')
+const popupOverflow = document.querySelector('.popup__overflow')
+const popupBox = document.querySelector('.popup__box')
+const popup = document.querySelector('.popup')
+const academyButton = document.querySelector('.academy__button')
+const presentButton = document.querySelector('.advantages__button')
+const coachingButton = document.querySelector('.coaching__button')
+const coachButton = document.querySelector('.coach__button')
+
 // липкое меню
 
 const header = document.querySelector('.header')
@@ -195,6 +207,7 @@ document.addEventListener('mousemove', function(event) {
   }
 // скрыть header после стандартной позиции при наведении мыши
   if(y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidthOver > 991) {
+    console.log(1)
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
@@ -204,14 +217,6 @@ document.addEventListener('mousemove', function(event) {
 
 
 window.addEventListener('scroll', () => {
-  // console.log(`${scrollPosition()} \ ${lastScroll}`)
-
-
-  // if(scrollPosition() < lastScroll && conteinBorder() && scrollPosition() < defaultOffset) {
-  //   header.classList.remove('header_hide')
-  //   header.classList.remove('header_border')
-  //   headerLogo.classList.remove('header__logo_hide')
-  // }
 
   if(scrollPosition() < lastScroll && conteinHide() && screenWidthOver < 992) {
     header.classList.remove('header_hide')
@@ -219,17 +224,21 @@ window.addEventListener('scroll', () => {
     headerLogo.classList.add('header__logo_hide')
   }
 
-  // console.log(`${scrollPosition()} \ ${defaultOffset} \ ${lastScroll} \ ${!conteinHide()}`)
-
 
   // показать header в базовой позиции при скроле
-  if(scrollPosition() < lastScroll && scrollPosition() < defaultOffset) {
+  if(scrollPosition() < lastScroll
+  && scrollPosition() < defaultOffset
+  && lastScroll < 201
+  && conteinHide()) {
+    console.log(`${scrollPosition()} \ ${defaultOffset} \ ${document.body.style.top} \ ${lastScroll}`)
     header.classList.remove('header_hide')
     headerLogo.classList.remove('header__logo_hide')
     header.classList.remove('header_border')
   }
-// убрать header после базовой позиции при скроле
+
+  // убрать header после базовой позиции при скроле
   if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
+    console.log(2)
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
@@ -286,36 +295,42 @@ burgerButton.addEventListener('click', hendleOpenMenu)
 
 // window
 
-const popupButtonClose = document.querySelector('.popup__button-close')
-const popupOverflow = document.querySelector('.popup__overflow')
-const popupBox = document.querySelector('.popup__box')
-const popup = document.querySelector('.popup')
-const academyButton = document.querySelector('.academy__button')
-const presentButton = document.querySelector('.advantages__button')
-const coachingButton = document.querySelector('.coaching__button')
-const coachButton = document.querySelector('.coach__button')
+// const popupButtonClose = document.querySelector('.popup__button-close')
+// const popupOverflow = document.querySelector('.popup__overflow')
+// const popupBox = document.querySelector('.popup__box')
+// const popup = document.querySelector('.popup')
+// const academyButton = document.querySelector('.academy__button')
+// const presentButton = document.querySelector('.advantages__button')
+// const coachingButton = document.querySelector('.coaching__button')
+// const coachButton = document.querySelector('.coach__button')
 
-function popupHandleClose(pop) {
+function popupHandleClose(pop, overflow) {
   enableScroll()
   pop.classList.add('popup__hidden')
+  overflow.classList.remove('overflow-active')
 }
 
-function popupHandleOpen(pop) {
+function popupHandleOpen(pop, overflow) {
   disableScroll()
+  console.log(lastScroll)
   pop.classList.remove('popup__hidden')
+  overflow.classList.add('overflow-active')
 }
 
 popupButtonClose.addEventListener('click', () => {
-  popupHandleClose(popup)
+  popupHandleClose(popup, popupOverflow)
+})
+popupOverflow.addEventListener('click', () => {
+  popupHandleClose(popup, popupOverflow)
 })
 academyButton.addEventListener('click', () => {
-  popupHandleOpen(popup)
+  popupHandleOpen(popup, popupOverflow)
 })
 presentButton.addEventListener('click', () => {
-  popupHandleOpen(popup)
+  popupHandleOpen(popup, popupOverflow)
 })
 coachingButton.addEventListener('click', () => {
-  popupHandleOpen(popup)
+  popupHandleOpen(popup, popupOverflow)
 })
 coachButton.addEventListener('click', () => {
   popupHandleOpen(popup)
@@ -330,10 +345,13 @@ const popupImg1 = document.querySelector('.popup-img1')
 const founderLink = document.querySelector('.founder__link')
 
 popupButtonCloseImg1.addEventListener('click', () => {
-  popupHandleClose(popupImg1)
+  popupHandleClose(popupImg1, popupOverflowImg1)
+})
+popupOverflowImg1.addEventListener('click', () => {
+  popupHandleClose(popupImg1, popupOverflowImg1)
 })
 founderLink.addEventListener('click',  () => {
-  popupHandleOpen(popupImg1)
+  popupHandleOpen(popupImg1, popupOverflowImg1)
 })
 
 const popupButtonCloseImg2 = document.querySelector('.popup-img2__button-close')
@@ -343,10 +361,13 @@ const popupImg2 = document.querySelector('.popup-img2')
 const formatLink = document.querySelector('.format__certificate')
 
 popupButtonCloseImg2.addEventListener('click', () => {
-  popupHandleClose(popupImg2)
+  popupHandleClose(popupImg2, popupOverflowImg2)
+})
+popupOverflowImg2.addEventListener('click', () => {
+  popupHandleClose(popupImg2, popupOverflowImg2)
 })
 formatLink.addEventListener('click',  () => {
-  popupHandleOpen(popupImg2)
+  popupHandleOpen(popupImg2, popupOverflowImg2)
 })
 
 
@@ -414,22 +435,37 @@ const servicesTextList = document.querySelectorAll('.services__item-text')
 
 
 servicesTextList.forEach((textItem, index) => {
-  textItem.addEventListener('mouseover', () => {
-    const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
-    servicesTooltipList.forEach((tooltipItem, i) => {
-      if(i === index) {
-        tooltipItem.classList.add('services__item-tooltip_active')
-      }
+  if(screenWidthOver > 992) {
+    console.log('pc')
+    textItem.addEventListener('mouseover', () => {
+      const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+      servicesTooltipList.forEach((tooltipItem, i) => {
+        if(i === index) {
+          tooltipItem.classList.add('services__item-tooltip_active')
+        }
+      })
     })
-  })
-  textItem.addEventListener('mouseout', () => {
-    const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
-    servicesTooltipList.forEach((tooltipItem, i) => {
-      if(i === index) {
-        tooltipItem.classList.remove('services__item-tooltip_active')
-      }
+    textItem.addEventListener('mouseout', () => {
+      const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+      servicesTooltipList.forEach((tooltipItem, i) => {
+        if(i === index) {
+          tooltipItem.classList.remove('services__item-tooltip_active')
+        }
+      })
     })
-  })
+  } else {
+    console.log('mob')
+    textItem.addEventListener('click', () => {
+      const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+      servicesTooltipList.forEach((tooltipItem, i) => {
+        if(i === index && !tooltipItem.classList.contains('services__item-tooltip_active')) {
+          tooltipItem.classList.add('services__item-tooltip_active')
+        } else if(tooltipItem.classList.contains('services__item-tooltip_active')) {
+          tooltipItem.classList.remove('services__item-tooltip_active')
+        }
+      })
+    })
+  }
 })
 
 // кнопка круг
@@ -462,3 +498,66 @@ const rotateBetweenLetters = (value) => {
 
 rotateBetweenWords(10)
 rotateBetweenLetters(5)
+
+
+// открытие карточки при нажатии
+
+const cardsList = document.querySelectorAll('.teachers__card')
+
+function handleClick(el, i, index, classL, classR) {
+    if(index === i && index === 0){
+      return el.classList.add(classL)
+    }
+    if(index === i && index === 2){
+      return el.classList.add(classL)
+    }
+    if(index === i && index === 1){
+      return el.classList.add(classR)
+    }
+    if(index === i && index === 3){
+      return el.classList.add(classR)
+    }
+}
+
+cardsList.forEach((card, index) => {
+  card.addEventListener('click', () => {
+    const fotoList = document.querySelectorAll('.teachers__foto')
+    const contentList = document.querySelectorAll('.teachers__content')
+
+
+    fotoList.forEach((el, i) => {
+      if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
+        console.log('add')
+        handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
+      } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
+        console.log('rem')
+        if(el.classList.contains('teachers__card_open-left')){
+          return el.classList.remove('teachers__card_open-left')
+        }
+        if(el.classList.contains('teachers__card_open-right')){
+          return el.classList.remove('teachers__card_open-right')
+        }
+      }
+
+
+    })
+
+    contentList.forEach((el, i) => {
+      if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
+        console.log('add')
+        handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
+      } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
+        console.log('rem')
+        if(el.classList.contains('teachers__card_open-left')){
+          return el.classList.remove('teachers__card_open-left')
+        }
+        if(el.classList.contains('teachers__card_open-right')){
+          return el.classList.remove('teachers__card_open-right')
+        }
+      }
+    })
+
+
+  })
+})
+

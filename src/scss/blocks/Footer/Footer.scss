@@ -46,11 +46,6 @@
   transition: all 0.5s ease;
 }
 
-.icon:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .footer__list-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,22 +128,6 @@
   fill: var(--font-color);
 }
 
-.button:hover {
-  width: 140px;
-  border-radius: 50px;
-  transition-duration: 0.3s;
-  background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.button:hover .svgIcon {
-  transition-duration: 0.3s;
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
-}
-
 .button::before {
   position: absolute;
   bottom: -20px;
@@ -157,11 +136,34 @@
   font-size: 0px;
 }
 
-.button:hover::before {
-  font-size: 13px;
-  opacity: 1;
-  bottom: unset;
-  transition-duration: 0.3s;
+@media (min-width:993px) {
+  .icon:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  .button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .button:hover .svgIcon {
+    transition-duration: 0.3s;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+
+  .button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+  }
 }
 
 @media (max-width: 967px) {

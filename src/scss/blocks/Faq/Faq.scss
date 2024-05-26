@@ -55,9 +55,10 @@
 }
 
 .faq__question {
-  padding: 14px 0 14px 50px;
+  padding: 14px 0 14px 20px;
   border-bottom: 1px solid #988C83;
   position: relative;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {

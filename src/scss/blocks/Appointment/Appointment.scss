@@ -57,6 +57,7 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  cursor: pointer;
 }
 
 input:-webkit-autofill,
@@ -107,24 +108,13 @@ input:-webkit-autofill:focus {
           transform: scale(0.96);
 }
 
-.appointment__button:hover {
-  background-color: var(--hover-color);
-  color: var(--font-color-light);
-}
-
 .appointment__button[disabled],
-.appointment__button[disabled]:hover,
 .appointment__button[disabled]:active {
   color: rgb(171, 171, 171);
   cursor: auto;
   background-color: var(--card-color);
   -webkit-transform: scale(1);
           transform: scale(1);
-}
-
-.appointment__button[disabled]:hover:before,
-.appointment__button[disabled]:hover::after {
-  display: none;
 }
 
 .appointment__button:before,
@@ -218,5 +208,25 @@ input:-webkit-autofill:focus {
   max-width: 380px;
   text-align: center;
   margin: 0 auto;
+}
+
+@media (min-width:993px) {
+  .appointment__button:hover {
+    background-color: var(--hover-color);
+    color: var(--font-color-light);
+  }
+
+  .appointment__button[disabled]:hover {
+    color: rgb(171, 171, 171);
+    cursor: auto;
+    background-color: var(--card-color);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .appointment__button[disabled]:hover:before,
+  .appointment__button[disabled]:hover::after {
+    display: none;
+  }
 }
 

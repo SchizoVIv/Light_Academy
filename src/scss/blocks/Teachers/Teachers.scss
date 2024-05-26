@@ -26,27 +26,6 @@
   background-color: var(--card-color);
   z-index: 2;
 
-  &:hover .teachers__foto {
-    // opacity: 0;
-    // width: 0%;
-    transform: rotateY(-90deg);
-    // transform: translate(100% 0);
-  }
-
-  &:hover .teachers__content {
-    transform: rotateY(-90deg);
-    // transform: translate(100% 0);
-  }
-
-  &:hover .teachers__content_rotate_right {
-    transform: rotateY(90deg);
-    transform-origin: right;
-  }
-  &:hover .teachers__foto-juliana {
-    transform: rotateY(90deg);
-    transform-origin: right;
-  }
-
   &:nth-child(1) {
     position: relative;
     z-index: 2;
@@ -145,7 +124,7 @@
   transform-origin: right;
 }
 
-.teachers__content_rotate_right {
+.teachers__content_rotate_right, .teachers__foto-natali {
   transform-origin: right;
 }
 
@@ -153,8 +132,38 @@
   border-radius: 0 342px 0 0;
 }
 
+.teachers__card_open-right {
+  transform: rotateY(90deg);
+  transform-origin: right;
+}
+
+.teachers__card_open-left {
+  transform: rotateY(-90deg);
+}
+
 
 
 .teachers__text {
   margin: 50px 0 0;
+}
+
+@media (min-width:993px) {
+  .teachers__card {
+    &:hover .teachers__foto {
+      transform: rotateY(-90deg);
+    }
+
+    &:hover .teachers__content {
+      transform: rotateY(-90deg);
+    }
+
+    &:hover .teachers__content_rotate_right {
+      transform: rotateY(90deg);
+      transform-origin: right;
+    }
+    &:hover .teachers__foto-juliana {
+      transform: rotateY(90deg);
+      transform-origin: right;
+    }
+  }
 }
