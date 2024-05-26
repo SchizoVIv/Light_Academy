@@ -519,45 +519,46 @@ function handleClick(el, i, index, classL, classR) {
     }
 }
 
-cardsList.forEach((card, index) => {
-  card.addEventListener('click', () => {
-    const fotoList = document.querySelectorAll('.teachers__foto')
-    const contentList = document.querySelectorAll('.teachers__content')
+if(screenWidthOver < 993) {
+  cardsList.forEach((card, index) => {
+    card.addEventListener('click', () => {
+      const fotoList = document.querySelectorAll('.teachers__foto')
+      const contentList = document.querySelectorAll('.teachers__content')
+
+      fotoList.forEach((el, i) => {
+        if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
+          console.log('add')
+          handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
+        } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
+          console.log('rem')
+          if(el.classList.contains('teachers__card_open-left')){
+            return el.classList.remove('teachers__card_open-left')
+          }
+          if(el.classList.contains('teachers__card_open-right')){
+            return el.classList.remove('teachers__card_open-right')
+          }
+        }
 
 
-    fotoList.forEach((el, i) => {
-      if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
-        console.log('add')
-        handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
-      } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
-        console.log('rem')
-        if(el.classList.contains('teachers__card_open-left')){
-          return el.classList.remove('teachers__card_open-left')
+      })
+
+      contentList.forEach((el, i) => {
+        if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
+          console.log('add')
+          handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
+        } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
+          console.log('rem')
+          if(el.classList.contains('teachers__card_open-left')){
+            return el.classList.remove('teachers__card_open-left')
+          }
+          if(el.classList.contains('teachers__card_open-right')){
+            return el.classList.remove('teachers__card_open-right')
+          }
         }
-        if(el.classList.contains('teachers__card_open-right')){
-          return el.classList.remove('teachers__card_open-right')
-        }
-      }
+      })
 
 
     })
-
-    contentList.forEach((el, i) => {
-      if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
-        console.log('add')
-        handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
-      } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
-        console.log('rem')
-        if(el.classList.contains('teachers__card_open-left')){
-          return el.classList.remove('teachers__card_open-left')
-        }
-        if(el.classList.contains('teachers__card_open-right')){
-          return el.classList.remove('teachers__card_open-right')
-        }
-      }
-    })
-
-
   })
-})
+}
 
