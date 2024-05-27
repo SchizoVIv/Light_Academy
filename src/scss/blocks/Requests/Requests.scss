@@ -317,9 +317,14 @@
     height: 400px;
   }
 
+  .requests__disk {
+    bottom: 10px;
+  }
+
 }
 
 @media (max-width: 900px) {
+
 
   .requests {
     padding: 114px 0 200px;

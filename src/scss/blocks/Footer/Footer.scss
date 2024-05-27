@@ -166,7 +166,7 @@
   }
 }
 
-@media (max-width: 967px) {
+@media (max-width: 1030px) {
   .footer__conteiner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -179,6 +179,9 @@
     align-self: center;
   }
 
+}
+
+@media (max-width: 700px) {
   .footer__button-box {
     position: static;
     margin: 20px 0;
