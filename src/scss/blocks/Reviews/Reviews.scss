@@ -76,6 +76,10 @@
   grid-area: stars;
 }
 
+.reviews__star-item {
+  width: 29px;
+}
+
 .reviews__foto {
   margin: 0 25px 0 0;
   border-radius: 50%;
@@ -350,7 +354,7 @@
     display: none;
     animation: none;
   }
-  
+
 }
 
 @media (max-width:480px) {
