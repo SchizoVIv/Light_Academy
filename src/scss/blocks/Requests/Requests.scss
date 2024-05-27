@@ -410,5 +410,9 @@
   .requests__disk {
     bottom: -50%;
     right: 0;
+    animation: none;
+  }
+  .requests__disk_anim {
+    animation: none;
   }
 }

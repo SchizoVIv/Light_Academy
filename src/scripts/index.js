@@ -312,8 +312,8 @@ window.addEventListener('scroll', () => {
     requestsCard.classList.add('requests__card_anim')
   }
   if(screenWidthOver < 500 && scrollPosition() > 2350 && scrollPosition() < 2500) {
-    requestsDisk.classList.add('requests__disk_anim')
-    requestsCard.classList.add('requests__card_anim')
+    requestsDisk.classList.remove('requests__disk_anim')
+    requestsCard.classList.remove('requests__card_anim')
   }
 
   lastScroll = scrollPosition()
