@@ -61,6 +61,8 @@ inputs.forEach(function(input, index) {
 });
 
 
+// 2ой слайдер
+
 const buttonPrev = document.querySelector('.swiper-button-prev')
 const buttonNext = document.querySelector('.swiper-button-next')
 
@@ -107,6 +109,10 @@ function vinilAnimationRunNext() {
 
 buttonPrev.addEventListener('click', vinilAnimationRunPrev)
 buttonNext.addEventListener('click', vinilAnimationRunNext)
+
+
+
+
 
 // faq
 
@@ -644,68 +650,20 @@ if(screenWidthOver < 993) {
   })
 }
 
-
-// отзывы
-
-// const sliderList = document.querySelectorAll('.slider__nav');
-// const SliderInner = document.querySelector('.slider__inner')
-
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   var slider = document.querySelector('.reviews');
-//   var startX, startY, dist, threshold = 150; // минимальное расстояние для свайпа
-//   console.log('11111')
-
-//   slider.addEventListener('touchstart', function (e) {
-//       var touchobj = e.changedTouches[0];
-//       startX = touchobj.clientX;
-//       startY = touchobj.clientY;
-//   }, false);
-
-//   slider.addEventListener('touchmove', function (e) {
-//       e.preventDefault(); // отключаем скроллинг страницы при свайпе
-//   }, false);
-
-//   slider.addEventListener('touchend', function (e) {
-//       var touchobj = e.changedTouches[0];
-//       dist = touchobj.clientX - startX; // получаем дистанцию свайпа
-//       console.log('rrrrr')
-
-//       if (Math.abs(dist) >= threshold) { // если дистанция больше порога
-//           if (dist > 0) {
-//               // свайп вправо, переключаемся на предыдущую карточку
-//               goToPrevSlide();
-//           } else {
-//               // свайп влево, переключаемся на следующую карточку
-//               goToNextSlide();
-//           }
-//       }
-//   }, false);
-
-//   function goToPrevSlide() {
-//     console.log('prev')
-//   }
-
-//   function goToNextSlide() {
-//     console.log('next')
-//   }
-// });
-
-
 //
 
-// const swiper = new Swiper('.sample-slider', {
-//   loop: true,
-//   // autoplay: {
-//   //   delay: 2000,
-//   // },
-//   navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-// },
-// })
+const swiper = new Swiper('.sample-slider', {
+  loop: true,
+  // autoplay: {
+  //   delay: 2000,
+  // },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: '.swiper-pagination',
+},
+  freeMode: true,
+})
 
