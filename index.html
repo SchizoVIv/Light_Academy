@@ -30,9 +30,6 @@
               <a class="header__link link-hover" href="#advantages">Преимущества</a>
             </li>
             <li class="header__nav-link">
-              <a class="header__link link-hover" href="#coaching">Коучинговый английский</a>
-            </li>
-            <li class="header__nav-link">
               <a class="header__link link-hover" href="#founders">Наша команда</a>
             </li>
             <li class="header__nav-link">
@@ -42,9 +39,20 @@
               <a class="header__link link-hover" href="#reviews">Отзывы</a>
             </li>
             <li class="header__nav-link">
+              <a class="header__link link-hover" href="#coaching">Коучинговый английский</a>
+            </li>
+            <li class="header__nav-link">
+              <a class="header__link link-hover" href="#coach">Работа с коучем</a>
+            </li>
+            <li class="header__nav-link">
+              <a class="header__link link-hover" href="#faq">FAQ</a>
+            </li>
+            <li class="header__nav-link">
               <a class="header__link link-hover" href="#footer">Контакты</a>
             </li>
         </ul>
+
+
         <ul class="header__contacts">
             <li class="header__item">
               <a class="header__telegram-link" href="https://t.me/light_english_admin" target="_blank">
@@ -245,6 +253,11 @@
         <p class="coaching__text">Сессия с коучем Академии входит в обучение.</p>
         <p class="coaching__text">*У вас есть возможность взять личную работу с коучем помимо обучения.</p>
       </div>
+      <!-- <a class="coaching__button-link" href="#appointment">
+        <button class="coaching__button type1">
+          <p class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</p>
+        </button>
+      </a> -->
       <button class="coaching__button type1">
         <p class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</p>
       </button>
@@ -509,7 +522,9 @@
       </div>
       <img class="coach__finish" src="./images/B.png" alt="Пункт В - финиш">
     </div>
+
     <button class="coach__button">Записаться на работу с Коучем</button>
+    
   </div>
 </section>
 
@@ -870,6 +885,7 @@
     <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
     <select class="appointment__select" id="option" name="option" required>
       <option class="appointment__option" value="consultation">Консультация</option>
+      <option class="appointment__option" value="course1">Хочу подарок</option>
       <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
       <option class="appointment__option" value="course2">Интересует курс Light English</option>
       <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
@@ -974,6 +990,7 @@
     <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
     <select class="appointment__select" id="option" name="option" required>
       <option class="appointment__option" value="consultation">Консультация</option>
+      <option class="appointment__option" value="course1">Хочу подарок</option>
       <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
       <option class="appointment__option" value="course2">Интересует курс Light English</option>
       <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
@@ -1006,7 +1023,7 @@
 
 
     </main>
-    <footer class="footer" id="footer">
+    <footer class="footer">
   <div class="footer__conteiner conteiner">
     <img class="footer__logo" src="./images/logo.png" alt="Логотип академии">
     <nav class="footer__nav-box">
@@ -1047,7 +1064,7 @@
       </ul>
     </nav>
     <div>
-      <ul class="footer__list-contact">
+      <ul class="footer__list-contact" id="footer">
         <li class="footer__item-contact">
           <img class="icon-size" src="./images/telegram.png" alt="Иконка телеграм">
           <div class="footer__text-contact">
