@@ -178,6 +178,10 @@
   .footer__logo {
     align-self: center;
   }
+
+  .footer__button-box {
+    position: relative;
+  }
 }
 
 @media (max-width: 400px) {
@@ -189,4 +193,6 @@
     text-align: center;
     padding: 100px 0;
   }
+
+
 }
