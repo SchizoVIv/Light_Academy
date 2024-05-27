@@ -180,7 +180,8 @@
   }
 
   .footer__button-box {
-    position: relative;
+    position: static;
+    margin: 20px 0;
   }
 }
 
