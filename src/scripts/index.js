@@ -24,8 +24,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 //
 
-const sliderList = document.querySelectorAll('.slider__nav');
-const cardList = document.querySelectorAll('.reviews__images');
+// const sliderList = document.querySelectorAll('.slider__nav');
+// const cardList = document.querySelectorAll('.reviews__images');
 
 // sliderList.forEach(function(element) {
 //   element.addEventListener('click', function() {
@@ -60,6 +60,53 @@ inputs.forEach(function(input, index) {
   });
 });
 
+
+const buttonPrev = document.querySelector('.swiper-button-prev')
+const buttonNext = document.querySelector('.swiper-button-next')
+
+function vinilAnimationRunPrev() {
+  const imagesBlocks = document.querySelectorAll('.reviews__images');
+  const slidesList = document.querySelectorAll('.swiper-slide');
+
+  slidesList.forEach((elem, index) => {
+    if(elem.classList.contains('swiper-slide-prev')) {
+      imagesBlocks.forEach((el, i) => {
+        if(index === i) {
+          console.log(`index ${index} \ i ${i}`)
+          el.classList.remove('reviews__images_off');
+          el.classList.add('reviews__images_on');
+        } else {
+          el.classList.remove('reviews__images_on');
+          // el.classList.add('reviews__images_off');
+        }
+      })
+    }
+  })
+}
+
+function vinilAnimationRunNext() {
+  const imagesBlocks = document.querySelectorAll('.reviews__images');
+  const slidesList = document.querySelectorAll('.swiper-slide');
+
+
+  slidesList.forEach((elem, index) => {
+    if(elem.classList.contains('swiper-slide-next')) {
+      imagesBlocks.forEach((el, i) => {
+        if(index === i) {
+          console.log(`index ${index} \ i ${i}`)
+          el.classList.remove('reviews__images_off');
+          el.classList.add('reviews__images_on');
+        } else {
+          el.classList.remove('reviews__images_on');
+          // el.classList.add('reviews__images_off');
+        }
+      })
+    }
+  })
+}
+
+buttonPrev.addEventListener('click', vinilAnimationRunPrev)
+buttonNext.addEventListener('click', vinilAnimationRunNext)
 
 // faq
 
@@ -208,7 +255,6 @@ document.addEventListener('mousemove', function(event) {
   }
 // скрыть header после стандартной позиции при наведении мыши
   if(y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidthOver > 991) {
-    console.log(1)
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
@@ -223,7 +269,7 @@ window.addEventListener('scroll', () => {
   // console.log(`ширина ${screenWidthOver}`)
 
 
-  console.log(`lastScroll ${lastScroll}`)
+  // console.log(`lastScroll ${lastScroll}`)
 
 
 // мобильная версия показывать header при скроле
@@ -233,7 +279,6 @@ window.addEventListener('scroll', () => {
     && scrollPosition() > 301
     && lastScroll > 301
     ) {
-    console.log(lastScroll)
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
     headerLogo.classList.add('header__logo_hide')
@@ -244,7 +289,6 @@ window.addEventListener('scroll', () => {
     && scrollPosition() < 301
     && lastScroll < 301
     ) {
-    console.log(lastScroll)
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
     headerLogo.classList.remove('header__logo_hide')
@@ -256,7 +300,6 @@ window.addEventListener('scroll', () => {
   && scrollPosition() < defaultOffset
   && lastScroll < 201
   && conteinHide()) {
-    console.log(`${scrollPosition()} \ ${defaultOffset} \ ${document.body.style.top} \ ${lastScroll}`)
     header.classList.remove('header_hide')
     headerLogo.classList.remove('header__logo_hide')
     header.classList.remove('header_border')
@@ -264,7 +307,6 @@ window.addEventListener('scroll', () => {
 
   // убрать header после базовой позиции при скроле
   if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
-    console.log(2)
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
@@ -356,12 +398,9 @@ function popupHandleOpen(pop, overflow, e) {
   disableScroll()
   pop.classList.remove('popup__hidden')
   overflow.classList.add('overflow-active')
-  console.log(e.classList)
   if(e.classList.contains('advantages__wheel') || e.classList.contains('advantages__button') || e.classList.contains('advantages__wheel-content') || e.classList.contains('advantages__wheel-inner')) {
-    console.log('ok')
     popupTitle.textContent = 'Заполни форму и получи подарок!';
   } else {
-    console.log('no ok')
     popupTitle.textContent = 'Запишитесь на консультацию';
   }
 }
@@ -485,7 +524,6 @@ const servicesTextList = document.querySelectorAll('.services__item-text')
 
 servicesTextList.forEach((textItem, index) => {
   if(screenWidthOver > 992) {
-    console.log('pc')
     textItem.addEventListener('mouseover', () => {
       const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
       servicesTooltipList.forEach((tooltipItem, i) => {
@@ -503,7 +541,6 @@ servicesTextList.forEach((textItem, index) => {
       })
     })
   } else {
-    console.log('mob')
     textItem.addEventListener('click', () => {
       const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
       servicesTooltipList.forEach((tooltipItem, i) => {
@@ -576,10 +613,8 @@ if(screenWidthOver < 993) {
 
       fotoList.forEach((el, i) => {
         if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
-          console.log('add')
           handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
         } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
-          console.log('rem')
           if(el.classList.contains('teachers__card_open-left')){
             return el.classList.remove('teachers__card_open-left')
           }
@@ -593,10 +628,8 @@ if(screenWidthOver < 993) {
 
       contentList.forEach((el, i) => {
         if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
-          console.log('add')
           handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
         } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
-          console.log('rem')
           if(el.classList.contains('teachers__card_open-left')){
             return el.classList.remove('teachers__card_open-left')
           }
@@ -610,4 +643,69 @@ if(screenWidthOver < 993) {
     })
   })
 }
+
+
+// отзывы
+
+// const sliderList = document.querySelectorAll('.slider__nav');
+// const SliderInner = document.querySelector('.slider__inner')
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var slider = document.querySelector('.reviews');
+  var startX, startY, dist, threshold = 150; // минимальное расстояние для свайпа
+  console.log('11111')
+
+  slider.addEventListener('touchstart', function (e) {
+      var touchobj = e.changedTouches[0];
+      startX = touchobj.clientX;
+      startY = touchobj.clientY;
+  }, false);
+
+  slider.addEventListener('touchmove', function (e) {
+      e.preventDefault(); // отключаем скроллинг страницы при свайпе
+  }, false);
+
+  slider.addEventListener('touchend', function (e) {
+      var touchobj = e.changedTouches[0];
+      dist = touchobj.clientX - startX; // получаем дистанцию свайпа
+      console.log('rrrrr')
+
+      if (Math.abs(dist) >= threshold) { // если дистанция больше порога
+          if (dist > 0) {
+              // свайп вправо, переключаемся на предыдущую карточку
+              goToPrevSlide();
+          } else {
+              // свайп влево, переключаемся на следующую карточку
+              goToNextSlide();
+          }
+      }
+  }, false);
+
+  function goToPrevSlide() {
+    console.log('prev')
+  }
+
+  function goToNextSlide() {
+    console.log('next')
+  }
+});
+
+
+//
+
+const swiper = new Swiper('.sample-slider', {
+  loop: true,
+  // autoplay: {
+  //   delay: 2000,
+  // },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: '.swiper-pagination',
+},
+})
 
