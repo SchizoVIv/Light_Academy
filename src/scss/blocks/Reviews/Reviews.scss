@@ -267,6 +267,15 @@
   }
 }
 
+@media (max-width:1205px) {
+
+  .reviews__images {
+    display: none;
+    animation: none;
+  }
+
+}
+
 @media (max-width:760px) {
   .reviews__card {
     max-width: 100vw;
