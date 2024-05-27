@@ -232,7 +232,7 @@
     display: block;
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.779);
@@ -254,6 +254,7 @@
     flex-direction: column;
     margin: 0 0 50px;
     gap: 20px;
+    overflow: auto;
   }
 
   .header__nav-box {
@@ -290,6 +291,20 @@
   .header__contacts_active {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media (max-height: 600px) {
+  .header__navigation {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 50px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .header__contacts {
+    margin: 0 0 20px 0;
   }
 }
 
