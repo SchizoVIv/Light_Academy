@@ -654,8 +654,10 @@ if(screenWidthOver < 993) {
 
 const swiper = new Swiper('.sample-slider', {
   loop: true,
+  spaceBetween: 40,
   // autoplay: {
-  //   delay: 2000,
+  //   delay: 5000,
+  //   disableOnInteraction: true,
   // },
   navigation: {
       nextEl: ".swiper-button-next",
@@ -663,7 +665,10 @@ const swiper = new Swiper('.sample-slider', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
 },
   freeMode: true,
+  slidesPerView: 1,
+  freeModeSticky: true,
 })
 

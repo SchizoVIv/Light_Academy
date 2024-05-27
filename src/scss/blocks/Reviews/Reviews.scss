@@ -14,7 +14,7 @@
 .reviews__card {
   max-width: 760px;
   padding: 50px;
-  margin: 65px auto 85px;
+  margin: 65px auto ;
   background-color: var(--card-color);
   display: grid;
   grid-template-columns:  repeat(2, 1fr);
@@ -394,7 +394,7 @@
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next::after, .swiper-button-prev::after {
   font-family: swiper-icons;
   font-size: var(--swiper-navigation-size);
   text-transform: none !important;
@@ -451,6 +451,7 @@
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
   transition: all 0.5s ease;
+  margin: 0 20px;
 
   &::before {
     content: '';
@@ -459,7 +460,7 @@
     background-color: var(--font-color);
     position: absolute;
     top: 4px;
-    right: 0;
+    // right: 0;
     transform: rotate(45deg);
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -472,7 +473,7 @@
     background-color: var(--font-color);
     position: absolute;
     bottom: 4px;
-    right: 0;
+    // right: 0;
     transform: rotate(-45deg);
     border-radius: 10px;
     transition: all 0.5s ease;
