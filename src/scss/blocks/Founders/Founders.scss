@@ -1,5 +1,5 @@
 .founders {
-  margin: 300px 0 0;
+  margin: 50px 0 0;
   width: 100%;
   background-color: var(--bg-acent-colog);
   padding: 143px 0;
@@ -297,6 +297,10 @@
       top: 0;
     }
   }
+
+  .founder__box-canyon {
+    padding: 15px;
+  }
 }
 
 @media (min-width:993px) {
@@ -316,17 +320,21 @@
 }
 
 @media (max-width: 600px) {
+
   .founders__box {
     grid-template-columns:  1fr;
     grid-template-areas:
       "stars"
       "found1"
       "box-text1"
-      "canyon"
       "found2"
       "box-text2"
       "stars-1";
     margin: 0 30px 0;
+  }
+
+  .founder__box-canyon {
+    display: none;
   }
 
   .founders__stars-box {

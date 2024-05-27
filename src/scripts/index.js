@@ -168,6 +168,7 @@ const popupButtonClose = document.querySelector('.popup__button-close')
 const popupOverflow = document.querySelector('.popup__overflow')
 const popupBox = document.querySelector('.popup__box')
 const popup = document.querySelector('.popup')
+const popupTitle = document.querySelector('.popup__title')
 const academyButton = document.querySelector('.academy__button')
 const presentButton = document.querySelector('.advantages__button')
 const coachingButton = document.querySelector('.coaching__button')
@@ -218,10 +219,35 @@ document.addEventListener('mousemove', function(event) {
 
 window.addEventListener('scroll', () => {
 
-  if(scrollPosition() < lastScroll && conteinHide() && screenWidthOver < 992) {
+  // console.log(`скрол ${scrollPosition()}`)
+  // console.log(`ширина ${screenWidthOver}`)
+
+
+  console.log(`lastScroll ${lastScroll}`)
+
+
+// мобильная версия показывать header при скроле
+  if(scrollPosition() < lastScroll
+    && conteinHide()
+    && screenWidthOver < 992
+    && scrollPosition() > 301
+    && lastScroll > 301
+    ) {
+    console.log(lastScroll)
     header.classList.remove('header_hide')
-    header.classList.add('header_border')
+    header.classList.remove('header_border')
     headerLogo.classList.add('header__logo_hide')
+  }
+  if(scrollPosition() < lastScroll
+    && !conteinHide()
+    && screenWidthOver < 992
+    && scrollPosition() < 301
+    && lastScroll < 301
+    ) {
+    console.log(lastScroll)
+    header.classList.remove('header_hide')
+    header.classList.remove('header_border')
+    headerLogo.classList.remove('header__logo_hide')
   }
 
 
@@ -245,22 +271,47 @@ window.addEventListener('scroll', () => {
   }
 
 
-  // анимация диска
-  if(screenWidth < 860 && scrollPosition() > 2740 && scrollPosition() < 2790) {
-    requestsDisk.classList.add('requests__disk_anim')
-    requestsCard.classList.add('requests__card_anim')
-  }
-  if(screenWidth < 1300 && scrollPosition() > 2150 && scrollPosition() < 2200) {
-    requestsDisk.classList.add('requests__disk_anim')
-    requestsCard.classList.add('requests__card_anim')
-  }
+  // анимация диска замена screenWidthOver
+  // if(screenWidthOver < 860 && scrollPosition() > 2740 && scrollPosition() < 2790) {
+  //   requestsDisk.classList.add('requests__disk_anim')
+  //   requestsCard.classList.add('requests__card_anim')
+  // }
+  // if(screenWidthOver < 1300 && scrollPosition() > 2150 && scrollPosition() < 2200) {
+  //   requestsDisk.classList.add('requests__disk_anim')
+  //   requestsCard.classList.add('requests__card_anim')
+  // }
 
-  if(screenWidth < 1240 && scrollPosition() > 1930 && scrollPosition() < 1970) {
+  // if(screenWidthOver < 1240 && scrollPosition() > 1930 && scrollPosition() < 1970) {
+  //   requestsDisk.classList.add('requests__disk_anim')
+  //   requestsCard.classList.add('requests__card_anim')
+  // }
+
+  // if(screenWidthOver > 1299 && scrollPosition() > 2500 && scrollPosition() < 2600) {
+  //   requestsDisk.classList.add('requests__disk_anim')
+  //   requestsCard.classList.add('requests__card_anim')
+  // }
+
+  if(screenWidthOver > 1700 && scrollPosition() > 2099 && scrollPosition() < 2700) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-
-  if(screenWidth > 1000 && scrollPosition() > 2500 && scrollPosition() < 2600) {
+  if(screenWidthOver < 1701 && scrollPosition() > 1920 && scrollPosition() < 2450) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+  if(screenWidthOver < 1500 && scrollPosition() > 1720 && scrollPosition() < 2120) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+  if(screenWidthOver < 1200 && scrollPosition() > 1600 && scrollPosition() < 1800) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+  if(screenWidthOver < 712 && scrollPosition() > 2200 && scrollPosition() < 2400) {
+    requestsDisk.classList.add('requests__disk_anim')
+    requestsCard.classList.add('requests__card_anim')
+  }
+  if(screenWidthOver < 500 && scrollPosition() > 2350 && scrollPosition() < 2500) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
@@ -295,45 +346,43 @@ burgerButton.addEventListener('click', hendleOpenMenu)
 
 // window
 
-// const popupButtonClose = document.querySelector('.popup__button-close')
-// const popupOverflow = document.querySelector('.popup__overflow')
-// const popupBox = document.querySelector('.popup__box')
-// const popup = document.querySelector('.popup')
-// const academyButton = document.querySelector('.academy__button')
-// const presentButton = document.querySelector('.advantages__button')
-// const coachingButton = document.querySelector('.coaching__button')
-// const coachButton = document.querySelector('.coach__button')
-
 function popupHandleClose(pop, overflow) {
   enableScroll()
   pop.classList.add('popup__hidden')
   overflow.classList.remove('overflow-active')
 }
 
-function popupHandleOpen(pop, overflow) {
+function popupHandleOpen(pop, overflow, e) {
   disableScroll()
-  console.log(lastScroll)
   pop.classList.remove('popup__hidden')
   overflow.classList.add('overflow-active')
+  console.log(e.classList)
+  if(e.classList.contains('advantages__wheel') || e.classList.contains('advantages__button') || e.classList.contains('advantages__wheel-content') || e.classList.contains('advantages__wheel-inner')) {
+    console.log('ok')
+    popupTitle.textContent = 'Заполни форму и получи подарок!';
+  } else {
+    console.log('no ok')
+    popupTitle.textContent = 'Запишитесь на консультацию';
+  }
 }
 
 popupButtonClose.addEventListener('click', () => {
-  popupHandleClose(popup, popupOverflow)
+  popupHandleClose(popup, popupOverflow,)
 })
 popupOverflow.addEventListener('click', () => {
   popupHandleClose(popup, popupOverflow)
 })
-academyButton.addEventListener('click', () => {
-  popupHandleOpen(popup, popupOverflow)
+academyButton.addEventListener('click', (e) => {
+  popupHandleOpen(popup, popupOverflow, e.target)
 })
-presentButton.addEventListener('click', () => {
-  popupHandleOpen(popup, popupOverflow)
+presentButton.addEventListener('click', (e) => {
+  popupHandleOpen(popup, popupOverflow, e.target)
 })
-coachingButton.addEventListener('click', () => {
-  popupHandleOpen(popup, popupOverflow)
+coachingButton.addEventListener('click', (e) => {
+  popupHandleOpen(popup, popupOverflow, e.target)
 })
-coachButton.addEventListener('click', () => {
-  popupHandleOpen(popup)
+coachButton.addEventListener('click', (e) => {
+  popupHandleOpen(popup, popupOverflow, e.target)
 })
 
 // сертификаты

@@ -162,11 +162,13 @@
 
 .coach__button {
   cursor: pointer;
+  text-decoration: none;
   margin: 90px 0 0;
   background-color: white;
   border: none;
   border-radius: 100px 0 200px 100px;
   padding: 19px 0;
+  // padding: 19px 30px 19px 25px;
   max-width: 435px;
   width: 100%;
   transition: 0.5s all ease;
@@ -175,6 +177,8 @@
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--hover-color);
+    color: var(--font-color-light);
   }
 
   &::after {

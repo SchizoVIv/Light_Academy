@@ -47,7 +47,7 @@
 .coaching {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 100px 0 0;
+  padding: 50px 0 150px;
 }
 
 .coaching__conteiner {
@@ -218,6 +218,16 @@
   flex-direction: column;
   gap: 10px;
 }
+
+// .coaching__button-link {
+//   grid-area: button;
+//   max-width: 770px;
+//   max-height: 70px;
+//   padding: 25px 0;
+//   text-decoration: none;
+//   width: 100%;
+//   justify-self: end;
+// }
 
 .coaching__button {
   grid-area: button;
