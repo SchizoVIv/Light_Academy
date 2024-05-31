@@ -3,9 +3,14 @@
   let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
   let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
   let scrollbarDiv = document.querySelector('.scrollbar');
+
+  if (scrollbarDiv) {
     if (!isChrome && !isSafari) {
       scrollbarDiv.innerHTML = 'You need Webkit browser to run this code';
     }
+  } else {
+    console.error('Element with class "scrollbar" not found');
+  }
 })();
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -22,19 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-//
 
-// const sliderList = document.querySelectorAll('.slider__nav');
-// const cardList = document.querySelectorAll('.reviews__images');
-
-// sliderList.forEach(function(element) {
-//   element.addEventListener('click', function() {
-//     cardList.forEach(function(el) {
-//       console.log(el.style.animationPlayState)
-//       el.style.animationPlayState = 'initial';
-//   });
-//   });
-// });
 
 const inputs = document.querySelectorAll('.slider__nav');
 
@@ -109,42 +102,6 @@ function vinilAnimationRunNext() {
 
 buttonPrev.addEventListener('click', vinilAnimationRunPrev)
 buttonNext.addEventListener('click', vinilAnimationRunNext)
-
-
-
-
-
-// faq
-
-// const items = document.querySelectorAll(".accordion button");
-
-// function toggleAccordion() {
-//   const itemToggle = this.getAttribute('aria-expanded');
-//   console.log(itemToggle)
-
-//   for (i = 0; i < items.length; i++) {
-//     items[i].setAttribute('aria-expanded', 'false');
-//   }
-
-//   if (itemToggle == 'false') {
-//     this.setAttribute('aria-expanded', 'true');
-//   }
-// }
-
-// items.forEach(item => item.addEventListener('click', toggleAccordion));
-
-// const items = document.querySelectorAll('.slider__nav')
-// const slider = document.querySelector('.slider__inner')
-// const wingLeft = document.querySelector('.reviews__wing-left')
-// const wingRight = document.querySelector('.reviews__wing-right')
-
-// function handleChangeCardLeft() {
-
-//   console.log(slider.style.left)
-// }
-
-// wingRight.addEventListener('click', handleChangeCardLeft)
-
 
 // burger
 
@@ -247,6 +204,14 @@ let y = 0
 let maxY = 80
 let screenWidthOver = window.innerWidth;
 
+// Функция для обновления переменной при изменении размеров окна
+function updateWindowWidth() {
+  screenWidthOver = window.innerWidth;
+}
+
+// Слушаем событие изменения размеров окна и вызываем функцию обновления
+window.addEventListener('resize', updateWindowWidth);
+
 document.addEventListener('mousemove', function(event) {
   x = event.clientX; // Координата X курсора
   y = event.clientY; // Координата Y курсора
@@ -257,12 +222,12 @@ document.addEventListener('mousemove', function(event) {
   if(y < maxY && scrollPosition() > defaultOffset && conteinHide() && screenWidthOver > 991) {
     header.classList.remove('header_hide')
     header.classList.add('header_border')
-    headerLogo.classList.add('header__logo_hide')
+    headerLogo.classList.add('header__logo_size')
   }
 // скрыть header после стандартной позиции при наведении мыши
   if(y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidthOver > 991) {
     header.classList.add('header_hide')
-    headerLogo.classList.add('header__logo_hide')
+    headerLogo.classList.add('header__logo_size')
     header.classList.remove('header_border')
   }
 });
@@ -295,6 +260,7 @@ window.addEventListener('scroll', () => {
     && scrollPosition() < 301
     && lastScroll < 301
     ) {
+    headerLogo.classList.remove('header__logo_size')
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
     headerLogo.classList.remove('header__logo_hide')
@@ -308,36 +274,18 @@ window.addEventListener('scroll', () => {
   && conteinHide()) {
     header.classList.remove('header_hide')
     headerLogo.classList.remove('header__logo_hide')
+    headerLogo.classList.remove('header__logo_size')
     header.classList.remove('header_border')
   }
 
   // убрать header после базовой позиции при скроле
   if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
     header.classList.add('header_hide')
-    headerLogo.classList.add('header__logo_hide')
+    // headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
   }
 
-
-  // анимация диска замена screenWidthOver
-  // if(screenWidthOver < 860 && scrollPosition() > 2740 && scrollPosition() < 2790) {
-  //   requestsDisk.classList.add('requests__disk_anim')
-  //   requestsCard.classList.add('requests__card_anim')
-  // }
-  // if(screenWidthOver < 1300 && scrollPosition() > 2150 && scrollPosition() < 2200) {
-  //   requestsDisk.classList.add('requests__disk_anim')
-  //   requestsCard.classList.add('requests__card_anim')
-  // }
-
-  // if(screenWidthOver < 1240 && scrollPosition() > 1930 && scrollPosition() < 1970) {
-  //   requestsDisk.classList.add('requests__disk_anim')
-  //   requestsCard.classList.add('requests__card_anim')
-  // }
-
-  // if(screenWidthOver > 1299 && scrollPosition() > 2500 && scrollPosition() < 2600) {
-  //   requestsDisk.classList.add('requests__disk_anim')
-  //   requestsCard.classList.add('requests__card_anim')
-  // }
+  // анимация диска промежутки
 
   if(screenWidthOver > 1700 && scrollPosition() > 2099 && scrollPosition() < 2700) {
     requestsDisk.classList.add('requests__disk_anim')
@@ -496,7 +444,7 @@ function validateForm() {
   const nameInput = document.querySelector("#name");
   const phoneInput = document.querySelector("#phone");
   const emailInput = document.querySelector("#email");
-  const submitButton = document.querySelector(".appointment__button");
+  const submitButton = document.querySelector(".form__button");
   const optionSelect = document.querySelector("#option");
 
   // Проверяем, пустые ли поля
@@ -526,6 +474,7 @@ validateForm();
 // подсказка
 
 const servicesTextList = document.querySelectorAll('.services__item-text')
+// const servicesSection = document.querySelector('.services__item-service:nth-child(3)::after')
 
 
 servicesTextList.forEach((textItem, index) => {
@@ -560,6 +509,22 @@ servicesTextList.forEach((textItem, index) => {
   }
 })
 
+// function HandleCloseObject(className) {
+//   const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+//   console.log(servicesTooltipList)
+//   servicesTooltipList.forEach((el) => {
+//     if(el.classList.contains(className)) {
+//       el.classList.remove(className)
+//     }
+//   })
+// }
+
+// servicesSection.addEventListener('click', () => {
+//   HandleCloseObject('services__item-tooltip_active')
+// })
+
+
+
 // кнопка круг
 const rotateBetweenWords = (value) => {
   const words = document.querySelectorAll('.advantages__wheel-inner')
@@ -574,8 +539,8 @@ const rotateBetweenWords = (value) => {
 
 // расстояние между буквами
 const rotateBetweenLetters = (value) => {
+  console.log('tyt')
   const letters = document.querySelectorAll('.advantages__wheel-content')
-
   let deg = 0
 
   for (let letter of letters) {

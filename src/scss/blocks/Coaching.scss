@@ -44,17 +44,11 @@
   }
 }
 
-.coaching {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 50px 0 150px;
-}
-
 .coaching__conteiner {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0 100px 100px 100px;
+  margin: 0 100px;
 }
 
 .coaching__title {
@@ -65,30 +59,25 @@
 
 @media (max-width: 691px) {
   .coaching__title {
-    text-align: end;
-    width: 100%;
     max-width: 400px;
   }
 }
 
 @media (max-width: 480px) {
   .coaching__title {
-    text-align: end;
-    width: 100%;
     max-width: 65vw;
   }
 }
 
 @media (max-width: 624px) {
   .coaching__title {
-    text-align: end;
-    width: 100%;
     max-width: 60vw;
   }
 }
 
 .coaching__grid-box {
   display: grid;
+  justify-items: center;
   grid-template-columns:  repeat(4, 1fr);
   grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
   grid-template-areas:
@@ -97,7 +86,6 @@
     "img2 img3 text3 text3"
     "button button button button";
   grid-gap: 40px 4vw;
-  justify-items: center;
   margin: 60px 0 0;
 }
 
@@ -106,8 +94,8 @@
 }
 
 .coaching__wing-img:nth-child(4) {
-  transform: rotate(90deg);
   grid-area: wing2;
+  transform: rotate(90deg);
 }
 
 .coaching__text {
@@ -131,27 +119,27 @@
 
 .coaching__image-box:nth-child(5) {
   grid-area: img1;
-  max-width: 249px;
-  max-height: 280px;
   position: relative;
-  width: 100%;
-  margin: 0 28px 0 0;
   display: flex;
   align-self: flex-start;
+  margin: 0 28px 0 0;
+  width: 100%;
+  max-width: 249px;
+  max-height: 280px;
 }
 
 .coaching__image-box {
+  width: 100%;
   max-width: 278px;
   max-height: 312px;
-  width: 100%;
 }
 
 .coaching__image {
   position: relative;
   z-index: 2;
-  max-width: 278px;
   width: 100%;
   height: auto;
+  max-width: 278px;
 }
 
 .coaching__image-box:nth-child(5)::after {
@@ -159,13 +147,13 @@
   position: absolute;
   bottom: 16px;
   left: 28px;
-  max-width: 249px;
-  max-height: 280px;
+  z-index: 1;
   height: 100%;
   width: 100%;
+  max-width: 249px;
+  max-height: 280px;
   border: 1px solid black;
   border-radius: 0 0 50% 50%;
-  z-index: 1;
 }
 
 .coaching__image-box:nth-child(6) {
@@ -182,13 +170,13 @@
   position: absolute;
   top: 25px;
   left: -23px;
-  max-width: 264px;
-  max-height: 312px;
+  z-index: 1;
   width: 100%;
   height: 100%;
+  max-width: 264px;
+  max-height: 312px;
   border: 1px solid black;
   border-radius: 0 50% 0 0;
-  z-index: 1;
 }
 .coaching__image-box:nth-child(7) {
   grid-area: img3;
@@ -203,13 +191,13 @@
   position: absolute;
   top: 24px;
   left: 24px;
-  max-width: 279px;
-  max-height: 280px;
+  z-index: 1;
   width: 100%;
   height: 100%;
+  max-width: 279px;
+  max-height: 280px;
   border: 1px solid var(--font-color);
   border-radius: 0 0 60% 0;
-  z-index: 1;
 }
 
 .coacing__box {
@@ -219,34 +207,24 @@
   gap: 10px;
 }
 
-// .coaching__button-link {
-//   grid-area: button;
-//   max-width: 770px;
-//   max-height: 70px;
-//   padding: 25px 0;
-//   text-decoration: none;
-//   width: 100%;
-//   justify-self: end;
-// }
-
 .coaching__button {
   grid-area: button;
-  max-width: 770px;
-  max-height: 70px;
-  padding: 25px 0;
-  width: 100%;
-  border-radius: 35px;
   position: relative;
-  background-color: transparent;
-  cursor: pointer;
-  border: 1px solid var(--font-color);
-  overflow: hidden;
-  color: var(--font-color);
-  transition: all 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: end;
+  padding: 25px 0;
+  width: 100%;
+  max-width: 770px;
+  max-height: 70px;
+  border-radius: 35px;
+  border: 1px solid var(--font-color);
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  color: var(--font-color);
+  transition: all 1s ease-in-out;
 }
 
 .coaching__button-text {
@@ -259,13 +237,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  transition: all 0.8s ease-in-out;
-  background-color: var(--hover-color);
-  border-radius: 30px;
-  visibility: hidden;
+  z-index: -1;
   height: 10px;
   width: 10px;
-  z-index: -1;
+  border-radius: 30px;
+  visibility: hidden;
+  background-color: var(--hover-color);
+  transition: all 0.8s ease-in-out;
 }
 
 .coaching__button:active {
@@ -277,9 +255,7 @@
     max-width: 900px;
   }
   .coaching__grid-box {
-    display: grid;
     grid-template-columns:  repeat(8, 1fr);
-    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
     grid-template-areas:
       "text1 text1 text1 wing1 text2 text2 img1 img1"
       "img2 img2 img3 img3 text2 text2 img1 img1"
@@ -287,8 +263,6 @@
       "img2 img2 img3 img3 text3 text3 text3 text3"
       "button button button button button button button button";
     grid-gap: 40px 70px;
-    justify-items: center;
-    margin: 60px 0 0;
   }
 
   .coaching__image-box:nth-child(6) {
@@ -304,9 +278,7 @@
 
 @media (max-width: 1000px) {
   .coaching__grid-box {
-    display: grid;
     grid-template-columns:  repeat(5, 1fr);
-    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
     grid-template-areas:
       "text1 text1 wing1 text2 text2"
       "text1 text1 img3 img3 img1"
@@ -315,8 +287,6 @@
       "text3 text3 text3 text3 text3"
       "button button button button button";
     grid-gap: 50px;
-    justify-items: center;
-    margin: 60px 0 0;
   }
 
   .coaching__image-box:nth-child(6) {
@@ -340,16 +310,13 @@
   }
 
   .type1:hover::after {
-    visibility: visible;
     transform: scale(150) translateX(2px);
+    visibility: visible;
   }
 }
 
 @media (max-width: 740px) {
   .coaching__grid-box {
-    display: grid;
-    grid-template-columns:  repeat(5, 1fr);
-    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
     grid-template-areas:
       "text1 text1 text1 img1 img1"
       "img2 img2 wing1 img1 img1"
@@ -358,9 +325,6 @@
       "img3 img3 img3 wing2 wing2"
       "text3 text3 text3 text3 text3"
       "button button button button button";
-    grid-gap: 50px;
-    justify-items: center;
-    margin: 60px 0 0;
   }
 
   .coaching__image-box:nth-child(5) {
@@ -385,9 +349,7 @@
 
 @media (max-width: 605px) {
   .coaching__grid-box {
-    display: grid;
     grid-template-columns:  repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
     grid-template-areas:
       "text1 text1"
       "wing1 img1"
@@ -396,9 +358,6 @@
       "wing2 img3"
       "text3 text3"
       "button button";
-    grid-gap: 50px;
-    justify-items: center;
-    margin: 60px 0 0;
   }
 
   .coaching__image-box:nth-child(5) {

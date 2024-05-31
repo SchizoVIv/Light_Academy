@@ -1,3 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+
 @-webkit-keyframes drive {
   0% {
     -webkit-transform: translate(-30%, 0);
@@ -44,36 +53,16 @@
   }
 }
 
-.faq {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-
 .faq__list {
   margin: 70px 0 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .faq__question {
+  position: relative;
   padding: 14px 0 14px 20px;
   border-bottom: 1px solid #988C83;
-  position: relative;
   cursor: pointer;
-}
-
-@media (max-width: 1000px) {
-  .faq__question {
-    padding: 14px 0 14px 20px;
-  }
-
-}
-
-@media (max-width: 600px) {
-  .faq__question {
-    padding: 14px 0 14px 10px;
-  }
-
 }
 
 .faq__plus {
@@ -94,22 +83,26 @@
   padding: 0 80px 0 0;
 
   &::after, &::before {
-    position: absolute;
     content: '';
+    position: absolute;
     top: 0;
     right: 25px;
-    background-color: #988C83;
+    -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+        transform: rotate(0);
     width: 2px;
     height: 20px;
     border-radius: 1px;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
+    background-color: #988C83;
   }
 
   &::before {
     -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
   }
 }
 
@@ -122,6 +115,8 @@
 }
 
 .faq__list-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 55px;
   margin: 37px 0 0 50px;
@@ -133,11 +128,13 @@
 }
 
 .faq__answer-text {
-  opacity: 0;
-  visibility: hidden;
   width: 100%;
   height: 0;
   max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
   will-change: opacity, visibility, max-height;
   color: #ad968b;
@@ -145,17 +142,29 @@
 
 .faq__answer-text_active {
   margin: 20px 0 0;
-  opacity: 1;
-  visibility: visible;
   width: 100%;
   height: 100%;
   max-height: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 .hidden-after::after {
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  // opacity: 0;
-  // visibility: hidden;
+          -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
 }
 
+@media (max-width: 1000px) {
+  .faq__question {
+    padding: 14px 0 14px 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .faq__question {
+    padding: 14px 0 14px 10px;
+  }
+
+}

@@ -1,40 +1,49 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .founders {
-  margin: 50px 0 0;
-  width: 100%;
-  background-color: var(--bg-acent-colog);
+  margin: 50px 0;
   padding: 143px 0;
   border-radius: 950px 950px 0 0;
+  background-color: var(--bg-acent-colog);
 }
 
 .founders__conteiner {
+  margin: 0 auto;
   width: 100%;
   max-width: 1600px;
-  margin: 0 auto;
 }
 
 .founders__title {
+  margin: 0 auto 0;
   text-align: center;
-  color: var(--font-color-light);
   max-width: 678px;
   width: 100%;
-  margin: 0 auto 0;
+  color: var(--font-color-light);
 }
 
 .founders__logo {
   display: block;
-  margin: 50px auto 195px;
-  width: 100%;
-  max-width: 113px;
-  height: auto;
   position: relative;
+  margin: 50px auto 0;
+  width: 100%;
+  height: auto;
+  max-width: 113px;
 
 }
 .founders__stars-box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: stars;
+  position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
   width: 130px;
   height: 150px;
-  position: relative;
-  justify-self: center;
 
   &::after {
     content: '';
@@ -54,33 +63,42 @@
 }
 
 .founders__stars {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
   grid-area: stars-1;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 100px 0 0;
   width: 60px;
   height: 60px;
   background-image: url(../images/star-3.png);
   background-size: contain;
-  margin: 100px 0 0;
-  justify-self: center;
 }
 
 .founders__box {
+  display: -ms-grid;
   display: grid;
-  margin: 0 100px;
   position: relative;
+  -ms-grid-columns:  1fr 8vw 2fr 8vw 1fr;
   grid-template-columns:  1fr 8vw 2fr 8vw 1fr;
+  -ms-grid-rows: (minmax(120px, 1fr))[auto-fill];
   grid-template-rows: repeat(auto-fill, minmax(120px, 1fr)) ;
-  grid-template-areas:
+      grid-template-areas:
     "stars . . . ."
     ". box-text1 box-text1 . ."
     ". canyon canyon canyon ."
     ". . box-text2 box-text2 ."
     ". . . . stars-1";
+  margin: 0 100px;
 }
 
-.founder__text-name, .founder__text-role, .founder__link, .founder__text {
-  color: var(--font-color-light);
-  z-index: 2;
+.founder__text-name,
+.founder__text-role,
+.founder__link,
+.founder__text {
   position: relative;
+  z-index: 2;
+  color: var(--font-color-light);
 
 }
 
@@ -89,14 +107,16 @@
 }
 
 .founder__text-span {
-  color: var(--font-color-light);
   padding: 0 0 0 30px;
+  color: var(--font-color-light);
 }
 
 .link {
   position: relative;
-  text-decoration: none;
   padding: 0;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 
   &::before {
@@ -106,6 +126,8 @@
     left: -20px;
     margin: auto;
     opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
 
@@ -122,9 +144,12 @@
 
 .link_black {
   position: relative;
-  text-decoration: none;
   padding: 0;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  z-index: 2;
 
   &::before {
     content: '->';
@@ -133,6 +158,8 @@
     left: -20px;
     margin: auto;
     opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
 
@@ -149,6 +176,8 @@
 
 .link-hover-line {
   padding: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -162,23 +191,28 @@
 }
 
 .founder__block-text:nth-child(1) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: box-text1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  position: relative;
-  max-width: 1030px;
-  width: 100%;
   margin: 0 0 30px;
+  width: 100%;
+  max-width: 1030px;
 
   & > .founder__image {
     grid-area: found1;
-    width: 25vw;
-    max-width: 365px;
     top: 0;
     right: -170%;
     left: 0;
     bottom: 0;
     margin: auto;
+    width: 25vw;
+    max-width: 365px;
   }
 
   & > .founder__block-about {
@@ -188,65 +222,74 @@
 
 
 .founder__block-text:nth-child(3) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
   grid-area: box-text2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-self: baseline;
+  margin: 30px 0 0;
   gap: 30px;
   max-width: 1245px;
-  position: relative;
-  margin: 30px 0 0;
 
   & > .founder__image {
     grid-area: found2;
-    width: 25vw;
-    max-width: 365px;
     right: 0;
     left: -60%;
     bottom: 0;
+    width: 25vw;
+    max-width: 365px;
 
   }
 
   & > .founder__block-about {
-    min-width: 200px;
     margin: 0 0 0 30px;
+    min-width: 200px;
   }
 }
 
 .founder__image {
+  position: absolute;
   z-index: 2;
+  width: 100%;
   border-radius: 295px;
   outline: 3px solid var(--font-color-light);
-  width: 100%;
-  position: absolute;
 }
 
 
 .founder__box-canyon {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: canyon;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 35px;
   width: 100%;
   max-width: 893px;
-  align-self: center;
-  justify-self: center;
-  padding: 35px;
   border: 2px solid var(--font-color-light);
 }
 
 .founder__image-canyon {
-  // z-index: 1;
-  pointer-events: none;
-  mix-blend-mode: luminosity;
   width: 100%;
   max-width: 893px;
+  pointer-events: none;
+  mix-blend-mode: luminosity;
 }
 
 @media (max-width: 1200px) {
-
   .founders__logo {
-    margin: 50px auto 95px;
+    margin: 50px auto 0;
   }
   .founders__box {
+    -ms-grid-columns:  7vw 2fr 2fr 2fr 7vw;
     grid-template-columns:  7vw 2fr 2fr 2fr 7vw;
-    grid-template-areas:
+        grid-template-areas:
       "stars . . . ."
       ". box-text1 box-text1 . ."
       "canyon canyon canyon canyon canyon"
@@ -264,24 +307,47 @@
   }
 
   .founder__block-text:nth-child(1) {
-
     & > .founder__image {
       bottom: -100%;
     }
   }
 
   .founder__block-text:nth-child(3) {
-
     & > .founder__image {
       top: -250px;
     }
+  }
+  .founders__stars-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .founders__stars {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .founder__block-text:nth-child(1) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+  .founder__block-text:nth-child(3) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    flex-direction: column;
+  }
+  .founder__box-canyon {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
 }
 
 @media (max-width: 1025px) {
   .founders__box {
+    -ms-grid-columns:  7vw 2fr 2fr 2fr 7vw;
     grid-template-columns:  7vw 2fr 2fr 2fr 7vw;
-    grid-template-areas:
+        grid-template-areas:
       "stars . . . ."
       "box-text1 box-text1 box-text1 . ."
       "canyon canyon canyon canyon canyon"
@@ -290,7 +356,10 @@
   }
 
   .founder__block-text {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .founders__logo {
@@ -316,6 +385,29 @@
 
   .founder__box-canyon {
     padding: 15px;
+  }
+  .founders__stars-box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .founders__stars {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .founder__block-text:nth-child(1) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .founder__block-text:nth-child(3) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+  }
+  .founder__box-canyon {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
   }
 }
 
@@ -346,8 +438,9 @@
 @media (max-width: 600px) {
 
   .founders__box {
+    -ms-grid-columns:  1fr;
     grid-template-columns:  1fr;
-    grid-template-areas:
+        grid-template-areas:
       "stars"
       "found1"
       "box-text1"
@@ -362,13 +455,15 @@
   }
 
   .founders__stars-box {
+    -ms-grid-column-align: start;
+        justify-self: start;
     margin: 30px 0;
-    justify-self: start;
     margin-left: 30px;
   }
 
   .founders__stars {
-    justify-self:end;
+    -ms-grid-column-align:end;
+        justify-self:end;
     margin-right: 30px;
   }
 
@@ -381,27 +476,30 @@
   }
 
   .founder__block-text {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .founder__image {
-    width: 100%;
     position: relative;
+    width: 100%;
   }
 
   .founder__block-text:nth-child(1) {
 
     & > .founder__image {
-      width: 100%;
       position: relative;
       left: 0;
+      width: 100%;
     }
   }
 
   .founder__image-canyon {
+    padding: 0;
     width: 0;
     height: 0;
-    padding: 0;
     border: none;
   }
 
@@ -415,10 +513,43 @@
 
     }
     & > .founder__image {
-      width: 100%;
       position: relative;
       left: 0;
       margin: auto;
+      width: 100%;
     }
   }
+
+  // .founders__stars-box {
+  //   -ms-grid-row: 1;
+  //   -ms-grid-column: 1;
+  // }
+
+  // .founders__stars {
+  //   -ms-grid-row: 6;
+  //   -ms-grid-column: 1;
+  // }
+
+  .founder__block-text:nth-child(1) {
+    // -ms-grid-row: 3;
+    // -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  // & > .founder__image {
+  //   -ms-grid-row: 2;
+  //   -ms-grid-column: 1;
+  // }
+
+  .founder__block-text:nth-child(3) {
+    // -ms-grid-row: 5;
+    // -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  // & > .founder__image {
+  //   -ms-grid-row: 4;
+  //   -ms-grid-column: 1;
+  // }
 }
+
