@@ -14,12 +14,14 @@
       <link rel="stylesheet" href="./css/index.css">
 
       <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" ></script>
   </head>
   <body class="page">
     <header class="header" id="header">
   <div class="header__conteiner">
-    <img class="header__logo" src="./images/logo-b.png" alt="Логотип академии">
+    <a href="#header">
+      <img class="header__logo" src="./images/logo-b.png" alt="Логотип академии">
+    </a>
     <input id="menu-toggle" type="checkbox">
     <label class="header__button-container" for="menu-toggle">
       <div class="header__button"></div>
@@ -74,8 +76,8 @@
       <section class="academy" id="academy">
   <div class="conteiner">
     <div class="academy__box">
-      <h1 class="academy__title-first">АКАДЕМИЯ</h1>
-      <h2 class="academy__title-second">Light</h2>
+      <h1 class="academy__title-line-first">АКАДЕМИЯ</h1>
+      <h2 class="academy__title-line-second">Light</h2>
     </div>
     <div class="academy__box-images">
       <img class="academy__image" src="./images/firstImagePeople.png" alt="Собрание студентов за бранчем">
@@ -115,7 +117,7 @@
   </div>
 </section>
 
-      <section class="advantages" id="advantages">
+      <section class="advantages section-padding" id="advantages">
   <div class="advantages__conteiner conteiner">
     <h3 class="advantages__title title">Обучаясь у нас, вы получаете:</h3>
     <button class="advantages__button uiverse">
@@ -232,7 +234,7 @@
   </div>
 </section>
 
-      <section class="coaching" id="coaching">
+      <section class="coaching section-padding" id="coaching">
   <div class="coaching__conteiner conteiner">
     <h3 class="coaching__title title">“коучинговый английский” что это?</h3>
     <div class="coaching__grid-box">
@@ -332,8 +334,7 @@
   </div>
 </section>
 
-      
-      <section class="format" id="format">
+      <section class="format section-padding" id="format">
   <div class="format__conteiner conteiner">
     <h3 class="format__title title">Формат работы</h4>
     <div class="format__box-grid">
@@ -372,7 +373,7 @@
   </div>
 </section>
 
-      <section class="services" id="services">
+      <section class="services section-padding" id="services">
   <div class="conteiner">
     <div class="services__backlight backlight"></div>
     <h3 class="services__title title">Услуги</h3>
@@ -487,7 +488,7 @@
   </div>
 </section>
 
-      <section class="coach" id="coach">
+      <section class="coach section-padding" id="coach">
   <div class="coach__conteiner conteiner">
     <div class="coach__box-request">
       <ul class="coach__list">
@@ -524,11 +525,11 @@
     </div>
 
     <button class="coach__button">Записаться на работу с Коучем</button>
-    
+
   </div>
 </section>
 
-      <section class="reviews" id="reviews">
+      <section class="reviews section-padding" id="reviews">
   <div class="reviews__backlight backlight"></div>
   <div>
     <h3 class="reviews__title title">Что говорят наши ученики</h3>
@@ -795,34 +796,34 @@
   </div>
 </section>
 
-      <section class="appointment" id="appointment">
+      <section class="appointment section-padding" id="appointment">
   <div class="appointment__conteiner conteiner">
     <img class="appointment__logo" src="./images/logo-b.png" alt="Логотип академии">
     <h3 class="appointment__title title">Запишитесь</br> на консультацию</h3>
-    <form class="appointment__form" action="appointment__form" method="post">
-  <div class="appointment__box-input">
-    <input class="appointment__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
-    <input class="appointment__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-    <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
-    <select class="appointment__select" id="option" name="option" required>
-      <option class="appointment__option" value="consultation">Консультация</option>
-      <option class="appointment__option" value="course1">Хочу подарок</option>
-      <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
-      <option class="appointment__option" value="course2">Интересует курс Light English</option>
-      <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
-      <option class="appointment__option" value="just_ask">Интересуют занятия с Коучем</option>
+    <form class="form" action="form" method="post">
+  <div class="form__box-input">
+    <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+    <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+    <input class="form__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
+    <select class="form__select" id="option" name="option" required>
+      <option class="form__option" value="consultation">Консультация</option>
+      <option class="form__option" value="course1">Хочу подарок</option>
+      <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
+      <option class="form__option" value="course2">Интересует курс Light English</option>
+      <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
+      <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
     </select>
   </div>
-  <button class="appointment__button" type="submit">Записаться</button>
-  <p class="appointment__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
-    <a class="appointment__warning-link" href="#">политикой конфиденциальности</a>
+  <button class="form__button" type="submit">Записаться</button>
+  <p class="form__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
+    <a class="form__warning-link" href="#">политикой конфиденциальности</a>
   </p>
 </form>
 
   </div>
 </section>
 
-      <section class="faq" id="faq">
+      <section class="faq section-padding" id="faq">
   <div class="conteiner">
     <h3 class="title">Часто задаваемые вопросы</h3>
 
@@ -904,23 +905,23 @@
     <div class="popup__image"></div>
     <div class="popup__form">
       <h3 class="popup__title title">Заполни форму и получи подарок!</h3>
-      <form class="appointment__form" action="appointment__form" method="post">
-  <div class="appointment__box-input">
-    <input class="appointment__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
-    <input class="appointment__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-    <input class="appointment__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
-    <select class="appointment__select" id="option" name="option" required>
-      <option class="appointment__option" value="consultation">Консультация</option>
-      <option class="appointment__option" value="course1">Хочу подарок</option>
-      <option class="appointment__option" value="course1">Интересуют индивидуальные занятия</option>
-      <option class="appointment__option" value="course2">Интересует курс Light English</option>
-      <option class="appointment__option" value="just_ask">Интересует разговорный клуб</option>
-      <option class="appointment__option" value="just_ask">Интересуют занятия с Коучем</option>
+      <form class="form" action="form" method="post">
+  <div class="form__box-input">
+    <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+    <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+    <input class="form__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
+    <select class="form__select" id="option" name="option" required>
+      <option class="form__option" value="consultation">Консультация</option>
+      <option class="form__option" value="course1">Хочу подарок</option>
+      <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
+      <option class="form__option" value="course2">Интересует курс Light English</option>
+      <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
+      <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
     </select>
   </div>
-  <button class="appointment__button" type="submit">Записаться</button>
-  <p class="appointment__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
-    <a class="appointment__warning-link" href="#">политикой конфиденциальности</a>
+  <button class="form__button" type="submit">Записаться</button>
+  <p class="form__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
+    <a class="form__warning-link" href="#">политикой конфиденциальности</a>
   </p>
 </form>
 
@@ -1035,7 +1036,7 @@
 </footer>
 
 
-    <script src="./js/index.bundle.js"></script>
+    <script src="./js/index.bundle.js" ></script>
   </body>
 </html>
 
