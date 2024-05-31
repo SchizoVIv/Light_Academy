@@ -4,7 +4,7 @@
   let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
   let scrollbarDiv = document.querySelector('.scrollbar');
 
-  if (scrollbarDiv) { 
+  if (scrollbarDiv) {
     if (!isChrome && !isSafari) {
       scrollbarDiv.innerHTML = 'You need Webkit browser to run this code';
     }
@@ -204,6 +204,14 @@ let y = 0
 let maxY = 80
 let screenWidthOver = window.innerWidth;
 
+// Функция для обновления переменной при изменении размеров окна
+function updateWindowWidth() {
+  screenWidthOver = window.innerWidth;
+}
+
+// Слушаем событие изменения размеров окна и вызываем функцию обновления
+window.addEventListener('resize', updateWindowWidth);
+
 document.addEventListener('mousemove', function(event) {
   x = event.clientX; // Координата X курсора
   y = event.clientY; // Координата Y курсора
@@ -214,12 +222,12 @@ document.addEventListener('mousemove', function(event) {
   if(y < maxY && scrollPosition() > defaultOffset && conteinHide() && screenWidthOver > 991) {
     header.classList.remove('header_hide')
     header.classList.add('header_border')
-    headerLogo.classList.add('header__logo_hide')
+    headerLogo.classList.add('header__logo_size')
   }
 // скрыть header после стандартной позиции при наведении мыши
   if(y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidthOver > 991) {
     header.classList.add('header_hide')
-    headerLogo.classList.add('header__logo_hide')
+    headerLogo.classList.add('header__logo_size')
     header.classList.remove('header_border')
   }
 });
@@ -252,6 +260,7 @@ window.addEventListener('scroll', () => {
     && scrollPosition() < 301
     && lastScroll < 301
     ) {
+    headerLogo.classList.remove('header__logo_size')
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
     headerLogo.classList.remove('header__logo_hide')
@@ -265,13 +274,14 @@ window.addEventListener('scroll', () => {
   && conteinHide()) {
     header.classList.remove('header_hide')
     headerLogo.classList.remove('header__logo_hide')
+    headerLogo.classList.remove('header__logo_size')
     header.classList.remove('header_border')
   }
 
   // убрать header после базовой позиции при скроле
   if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
     header.classList.add('header_hide')
-    headerLogo.classList.add('header__logo_hide')
+    // headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
   }
 
@@ -464,6 +474,7 @@ validateForm();
 // подсказка
 
 const servicesTextList = document.querySelectorAll('.services__item-text')
+// const servicesSection = document.querySelector('.services__item-service:nth-child(3)::after')
 
 
 servicesTextList.forEach((textItem, index) => {
@@ -497,6 +508,22 @@ servicesTextList.forEach((textItem, index) => {
     })
   }
 })
+
+// function HandleCloseObject(className) {
+//   const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
+//   console.log(servicesTooltipList)
+//   servicesTooltipList.forEach((el) => {
+//     if(el.classList.contains(className)) {
+//       el.classList.remove(className)
+//     }
+//   })
+// }
+
+// servicesSection.addEventListener('click', () => {
+//   HandleCloseObject('services__item-tooltip_active')
+// })
+
+
 
 // кнопка круг
 const rotateBetweenWords = (value) => {

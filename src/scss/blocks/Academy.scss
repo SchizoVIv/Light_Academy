@@ -1,5 +1,5 @@
 .academy {
-  margin: 200px auto 50px;
+  margin: 250px auto 50px;
   width: 100%;
   max-width: 1600px;
 }
@@ -160,7 +160,7 @@
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
-  .academy__title-second {
+  .academy__title-line-second {
     margin: 0;
   }
 }
@@ -169,10 +169,10 @@
   .academy {
     margin: 220px auto 0;
   }
-  .academy__title-first {
+  .academy__title-line-first {
     font-size: clamp(1.875rem, -1.8844rem + 18.797vw, 5rem);
   }
-  .academy__title-second {
+  .academy__title-line-second {
     font-size: clamp(2.5rem, -2.0113rem + 22.5564vw, 6.25rem);
   }
 }

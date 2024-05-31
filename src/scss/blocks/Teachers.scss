@@ -105,6 +105,39 @@
   }
 }
 
+// @media (max-width: 1657px), (min-width: 1284px) {
+
+//   .teachers__card:last-child {
+//     padding: 45px 39px;
+//     z-index: 2;
+//     width: 100%;
+//     max-width: 1086px;
+//     min-height: none;
+//     max-height: 200px;
+//     background-color: var(--card-color);
+//   }
+//   .teachers__card {
+//     &:nth-child(4) {
+//       position: relative;
+//       z-index: 2;
+//       background-image: url(../images/Natalya.jpg);
+//       background-repeat: no-repeat;
+//       background-size:contain;
+//       background-position: 100% 50%;
+//       -webkit-box-shadow:
+//         51px 95px 43px rgba(58, 63, 74, 1%),
+//         29px 53px 36px rgba(58, 63, 74, 15%),
+//         13px 24px 27px rgba(58, 63, 74, 19%),
+//         3px 6px 15px rgba(58, 63, 74, 20%);
+//       box-shadow:
+//         51px 95px 43px rgba(58, 63, 74, 1%),
+//         29px 53px 36px rgba(58, 63, 74, 15%),
+//         13px 24px 27px rgba(58, 63, 74, 19%),
+//         3px 6px 15px rgba(58, 63, 74, 20%);
+//     }
+//   }
+// }
+
 .teachers__content,
 .teachers__foto {
   position: absolute;

@@ -329,6 +329,7 @@
 
   .services__notes {
     bottom: 20%;
+    z-index: 1;
   }
   .services__item-service:nth-child(1) {
     -ms-grid-row: 1;

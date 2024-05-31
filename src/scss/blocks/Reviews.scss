@@ -628,13 +628,21 @@
 
   }
 
-  &:hover::before, &:hover::after {
-    background-color: var(--hover-color);
-  }
-
   &:active::before, &:active::after {
     -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
             transform: scale(0.8);
+  }
+}
+
+@media (min-width: 993px) {
+  .swiper-button-next, .swiper-button-prev {
+    &:hover::before, &:hover::after {
+      background-color: var(--hover-color);
+    }
+  }
+
+  .swiper-pagination-bullet:hover {
+    opacity: 0.5;
   }
 }

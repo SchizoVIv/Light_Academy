@@ -29,7 +29,7 @@
 .founders__logo {
   display: block;
   position: relative;
-  margin: 50px auto 195px;
+  margin: 50px auto 0;
   width: 100%;
   height: auto;
   max-width: 113px;
@@ -149,6 +149,7 @@
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  z-index: 2;
 
   &::before {
     content: '->';
@@ -283,7 +284,7 @@
 
 @media (max-width: 1200px) {
   .founders__logo {
-    margin: 50px auto 95px;
+    margin: 50px auto 0;
   }
   .founders__box {
     -ms-grid-columns:  7vw 2fr 2fr 2fr 7vw;
@@ -333,6 +334,7 @@
     -ms-grid-row: 4;
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
+    flex-direction: column;
   }
   .founder__box-canyon {
     -ms-grid-row: 3;

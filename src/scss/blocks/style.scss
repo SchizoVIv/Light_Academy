@@ -98,6 +98,26 @@ ol {
 }
 
 @media (max-width: 900px) {
+
+  .section-padding {
+    padding: 30px 0 100px;
+  }
+
+  .title {
+    font-size: clamp(2rem, 0.8966rem + 5.5172vw, 4rem);
+  }
+
+  .subtitle {
+    font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .section-padding {
+    padding: 30px 0 50px;
+  }
+
   .title {
     font-size: clamp(2rem, 0.8966rem + 5.5172vw, 4rem);
   }

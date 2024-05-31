@@ -43,6 +43,10 @@
 
 .requests {
   position: relative;
+  padding: 50px 0 150px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .requests__conteiner {
@@ -256,7 +260,7 @@
 @media (max-width: 900px) {
 
   .requests {
-    padding: 114px 0 200px;
+    padding: 30px 0 200px;
   }
 
   .requests__conteiner {
