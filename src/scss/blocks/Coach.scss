@@ -1,0 +1,433 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+
+@-webkit-keyframes drive {
+  0% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+  25% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 0);
+            transform: translate(-10%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+}
+
+@keyframes drive {
+  0% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+  25% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20%, 0);
+            transform: translate(-20%, 0);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 0);
+            transform: translate(-10%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-30%, 0);
+            transform: translate(-30%, 0);
+  }
+}
+
+.coach__title {
+  margin: 0 0 20px;
+}
+
+.coach__box-request{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.coach__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 40px 50px 40px 88px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.coach__item-accent{
+  position: relative;
+  padding: 12px 0;
+  font-family: 'NinaCTT';
+  font-size: 18px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/star-2.png);
+    background-size: 27px 27px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+}
+
+.coach__introduction {
+  width: 100%;
+  max-width: 506px;
+}
+
+.coach__introduction-text {
+  width: 100%;
+}
+
+.coach__scheme {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns:  128px 20px 1fr 20px 1fr 20px 128px;
+  grid-template-columns:  128px repeat(2, 1fr) 128px;
+  -ms-grid-rows: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(120px, 1fr));
+      grid-template-areas:
+    "startA stroc1 car finishB"
+    "startA lineC lineC finishB"
+    "startA stroc2 stroc2 finishB";
+  grid-gap: 0 20px;
+  margin: 100px 0 0;
+}
+
+.coach__start {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  grid-area: startA;
+}
+
+.coach__finish {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 7;
+  grid-area: finishB;
+}
+
+.coach__box-img-car {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: car;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.coach__line {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: lineC;
+  width: 100%;
+  height: 2px;
+  background-color: var(--font-color);
+}
+
+.coach__box-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 2px solid var(--font-color);
+}
+
+.coach__box-content {
+  margin: 0 20px;
+}
+
+.coach__text-description {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: stroc1;
+  margin: 0 80px 32px 20px;
+  max-width: 520px;
+  font-family: 'NinaCTT';
+  font-size: 24px;
+}
+
+.coach__box-text {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: stroc2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 17px 0 0 20px;
+  gap: 30px;
+  text-align: center;
+  font-family: 'NinaCTT';
+  font-size: 18px;
+}
+
+.coach__button {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-radius: 100px 0 200px 100px;
+  margin: 90px 0 0;
+  padding: 19px 0;
+  width: 100%;
+  max-width: 435px;
+  text-decoration: none;
+  background-color: white;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+
+  &:active {
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--hover-color);
+    color: var(--font-color-light);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+  }
+}
+
+.coach__img-car {
+  -webkit-animation: drive 5s ease-in-out infinite;
+          animation: drive 5s ease-in-out infinite;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.coach__backlight {
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 600px;
+  max-height: 600px;
+  background-color: #D3CAC3 !important;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+}
+
+@media (max-width: 1300px) {
+  .coach__scheme {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns:  10vw 20px 1fr 20px 10vw;
+    grid-template-columns:  10vw 1fr 10vw;
+    -ms-grid-rows: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-areas:
+      "stroc1 stroc1 stroc1"
+      "startA car finishB"
+      "startA lineC finishB"
+      "startA stroc2 finishB"
+      ;
+    margin: 100px 0 0;
+  }
+
+  .coach__text-description {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    margin: 0 0 32px 20px;
+  }
+
+  .coach__img-car {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 40vw;
+  }
+
+  .coach__start, .coach__finish {
+    width: 10vw;
+  }
+  .coach__start {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 1;
+  }
+  .coach__finish {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 5;
+  }
+  .coach__box-img-car {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .coach__line {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .coach__text-description {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  .coach__box-text {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+}
+
+@media (min-width:993px) {
+  .coach__button:hover {
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--hover-color);
+    color: var(--font-color-light);
+  }
+}
+
+@media (max-width:930px) {
+  .coach__box-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .coach__button {
+    max-width: none;
+  }
+}
+
+@media (max-width:800px) {
+  .coach__scheme {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns:  10vw 20px 1fr 20px 10vw;
+    grid-template-columns:  10vw 1fr 10vw;
+    -ms-grid-rows: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-areas:
+      "stroc1 stroc1 stroc1"
+      "startA car finishB"
+      "startA lineC finishB"
+      "stroc2 stroc2 stroc2"
+      ;
+    margin: 100px 0 0;
+  }
+
+  .coach__box-request {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .coach__introduction {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  .coach__box-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .coach__start {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  .coach__finish {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+  }
+  .coach__box-img-car {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .coach__line {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .coach__text-description {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  .coach__box-text {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+}
+
+@media (max-width:400px) {
+  .coach__list {
+    padding: 40px 50px 40px;
+  }
+}

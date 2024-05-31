@@ -1,0 +1,431 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  margin: 0 auto;
+  width: 100%;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  background-color: #f9f3ef00;
+}
+
+.header_border {
+  border-bottom: 1px solid var(--font-color);
+  background-color: #F9F3EF;
+  background-image: url(../images/100-90-8.png);
+}
+
+.header_hide {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.header__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 20px;
+  margin: 0 100px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.header__logo {
+  width: 80px;
+  height: 74.91px;
+  max-width: 100px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.header__logo_hide {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.header__navigation {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+      grid-template-areas:
+    ". . . . . . . .";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  grid-gap: 40px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.header__nav-link {
+  text-align: center;
+  width: 100%;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.header__telegram-logo{
+  width: 29px;
+  height: 29px;
+  background-image: url(../images/telegram.png);
+}
+
+.header__whats-app-logo{
+  width: 29px;
+  height: 29px;
+  background-image: url(../images/telegram.png);
+}
+
+.header__button-container {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.header__button,
+.header__button::before,
+.header__button::after {
+  display: block;
+  position: absolute;
+  z-index: 4;
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: var(--font-color);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.header__button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.header__button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .header__button-container .header__button::before {
+  -webkit-transform: rotate(405deg);
+      -ms-transform: rotate(405deg);
+          transform: rotate(405deg);
+  margin-top: 0px;
+}
+
+#menu-toggle:checked + .header__button-container .header__button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .header__button-container .header__button::after {
+  -webkit-transform: rotate(-405deg);
+      -ms-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+  margin-top: 0px;
+}
+
+.header__overflow {
+  display: none;
+}
+
+.header__nav-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+
+
+.link-hover, .link-hover-wite {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 5px 0;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  &::before {
+    bottom: 0;
+    background-color: var(--hover-color);
+    height: 2px;
+    -webkit-transform-origin: 100% 50%;
+        -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: -webkit-transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    -o-transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  &::after {
+    content: attr(data-replace);
+    top: 0;
+    -webkit-transform: translate3d(200%, 0, 0);
+            transform: translate3d(200%, 0, 0);
+    -webkit-transform-origin: 100% 50%;
+        -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: -webkit-transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    -o-transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: var(--hover-color);
+  }
+}
+
+.link-hover-wite {
+  &::before {
+    background-color: var(--font-color-light);
+  }
+  &::after {
+    color: var(--font-color-light);
+  }
+}
+
+@media (max-width: 1295px) {
+  .header__navigation {
+    -ms-grid-columns:  minmax(110px, 1fr) 30px minmax(198px, 1fr) 30px minmax(115px, 1fr);
+    grid-template-columns:  minmax(110px, 1fr) minmax(198px, 1fr) minmax(115px, 1fr);
+    -ms-grid-rows: 1fr 0 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+        grid-template-areas:
+      ". . . ."
+      ". . . .";
+    grid-gap: 0 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    background-color: none;
+  }
+  .header__button-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 20;
+    border: 1px solid var(--font-color);
+    border-radius: 50%;
+    background-color: var(--font-color-light);
+  }
+
+  .header_border {
+    border-bottom: none;
+    background: none;
+    background-image: none;
+  }
+
+  .header__overflow {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.779);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background-image: url(../images/100-90-8.png);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .overflow_hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .header__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 50px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .header__nav-box {
+    max-width: 60%;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+    height: 100vh;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .header__nav-box_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 0;
+    background-color: var(--font-color-light);
+    height: 100vh;
+  }
+
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 4;
+    min-width: 60%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .header__contacts_active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-height: 600px) {
+  .header__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px 0 50px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .header__contacts {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (min-width:993px) {
+  .link-hover, .link-hover-wite {
+    &:hover::before {
+      -webkit-transform-origin: 0% 50%;
+          -ms-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+    &:hover::after {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  .link-hover-wite:hover {
+    color: var(--font-color-light);
+  }
+}
+
+@media (max-width: 462px) {
+  .header__conteiner {
+    margin: 0 30px;
+  }
+  .header__nav-box {
+    width: 100%;
+    max-width: none;
+  }
+}
+
