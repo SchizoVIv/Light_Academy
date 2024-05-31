@@ -130,6 +130,8 @@
   -ms-grid-row-span: 5;
   -ms-grid-column: 1;
   grid-area: startA;
+  align-self: flex-end;
+  max-width: 126px;
 }
 
 .coach__finish {
@@ -137,6 +139,8 @@
   -ms-grid-row-span: 5;
   -ms-grid-column: 7;
   grid-area: finishB;
+  align-self: flex-end;
+  max-width: 95px;
 }
 
 .coach__box-img-car {
@@ -269,6 +273,13 @@
           filter: blur(200px);
 }
 
+@media (max-width: 1451px) {
+  .coach__start, .coach__finish {
+    width: 10vw;
+    margin: 0 0 30px;
+  }
+}
+
 @media (max-width: 1300px) {
   .coach__scheme {
     display: -ms-grid;
@@ -331,6 +342,12 @@
     -ms-grid-column-span: 1;
   }
 }
+@media (max-width: 1050px) {
+  .coach__start, .coach__finish {
+    width: 10vw;
+    margin: 0 0 60px;
+  }
+}
 
 @media (min-width:993px) {
   .coach__button:hover {
@@ -355,9 +372,15 @@
   .coach__button {
     max-width: none;
   }
+
+  .coach__start, .coach__finish {
+    width: 10vw;
+    margin: 50px 0 0;
+    align-self: center;
+  }
 }
 
-@media (max-width:800px) {
+@media (max-width:930px) {
   .coach__scheme {
     display: -ms-grid;
     display: grid;
