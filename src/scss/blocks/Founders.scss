@@ -280,6 +280,7 @@
   max-width: 893px;
   pointer-events: none;
   mix-blend-mode: luminosity;
+  z-index: -1;
 }
 
 @media (max-width: 1200px) {

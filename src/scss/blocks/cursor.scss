@@ -1,0 +1,38 @@
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .1s;
+}
+
+.cursor2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--font-color);
+  background-color: var(--font-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  // transition: .15s;
+  // transition: .15s;
+  z-index: 99;
+}
+
+.type1:hover + .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: var(--font-color-light);
+  opacity: .5;
+}
+
+.type1:hover + .cursor2 {
+  width: 15px;
+}

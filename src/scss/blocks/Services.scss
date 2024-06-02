@@ -91,6 +91,7 @@
   -ms-grid-column: 3;
   grid-area: price2;
   position: relative;
+  z-index: -1;
   min-height: 920px;
   -webkit-box-shadow:
     -14px -15px 22px rgba(58, 63, 74, 17%),
@@ -150,7 +151,7 @@
 }
 
 .services__item-text {
-  cursor: help;
+  // cursor: help;
   margin: 0 0 0 15px;
 
   &::before {

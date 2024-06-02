@@ -131,6 +131,7 @@
     -74px 66px 80px rgba(58, 63, 74, 7%),
     -28px 25px 25px rgba(58, 63, 74, 5%),
     -6px 5px 6px rgba(58, 63, 74, 3%);
+  z-index: -1;
 }
 
 .advantages__card:nth-child(4) {
@@ -170,6 +171,7 @@
     0px 100px 80px rgba(58, 63, 74, 7%),
     0px 38px 25px rgba(58, 63, 74, 5%),
     0px 8px 6px rgba(58, 63, 74, 3%);
+  z-index: -1;
 }
 
 .advantages__card-text {
@@ -248,7 +250,7 @@
   padding: 0;
   margin: 0;
   outline: none;
-  cursor: pointer;
+  // // cursor: pointer;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.02em;
