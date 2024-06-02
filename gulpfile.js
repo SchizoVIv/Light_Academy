@@ -63,7 +63,7 @@ gulp.task('img', function() {
   return gulp
   .src('./src/images/**/*', { encoding: false })
   // .pipe(changed('./dist/images'))
-  .pipe(imagemin({ verbose: true })) // сжатие картинок
+  // .pipe(imagemin({ verbose: true })) // сжатие картинок
   .pipe(gulp.dest('./dist/images'))
 })
 
