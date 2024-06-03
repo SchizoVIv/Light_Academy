@@ -32,11 +32,6 @@ li {
 
 a {
   color: inherit;
-  cursor: none;
-}
-
-button {
-  cursor: none;
 }
 
 button,
@@ -135,6 +130,15 @@ ol {
     font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
   }
 }
+
+// @media (min-width: 993px) {
+//   html, .page {
+//     cursor: none;
+//   }
+// button, a {
+//   cursor: none;
+// }
+// }
 
 ::-webkit-scrollbar {
   width: 12px;

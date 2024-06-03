@@ -9,4 +9,4 @@ import './buttonPresent.js';
 import './addCard.js';
 import './cards.js';
 import './swiper.js';
-import './cursor.js';
+// import './cursor.js';
