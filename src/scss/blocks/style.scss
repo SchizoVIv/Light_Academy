@@ -63,11 +63,7 @@ ol {
   color: var(--font-color);
 }
 
-// html {
-//   cursor: none;
-// }
 .page{
-  // cursor: none;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -132,12 +128,9 @@ ol {
 }
 
 // @media (min-width: 993px) {
-//   html, .page {
+//   html, .page, a, button {
 //     cursor: none;
 //   }
-// button, a {
-//   cursor: none;
-// }
 // }
 
 ::-webkit-scrollbar {
@@ -153,6 +146,7 @@ ol {
   border-radius: 8px;
   border: 2px solid var(--font-color-light);
 }
+
 
 
 

@@ -214,7 +214,7 @@
 }
 
 .coach__button {
-  // // cursor: pointer;
+  cursor: pointer;
   position: relative;
   border: none;
   border-radius: 100px 0 200px 100px;
@@ -222,6 +222,11 @@
   padding: 19px 0;
   width: 100%;
   max-width: 435px;
+
+
+}
+
+.button-hover {
   text-decoration: none;
   background-color: white;
   -webkit-transition: 0.5s all ease;
@@ -351,7 +356,7 @@
 }
 
 @media (min-width:993px) {
-  .coach__button:hover {
+  .button-hover:hover {
     -webkit-transform: translateY(-3px);
         -ms-transform: translateY(-3px);
             transform: translateY(-3px);

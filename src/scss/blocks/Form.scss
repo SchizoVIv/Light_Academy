@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-.form__box-input {
+.form__inputs-conteiner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +97,7 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  // cursor: pointer;
+  cursor: pointer;
 }
 
 input:-webkit-autofill,
@@ -138,7 +138,7 @@ input:-webkit-autofill:focus {
   width: 100%;
   max-width: 360px;
   background-color: var(--card-color);
-  // cursor: pointer;
+  cursor: pointer;
   -webkit-transition: all 0.2s ease;
           -o-transition: all 0.2s ease;
           transition: all 0.2s ease;
@@ -155,7 +155,7 @@ input:-webkit-autofill:focus {
   -webkit-transform: scale(1);
           -ms-transform: scale(1);
       transform: scale(1);
-  // cursor: auto;
+  cursor: auto;
   color: rgb(171, 171, 171);
   background-color: var(--card-color);
 }
@@ -247,7 +247,7 @@ input:-webkit-autofill:focus {
             -ms-transform: scale(1);
         transform: scale(1);
     color: rgb(171, 171, 171);
-    // cursor: auto;
+    cursor:auto;
     background-color: var(--card-color);
   }
 

@@ -1,3 +1,5 @@
+import './inputmask.min.js';
+import './just-validate.min.js';
 import './scroll.js';
 import './popup.js';
 import './burger.js';
@@ -6,7 +8,5 @@ import './faq.js';
 import './validation.js';
 import './hint.js';
 import './buttonPresent.js';
-import './addCard.js';
 import './cards.js';
 import './swiper.js';
-// import './cursor.js';
