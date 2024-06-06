@@ -11,14 +11,15 @@ const coachingButton = document.querySelector('.coaching__button')
 const coachButton = document.querySelector('.coach__button')
 
 
-function popupHandleClose(pop, overflow) {
+export function popupHandleClose(pop, overflow) {
   enableScroll()
   pop.classList.add('popup__hidden')
   overflow.classList.remove('overflow-active')
 }
 
-function popupHandleOpen(pop, overflow, e) {
+export function popupHandleOpen(pop, overflow, e) {
   disableScroll()
+  console.log(pop)
   pop.classList.remove('popup__hidden')
   overflow.classList.add('overflow-active')
   if(e.classList.contains('advantages__wheel') || e.classList.contains('advantages__button') || e.classList.contains('advantages__wheel-content') || e.classList.contains('advantages__wheel-inner')) {
@@ -80,3 +81,21 @@ popupOverflowImg2.addEventListener('click', () => {
 formatLink.addEventListener('click',  () => {
   popupHandleOpen(popupImg2, popupOverflowImg2)
 })
+
+// сообщение
+
+// const popupButtonCloseMsg = document.querySelector('.popup-msg__button-close')
+// const popupOverflowMsg = document.querySelector('.popup-msg__overflow')
+// const popupMsg = document.querySelector('.popup-msg')
+// const formButton = document.querySelector('.form__button')
+
+// popupButtonCloseMsg.addEventListener('click', () => {
+//   popupHandleClose(popupMsg, popupOverflowMsg)
+// })
+// popupOverflowMsg.addEventListener('click', () => {
+//   popupHandleClose(popupMsg, popupOverflowMsg)
+// })
+// formButton.addEventListener('click',  () => {
+//   popupHandleOpen(popupMsg, popupOverflowMsg)
+// })
+

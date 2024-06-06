@@ -13,6 +13,7 @@ const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 // const changed = require('gulp-changed');
 const sassGlob = require('gulp-sass-glob');
+const php = require('gulp-connect-php');
 
 gulp.task('clean', function() {
   if(fs.existsSync('./dist/')){
@@ -63,7 +64,7 @@ gulp.task('img', function() {
   return gulp
   .src('./src/images/**/*', { encoding: false })
   // .pipe(changed('./dist/images'))
-  // .pipe(imagemin({ verbose: true })) // сжатие картинок
+  .pipe(imagemin({ verbose: true })) // сжатие картинок
   .pipe(gulp.dest('./dist/images'))
 })
 
@@ -77,15 +78,15 @@ gulp.task('fonts', function() {
   done();
 })
 
-// gulp.task('files', function() {
-//   if(fs.existsSync('./src/files/')) {
-//     return gulp
-//     .src('./src/files/**/*', { encoding: false })
-//     // .pipe(changed('./dist/files'))
-//     .pipe(gulp.dest('./dist/files'))
-//   }
-//   done();
-// })
+gulp.task('files', function() {
+  if(fs.existsSync('./src/files/')) {
+    return gulp
+    .src('./src/files/**/*', { encoding: false })
+    // .pipe(changed('./dist/files'))
+    .pipe(gulp.dest('./dist/files'))
+  }
+  done();
+})
 
 gulp.task('js', function() {
   return gulp
@@ -97,6 +98,29 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./dist/js'))
 })
 
+// gulp.task('js', function() {
+//   return gulp
+//     .src(['./src/scripts/*.js', '!./src/scripts/cardsListTeacher.js', '!./src/scripts/cardsListReview.js']) // Исключаем файлы cardsListTeacher.js и cardsListReview.js
+//     .pipe(plumber())
+//     .pipe(babel())
+//     .pipe(webpack(require('./webpack.config.js')))
+//     .pipe(gulp.dest('./dist/js'))
+// });
+
+// // Задача для копирования файлов cardsListTeacher.js и cardsListReview.js без обработки
+// gulp.task('copySpecialJS', function() {
+//   return gulp
+//     .src(['./src/scripts/cardsListTeacher.js', './src/scripts/cardsListReview.js'])
+//     .pipe(gulp.dest('./dist/js'));
+// });
+
+gulp.task('php', function() {
+  return gulp
+  .src('./src/**/*.php', { encoding: false })
+  // .pipe(changed('./dist/files'))
+  .pipe(gulp.dest('./dist/'))
+})
+
 gulp.task('server', function() {
   return gulp.src('./dist/')
   .pipe(server({
@@ -105,18 +129,22 @@ gulp.task('server', function() {
   }))
 })
 
+
 gulp.task('watch', function() {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('sass'));
   gulp.watch('./src/**/*.html', gulp.parallel('html'));
   gulp.watch('./src/images/**/*', gulp.parallel('img'));
   gulp.watch('./src/fonts/**/*', gulp.parallel('fonts'));
-  // gulp.watch('./src/files/**/*', gulp.parallel('files'));
+  gulp.watch('./src/files/**/*', gulp.parallel('files'));
   gulp.watch('./src/scripts/**/*', gulp.parallel('js'));
+  // gulp.watch('./src/scripts/**/*', gulp.parallel('copySpecialJS'));
+  gulp.watch('./src/**/*.php', gulp.parallel('php'));
 })
 
 gulp.task('default',
   gulp.series('clean',
-  // gulp.parallel('html', 'sass', 'img', 'fonts', 'files', 'js'),
-  gulp.parallel('html', 'sass', 'img', 'fonts', 'js'),
+  gulp.parallel('html', 'sass', 'img', 'fonts', 'files', 'js', 'php'),
+  // gulp.parallel('html', 'sass', 'img', 'fonts', 'files', 'js', 'php', 'copySpecialJS'),
+  // gulp.parallel('html', 'sass', 'img', 'fonts', 'js'),
   gulp.parallel('server', 'watch')
 ))

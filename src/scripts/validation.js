@@ -1,3 +1,22 @@
+import {popupHandleClose, popupHandleOpen} from './popup.js'
+
+const popupButtonCloseMsg = document.querySelector('.popup-msg__button-close')
+const popupOverflowMsg = document.querySelector('.popup-msg__overflow')
+const popupMsg = document.querySelector('.popup-msg')
+const formButton = document.querySelector('.form__button')
+
+popupButtonCloseMsg.addEventListener('click', () => {
+  popupHandleClose(popupMsg, popupOverflowMsg)
+})
+popupOverflowMsg.addEventListener('click', () => {
+  popupHandleClose(popupMsg, popupOverflowMsg)
+})
+// formButton.addEventListener('click',  () => {
+//   popupHandleOpen(popupMsg, popupOverflowMsg)
+// })
+
+
+
 const justValidate = require("./just-validate.min");
 // const Inputmask = require("./inputmask.min");
 // const submitButton = document.querySelector(".form__button");
@@ -60,8 +79,9 @@ validation.addField('#name', [
       name: document.getElementById("name").value,
       tel: selector.inputmask.unmaskedvalue(),
       email: document.getElementById("email").value,
-
+      orientation: document.getElementById("select"),
     }
+    console.log(data)
 
     let response = await fetch("../mail.php", {
       method: "POST",
@@ -73,31 +93,35 @@ validation.addField('#name', [
 
     let result = await response.text()
 
+    if(response.ok) {
+      popupHandleOpen(popupMsg, popupOverflowMsg)
+    }
+
     alert(result)
   })
 
-  const nameInput = document.querySelector("#name");
-  const phoneInput = document.querySelector("#phone");
-  const emailInput = document.querySelector("#email");
-  const submitButton = document.querySelector(".form__button");
-  const optionSelect = document.querySelector("#option");
+  // const nameInput = document.querySelector("#name");
+  // const phoneInput = document.querySelector("#phone");
+  // const emailInput = document.querySelector("#email");
+  // const submitButton = document.querySelector(".form__button");
+  // const optionSelect = document.querySelector("#option");
 
-  function validateForm() {
-    // Получаем ссылки на поля формы
-    console.log('valid')
-    // Проверяем, пустые ли поля
-    if (nameInput.value.trim() === '' ||
-    phoneInput.value.trim() === '' ||
-    emailInput.value.trim() === '' ||
-    optionSelect.value.trim() === '') {
-        submitButton.disabled = true;
-    } else {
-        submitButton.disabled = false;
-    }
-  }
-  nameInput.addEventListener("input", validateForm);
-  phoneInput.addEventListener("input", validateForm);
-  emailInput.addEventListener("input", validateForm);
-  optionSelect.addEventListener("input", validateForm);
-  // Вызываем функцию проверки формы при загрузке страницы
-  validateForm();
+  // function validateForm() {
+  //   // Получаем ссылки на поля формы
+  //   console.log('valid')
+  //   // Проверяем, пустые ли поля
+  //   if (nameInput.value.trim() === '' ||
+  //   phoneInput.value.trim() === '' ||
+  //   emailInput.value.trim() === '' ||
+  //   optionSelect.value.trim() === '') {
+  //       submitButton.disabled = true;
+  //   } else {
+  //       submitButton.disabled = false;
+  //   }
+  // }
+  // nameInput.addEventListener("input", validateForm);
+  // phoneInput.addEventListener("input", validateForm);
+  // emailInput.addEventListener("input", validateForm);
+  // optionSelect.addEventListener("input", validateForm);
+  // // Вызываем функцию проверки формы при загрузке страницы
+  // validateForm();
