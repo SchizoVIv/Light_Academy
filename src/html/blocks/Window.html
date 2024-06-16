@@ -4,16 +4,45 @@
     <button class="popup__button-close"></button>
     <div class="popup__image"></div>
     <div class="popup__form">
-      <h3 class="popup__title title">Заполни форму и получи подарок!</h3>
+      <h3 class="popup__title">Заполни форму и получи подарок!</h3>
       @@include('./Form.html')
     </div>
   </div>
 </section>
 <section class="popup-img1 popup__hidden">
   <div class="popup-img1__overflow"></div>
-  <div class="popup-img1__box-img">
-    <button class="popup-img1__button-close"></button>
-    <img src="./images/certificate.jpg" class="popup-img1__image" alt="Сертификат" style="pointer-events: none;">
+  <div class="swiper sample-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="popup__box-slide">
+          <button class="popup-img1__button-close"></button>
+          <div class="popup-img1__box-img">
+            <img src="./images/certificate.jpg" class="popup-img1__image" alt="Сертификат" style="pointer-events: none;">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="popup__box-slide">
+          <button class="popup-img1__button-close"></button>
+          <div class="popup-img1__box-img">
+            <img src="./images/certificate.jpg" class="popup-img1__image" alt="Сертификат" style="pointer-events: none;">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="popup__box-slide">
+          <button class="popup-img1__button-close"></button>
+          <div class="popup-img1__box-img">
+            <img src="./images/certificate.jpg" class="popup-img1__image" alt="Сертификат" style="pointer-events: none;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-box swiper-button-box-popup">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </div>
 </section>
 <section class="popup-img2 popup__hidden">

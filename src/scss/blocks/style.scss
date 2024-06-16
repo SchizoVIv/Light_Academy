@@ -71,6 +71,9 @@ ol {
   font-family: var(--main-font), serif;
   background-color: #F9F3EF;
   background-image: url(../images/100-90-8.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main {
@@ -123,7 +126,7 @@ ol {
   }
 
   .subtitle {
-    font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
+    // font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
   }
 }
 

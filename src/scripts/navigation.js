@@ -24,7 +24,6 @@ handleResize();
 document.addEventListener('mousemove', function(event) {
   x = event.clientX; // Координата X курсора
   y = event.clientY; // Координата Y курсора
-  // console.log('X: ' + x + ', Y: ' + y);
 
 
 // показать header после стандартной позиции при наведении мыши
@@ -44,14 +43,6 @@ document.addEventListener('mousemove', function(event) {
 
 
 window.addEventListener('scroll', () => {
-
-  // console.log(`скрол ${scrollPosition()}`)
-  // console.log(`ширина ${screenWidth}`)
-
-
-  // console.log(`lastScroll ${lastScroll}`)
-
-
 // мобильная версия показывать header при скроле
   if(scrollPosition() < lastScroll
     && conteinHide()

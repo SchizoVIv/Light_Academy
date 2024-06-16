@@ -11,13 +11,15 @@ $data = json_decode($json, true); // Преобразование json
 // Данные
 $name = $data['name'];
 $tel = $data['tel'];
-$msg = $data['email'];
+$email = $data['email'];
+$tema = $data['orientation'];
 
 // Контент письма
 $title = 'Заявка с сайта'; // Название письма
 $body = '<p>Имя: <strong>'.$name.'</strong></p>'.
         '<p>Телефон: <strong>'.$tel.'</strong></p>'.
-        '<p>Сообщение: <strong>'.$msg.'</strong></p>';
+        '<p>Почта: <strong>'.$email.'</strong></p>'.
+        '<p>Цель: <strong>'.$tema.'</strong></p>';
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -30,14 +32,18 @@ try {
   // Настройки почты отправителя
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
   $mail->Username   = 'mod.nomber1@gmail.com'; // Логин на почте
+  // $mail->Username   = 'eoalight@gmail.com'; // Логин на почте
+  // $mail->Password   = 'zscj exit obih galt'; // Пароль на почте
   $mail->Password   = 'bdzu ejri nfek fzcs'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
   $mail->setFrom('mod.nomber1@gmail.com', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
+  // $mail->setFrom('eoalight@gmail.com', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('mod.nomber1@gmail.com');
+  // $mail->addAddress('eoalight@gmail.com');
 
   // Отправка сообщения
   $mail->isHTML(true);

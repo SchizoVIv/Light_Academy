@@ -11,7 +11,6 @@ const rotateBetweenWords = (value) => {
 
 // расстояние между буквами
 const rotateBetweenLetters = (value) => {
-  console.log('tyt')
   const letters = document.querySelectorAll('.advantages__wheel-content')
   let deg = 0
 

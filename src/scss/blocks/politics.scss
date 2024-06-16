@@ -1,0 +1,16 @@
+.politics {
+  margin: 100px auto;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 100px;
+}
+
+.politics__text {
+  margin: 10px 0 0;
+}
+
+@media (max-width: 462px) {
+  .politics {
+    padding: 0 30px;
+  }
+}
