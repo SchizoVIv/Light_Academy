@@ -61,3 +61,11 @@ const swiper = new Swiper('.sample-slider', {
   slidesPerView: 1,
   freeModeSticky: true,
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  let video = document.querySelector('.reviews__video');
+  if (video) {
+      video.style.maxWidth = '100vw';
+      video.style.maxHeight = '550px';
+  }
+});
