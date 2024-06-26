@@ -28,58 +28,14 @@ if(screenWidth < 993) {
     card.addEventListener('click', () => {
       const fotoList = document.querySelectorAll('.teachers__foto')
       const contentList = document.querySelectorAll('.teachers__content')
-
-      // changeOpen(fotoList, index)
-      // changeOpen(contentList, index)
+      
       fotoList.forEach((el, i) => {
         changeOpen(el, i, index)
-        // if (i === index && !el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')) {
-        //   handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
-        // } else if (el.classList.contains('teachers__card_open-left')) {
-        //   return el.classList.remove('teachers__card_open-left')
-        // } else if (el.classList.contains('teachers__card_open-right')) {
-        //   return el.classList.remove('teachers__card_open-right')
-        // }
       })
 
       contentList.forEach((el, i) => {
         changeOpen(el, i, index)
-        // if (i === index && !el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')) {
-        //   handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
-        // } else if (el.classList.contains('teachers__card_open-left')) {
-        //   return el.classList.remove('teachers__card_open-left')
-        // } else if (el.classList.contains('teachers__card_open-right')) {
-        //   return el.classList.remove('teachers__card_open-right')
-        // }
       })
-
-      // fotoList.forEach((el, i) => {
-      //   if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
-      //     handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
-      //   } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
-      //     if(el.classList.contains('teachers__card_open-left')){
-      //       return el.classList.remove('teachers__card_open-left')
-      //     }
-      //     if(el.classList.contains('teachers__card_open-right')){
-      //       return el.classList.remove('teachers__card_open-right')
-      //     }
-      //   }
-
-
-      // })
-
-      // contentList.forEach((el, i) => {
-      //   if(!el.classList.contains('teachers__card_open-left') && !el.classList.contains('teachers__card_open-right')){
-      //     handleClick(el, i, index, 'teachers__card_open-left', 'teachers__card_open-right')
-      //   } else if(el.classList.contains('teachers__card_open-left') || el.classList.contains('teachers__card_open-right')) {
-      //     if(el.classList.contains('teachers__card_open-left')){
-      //       return el.classList.remove('teachers__card_open-left')
-      //     }
-      //     if(el.classList.contains('teachers__card_open-right')){
-      //       return el.classList.remove('teachers__card_open-right')
-      //     }
-      //   }
-      // })
 
 
     })

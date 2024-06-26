@@ -227,11 +227,11 @@ const sendMessage = (inputList) => {
   .then(response => {
     if (response.ok) {
       console.log('Сообщение успешно отправлено');
-      formElement.reset();
       if(inputList[3].selectedOptions[0].value === 'present') {
         window.location.href = 'https://t.me/eoalight/376';
       }
       popupHandleOpen(popupMsg, popupOverflowMsg)
+      formElement.reset();
     } else {
       console.error('Ошибка при отправке сообщения');
     }

@@ -43,7 +43,7 @@ buttonPrev.addEventListener('click', vinilAnimationRunPrev)
 buttonNext.addEventListener('click', vinilAnimationRunNext)
 
 const swiper = new Swiper('.sample-slider', {
-  loop: true,
+  // loop: true,
   spaceBetween: 40,
   // autoplay: {
   //   delay: 5000,
