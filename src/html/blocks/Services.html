@@ -3,9 +3,9 @@
     <div class="services__backlight backlight"></div>
     <h3 class="services__title title">Услуги</h3>
     <ul class="services__list-service">
-      <li class="services__item-service">
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
         <div>
-          <h4 class="services__subtitle subtitle">Индивидуальные занятия</h4>
+          <h4 class="services__subtitle subtitle" itemprop="name">Индивидуальные занятия</h4>
           <ul class="services__list-filling">
             <li class="services__item-filling">
               Занятия с преподавателем
@@ -27,10 +27,14 @@
             </li>
           </ul>
         </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="20" />
+        </div>
       </li>
 
-      <li class="services__item-service">
-        <h4 class="services__subtitle subtitle">Курс Light English</h4>
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
+        <h4 class="services__subtitle subtitle" itemprop="name">Курс Light English</h4>
         <ul class="services__list-filling">
           <li class="services__item-filling">
             Вебинары с основателем
@@ -55,11 +59,15 @@
             Коуч сессия
           </li>
         </ul>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="120" />
+        </div>
         <img src="./images/dance.png" class="services__image-dance" alt="Луи Армстронг- американский джазист">
       </li>
 
-      <li class="services__item-service">
-        <h4 class="services__subtitle subtitle">Разговорный клуб</h4>
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
+        <h4 class="services__subtitle subtitle" itemprop="name">Разговорный клуб</h4>
         <ul class="services__list-filling">
           <li class="services__item-filling">
             С участием преподавателя или носителем языка
@@ -92,10 +100,14 @@
           </li>
         </ul>
         <p class="services__cost">10€ встреча</p>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="10" />
+        </div>
       </li>
 
-      <li class="services__item-service">
-        <h4 class="services__subtitle subtitle">Работа с Коучем</h4>
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
+        <h4 class="services__subtitle subtitle" itemprop="name">Работа с Коучем</h4>
         <ul class="services__list-filling">
           <li class="services__item-filling">
             Формирование запроса
@@ -108,6 +120,10 @@
         <p class="services__cost">ОТ 50€ сессия</p>
         <div class="services__notes"></div>
         <img src="./images/jazzMusician.png" class="services__image" alt="Луи Армстронг- американский джазист">
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="50" />
+        </div>
       </li>
     </ul>
   </div>
