@@ -140,6 +140,19 @@
   width: 100%;
   height: auto;
   max-width: 278px;
+
+}
+
+.coaching__image_1 {
+  border-radius: 0 0 50% 50%;
+}
+
+.coaching__image_2 {
+  border-radius: 0 50% 0 0;
+}
+
+.coaching__image_3 {
+  border-radius: 0 0 50% 0;
 }
 
 .coaching__image-box:nth-child(5)::after {
@@ -224,7 +237,7 @@
   overflow: hidden;
   background-color: transparent;
   color: var(--font-color);
-  transition: all 1s ease-in-out;
+  // transition: all 1s ease-in-out;
 }
 
 .coaching__button-text {
@@ -232,23 +245,23 @@
   margin: 0 10px;
 }
 
-.type1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  height: 10px;
-  width: 10px;
-  border-radius: 30px;
-  visibility: hidden;
-  background-color: var(--hover-color);
-  transition: all 0.8s ease-in-out;
-}
+// .type1::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   z-index: -1;
+//   height: 10px;
+//   width: 10px;
+//   border-radius: 30px;
+//   visibility: hidden;
+//   background-color: var(--hover-color);
+//   transition: all 0.8s ease-in-out;
+// }
 
-.coaching__button:active {
-  transform: scale(0.8);
-}
+// .coaching__button:active {
+//   transform: scale(0.8);
+// }
 
 @media (max-width: 1280px) {
   .coaching__title {

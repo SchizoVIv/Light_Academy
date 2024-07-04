@@ -190,8 +190,6 @@
 }
 
 .requests__card:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
   grid-area: card1;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
@@ -217,8 +215,6 @@
 }
 
 .requests__card:nth-child(3) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: card2;
   max-width: 425px;
   height: 398px;
@@ -235,11 +231,10 @@
 }
 
 .requests__card:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
   grid-area: card3;
   -ms-grid-column-align: center;
       justify-self: center;
+  z-index: -1;
   border-radius: 0 162.5px 162.5px 0;
   max-width: 467px;
   height: 325px;
@@ -256,8 +251,6 @@
 }
 
 .requests__card:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
   grid-area: card4;
   justify-self: flex-end;
   max-width: 414px;
@@ -275,8 +268,6 @@
 }
 
 .requests__card:nth-child(6) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
   grid-area: card5;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -296,9 +287,6 @@
 }
 
 .requests__card:last-child {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
   position: relative;
   grid-area: card;
   -webkit-transform-origin: left top;
@@ -435,37 +423,6 @@
   .requests__card:last-child {
     margin: 0 0 0 50px;
   }
-
-  .requests__card:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-  }
-
-  .requests__card:nth-child(3) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:nth-child(4) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:nth-child(5) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
-  }
-
-  .requests__card:nth-child(6) {
-    -ms-grid-row: 7;
-    -ms-grid-column: 3;
-  }
-
-  .requests__card:last-child {
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-  }
 }
 
 @media (max-width:660px) {
@@ -510,37 +467,6 @@
 
   .requests__card:last-child {
     max-height: 300px;
-  }
-
-  .requests__card:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:nth-child(3) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:nth-child(4) {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:nth-child(5) {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:nth-child(6) {
-    -ms-grid-row: 11;
-    -ms-grid-column: 1;
-  }
-
-  .requests__card:last-child {
-    -ms-grid-row: 13;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
   }
 
 }

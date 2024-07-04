@@ -1,0 +1,29 @@
+.politics {
+  margin: 100px auto;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 100px;
+}
+
+.politics__title {
+  margin: 0 0 30px;
+}
+
+.politics__text {
+  margin: 10px 0 0;
+  width: 100%;
+}
+
+.politics__subtitle {
+  margin: 20px 0 10px;
+}
+
+
+
+
+
+@media (max-width: 462px) {
+  .politics {
+    padding: 0 30px;
+  }
+}

@@ -71,6 +71,9 @@ ol {
   font-family: var(--main-font), serif;
   background-color: #F9F3EF;
   background-image: url(../images/100-90-8.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main {
@@ -123,8 +126,30 @@ ol {
   }
 
   .subtitle {
-    font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
+    // font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
   }
 }
+
+// @media (min-width: 993px) {
+//   html, .page, a, button {
+//     cursor: none;
+//   }
+// }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--font-color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--font-color);
+  border-radius: 8px;
+  border: 2px solid var(--font-color-light);
+}
+
+
 
 

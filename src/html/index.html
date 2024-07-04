@@ -1,20 +1,118 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:article="http://schema.org/Article">
   <head>
       <meta charset="utf-8">
-      <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico"> -->
-      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
       <meta name="theme-color" content="#000000">
-      <link rel="apple-touch-icon" href="./images/logo129.png">
-      <link rel="icon" href="./images/logo129.png" type="image/x-icon">
-      <title>Академия Light</title>
-      <link rel="preload" href="./images/100-90-8.png" as="image">
-      <link rel="preload" href="./images/firstImagePeople.png" as="image">
-      <link rel="stylesheet" href="./css/index.css">
 
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> -->
+
+      <!-- <link rel="icon" href="/images/public/favicon.ico">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/public/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="120x120" href="/images/public/apple-touch-icon.png">
+      <link rel="manifest" href="/images/public/site.webmanifest">
+      <link rel="mask-icon" href="/images/public/safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="shortcut icon" href="/images/public/favicon.ico">
+      <link rel="icon" href="https://light-english.md/images/public/favicon.ico" type="image/x-icon">
+      <meta name="msapplication-TileColor" content="#f9f3ef">
+      <meta name="theme-color" content="#ffffff"> -->
+
+      <link rel="icon" href="https://light-english.md/public/favicon.ico" type="image/x-icon">
+
+      <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/public/favicon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/public/favicon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/public/favicon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/public/favicon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/public/favicon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/public/favicon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/public/favicon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/public/favicon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon-180x180.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/public/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/public/favicon-192x192.png">
+      <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/public/favicon-144x144.png">
+      <meta name="msapplication-config" content="/public/browserconfig.xml">
+
+
+      <title>Академия Light</title>
+      <meta name="description" content="Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только">
+
+      <!-- Мета-теги Open Graph для Facebook -->
+      <meta property="og:type" content="product">
+      <meta property="og:title" content="Курсы английского языка - Академия Light">
+      <meta property="og:description" content="Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только">
+      <meta property="og:url" content="https://light-english.md/">
+      <meta property="og:image" content="https://light-english.md/images/imageTitleLink.jpg">
+      <meta property="og:site_name" content="Академия Light">
+      <meta property="og:locale" content="ru_RU">
+
+      <!-- Мета-теги Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Курсы английского языка - Академия Light">
+      <meta name="twitter:description" content="Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только">
+      <meta name="twitter:image" content="https://light-english.md/images/imageTitleLink.jpg">
+      <meta property="article:section" content="Курсы английского">
+      <meta property="article:tag" content="английский язык, занятия, курсы, обучение, коучинг">
+
+      <link rel="preload" href="./images/100-90-8.png" as="image">
+      <link rel="preload" href="./images/firstImagePeople.jpg" as="image">
+      <link rel="stylesheet" href="./css/index.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" ></script>
+
+      <script type="application/ld+json">
+
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "https://light-english.md/",
+          "name": "Академия Light",
+          "alternateName": "Курсы английского языка с коучингом",
+          "description": "Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Академия Light",
+            "sameAs": "https://light-english.md/"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://light-english.md/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Кишинёв",
+            "addressCountry": "Молдова"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": [
+              "+37369310518",
+              "+37368673443"
+            ],
+            "contactType": "Customer Service",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Кишинёв",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Кишинёв",
+                "addressCountry": "Молдова"
+              }
+            }
+          }
+        }
+
+
+      </script>
+
   </head>
   <body class="page">
     @@include('blocks/Header.html')
@@ -30,10 +128,9 @@
       @@include('blocks/Reviews.html')
       @@include('blocks/Appointment.html')
       @@include('blocks/FAQ.html')
-      @@include('blocks/Window.html')
+      @@include('blocks/Popup.html')
     </main>
     @@include('blocks/Footer.html')
-
     <script src="./js/index.bundle.js" ></script>
   </body>
 </html>
