@@ -3,19 +3,8 @@ import {popupHandleClose, popupHandleOpen} from './popup.js'
 const popupButtonCloseMsg = document.querySelector('.popup-msg__button-close')
 const popupOverflowMsg = document.querySelector('.popup-msg__overflow')
 const popupMsg = document.querySelector('.popup-msg')
-const formButton = document.querySelector('.form__button')
-
-popupButtonCloseMsg.addEventListener('click', () => {
-  popupHandleClose(popupMsg, popupOverflowMsg)
-})
-popupOverflowMsg.addEventListener('click', () => {
-  popupHandleClose(popupMsg, popupOverflowMsg)
-})
-
 const formElement = document.querySelector('.form');
 
-const formInput = formElement.querySelector('.form__input');
-// const formError = formElement.querySelector(`.${formInput.id}-error`);
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
   inputElement.classList.add('form__input_type_error');
@@ -24,7 +13,6 @@ const showInputError = (formElement, inputElement, errorMessage) => {
 };
 
 const hideInputError = (formElement, inputElement) => {
-  console.log(inputElement.name)
   const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
   inputElement.classList.remove('form__input_type_error');
   errorElement.classList.remove('form__input-error_active');
@@ -40,6 +28,7 @@ function isErrorValid(inputElement) {
     inputElement.setCustomValidity("");
   }
 }
+
 const isValid = (formElement, inputElement) => {
   isErrorValid(inputElement)
 
@@ -143,4 +132,11 @@ const sendMessage = (inputList) => {
   .catch(error => console.error('Ошибка при отправке сообщения:', error));
 };
 
+
+popupButtonCloseMsg.addEventListener('click', () => {
+  popupHandleClose(popupMsg, popupOverflowMsg)
+})
+popupOverflowMsg.addEventListener('click', () => {
+  popupHandleClose(popupMsg, popupOverflowMsg)
+})
 

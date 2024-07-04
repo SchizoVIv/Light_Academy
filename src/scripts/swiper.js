@@ -2,7 +2,6 @@ const buttonPrev = document.querySelector('.swiper-button-prev')
 const buttonNext = document.querySelector('.swiper-button-next')
 
 function vinilAnimationRunPrev() {
-  const imagesBlocks = document.querySelectorAll('.reviews__images');
   const sectionReviews = document.querySelector('.reviews');
   const slidesList = sectionReviews.querySelectorAll('.swiper-slide');
 
@@ -21,7 +20,6 @@ function vinilAnimationRunPrev() {
 }
 
 function vinilAnimationRunNext() {
-  const imagesBlocks = document.querySelectorAll('.reviews__images');
   const sectionReviews = document.querySelector('.reviews');
   const slidesList = sectionReviews.querySelectorAll('.swiper-slide');
 

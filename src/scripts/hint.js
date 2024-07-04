@@ -1,14 +1,13 @@
-import {screenWidth} from './navigation.js';
-const servicesTextList = document.querySelectorAll('.services__item-text')
-// const servicesSection = document.querySelector('.services__item-service:nth-child(3)::after')
+import { SCREEN_WIDTH } from '../utils/constants.js';
+const servicesTextList = document.querySelectorAll('.services__item-text');
 
 
 servicesTextList.forEach((textItem, index) => {
-  if(screenWidth > 992) {
+  if (SCREEN_WIDTH > 992) {
     textItem.addEventListener('mouseover', () => {
       const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
       servicesTooltipList.forEach((tooltipItem, i) => {
-        if(i === index) {
+        if (i === index) {
           tooltipItem.classList.add('services__item-tooltip_active')
         }
       })
@@ -16,7 +15,7 @@ servicesTextList.forEach((textItem, index) => {
     textItem.addEventListener('mouseout', () => {
       const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
       servicesTooltipList.forEach((tooltipItem, i) => {
-        if(i === index) {
+        if (i === index) {
           tooltipItem.classList.remove('services__item-tooltip_active')
         }
       })
@@ -25,9 +24,9 @@ servicesTextList.forEach((textItem, index) => {
     textItem.addEventListener('click', () => {
       const servicesTooltipList = document.querySelectorAll('.services__item-tooltip')
       servicesTooltipList.forEach((tooltipItem, i) => {
-        if(i === index && !tooltipItem.classList.contains('services__item-tooltip_active')) {
+        if (i === index && !tooltipItem.classList.contains('services__item-tooltip_active')) {
           tooltipItem.classList.add('services__item-tooltip_active')
-        } else if(tooltipItem.classList.contains('services__item-tooltip_active')) {
+        } else if (tooltipItem.classList.contains('services__item-tooltip_active')) {
           tooltipItem.classList.remove('services__item-tooltip_active')
         }
       })

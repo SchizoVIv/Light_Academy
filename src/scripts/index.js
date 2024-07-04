@@ -1,5 +1,3 @@
-import './inputmask.min.js';
-import './just-validate.min.js';
 import './scroll.js';
 import './popup.js';
 import './burger.js';
