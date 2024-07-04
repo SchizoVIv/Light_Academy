@@ -1,30 +1,128 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:article="http://schema.org/Article">
   <head>
       <meta charset="utf-8">
-      <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico"> -->
-      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
       <meta name="theme-color" content="#000000">
-      <link rel="apple-touch-icon" href="./images/logo129.png">
-      <link rel="icon" href="./images/logo129.png" type="image/x-icon">
-      <title>Академия Light</title>
-      <link rel="preload" href="./images/100-90-8.png" as="image">
-      <link rel="preload" href="./images/firstImagePeople.png" as="image">
-      <link rel="stylesheet" href="./css/index.css">
 
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> -->
+
+      <!-- <link rel="icon" href="/images/public/favicon.ico">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/public/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="120x120" href="/images/public/apple-touch-icon.png">
+      <link rel="manifest" href="/images/public/site.webmanifest">
+      <link rel="mask-icon" href="/images/public/safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="shortcut icon" href="/images/public/favicon.ico">
+      <link rel="icon" href="https://light-english.md/images/public/favicon.ico" type="image/x-icon">
+      <meta name="msapplication-TileColor" content="#f9f3ef">
+      <meta name="theme-color" content="#ffffff"> -->
+
+      <link rel="icon" href="https://light-english.md/public/favicon.ico" type="image/x-icon">
+
+      <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="/public/favicon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/public/favicon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/public/favicon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/public/favicon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/public/favicon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/public/favicon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/public/favicon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/public/favicon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon-180x180.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/public/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/public/favicon-192x192.png">
+      <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/public/favicon-144x144.png">
+      <meta name="msapplication-config" content="/public/browserconfig.xml">
+
+
+      <title>Академия Light</title>
+      <meta name="description" content="Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только">
+
+      <!-- Мета-теги Open Graph для Facebook -->
+      <meta property="og:type" content="product">
+      <meta property="og:title" content="Курсы английского языка - Академия Light">
+      <meta property="og:description" content="Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только">
+      <meta property="og:url" content="https://light-english.md/">
+      <meta property="og:image" content="https://light-english.md/images/imageTitleLink.jpg">
+      <meta property="og:site_name" content="Академия Light">
+      <meta property="og:locale" content="ru_RU">
+
+      <!-- Мета-теги Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Курсы английского языка - Академия Light">
+      <meta name="twitter:description" content="Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только">
+      <meta name="twitter:image" content="https://light-english.md/images/imageTitleLink.jpg">
+      <meta property="article:section" content="Курсы английского">
+      <meta property="article:tag" content="английский язык, занятия, курсы, обучение, коучинг">
+
+      <link rel="preload" href="./images/100-90-8.png" as="image">
+      <link rel="preload" href="./images/firstImagePeople.jpg" as="image">
+      <link rel="stylesheet" href="./css/index.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" ></script>
+
+      <script type="application/ld+json">
+
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "https://light-english.md/",
+          "name": "Академия Light",
+          "alternateName": "Курсы английского языка с коучингом",
+          "description": "Мы предлагаем понять иностранный язык без зубрежки и выгорания. На нашем сайте ты найдешь крутой онлайн курс английского, с опытными переводчиками, уникальным коучинговым подходом, разговорным клубом и не только",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Академия Light",
+            "sameAs": "https://light-english.md/"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://light-english.md/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Кишинёв",
+            "addressCountry": "Молдова"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": [
+              "+37369310518",
+              "+37368673443"
+            ],
+            "contactType": "Customer Service",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Кишинёв",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Кишинёв",
+                "addressCountry": "Молдова"
+              }
+            }
+          }
+        }
+
+
+      </script>
+
   </head>
   <body class="page">
     <header class="header" id="header">
   <div class="header__conteiner">
     <a href="#header">
-      <img class="header__logo" src="./images/logo-b.png" alt="Логотип академии">
+      <img src="./images/logo-b.png" class="header__logo" alt="Логотип академии">
     </a>
     <input id="menu-toggle" type="checkbox">
     <label class="header__button-container" for="menu-toggle">
-      <div class="header__button"></div>
+      <span class="header__button"></span>
     </label>
     <div class="header__overflow overflow_hidden"></div>
     <nav class="header__nav-box">
@@ -54,17 +152,15 @@
               <a class="header__link link-hover" href="#footer">Контакты</a>
             </li>
         </ul>
-
-
         <ul class="header__contacts">
             <li class="header__item">
               <a class="header__telegram-link" href="https://t.me/light_english_admin" target="_blank">
-                <img class="icon-size icon" src="./images/telegramBlack.png" alt="Ссылка на телеграм">
+                <img src="./images/telegramBlack.png" class="icon-size icon" alt="Ссылка на телеграм">
               </a>
             </li>
             <li class="header__item">
               <a class="header__whats-app-link" href="#start" target="_blank">
-                <img class="icon-size icon" src="./images/whatsapp.png" alt="Ссылка на вотсап">
+                <img src="./images/whatsapp.png" class="icon-size icon" alt="Ссылка на вотсап">
               </a>
             </li>
         </ul>
@@ -80,7 +176,7 @@
       <h2 class="academy__title-line-second">Light</h2>
     </div>
     <div class="academy__box-images">
-      <img class="academy__image" src="./images/firstImagePeople.png" alt="Собрание студентов за бранчем">
+      <img src="./images/firstImagePeople.png" class="academy__image" alt="Собрание студентов за бранчем">
       <button class="academy__button btn2">
         <span class="academy__button-line"></span>
         <span class="academy__text-button">Записаться</span>
@@ -112,7 +208,7 @@
       <div class="requests__card-text">
         <p class="requests__text">Хотите выучить язык, но не знаете с чего начать</p>
       </div>
-      <img class="requests__disk anim" src="./images/record-1.png" alt="Падающая пластина"  loading="lazy">
+      <img src="./images/record-1.png" class="requests__disk anim" alt="Падающая пластина"  loading="lazy">
     </div>
   </div>
 </section>
@@ -121,96 +217,96 @@
   <div class="advantages__conteiner conteiner">
     <h3 class="advantages__title title">Обучаясь у нас, вы получаете:</h3>
     <button class="advantages__button uiverse">
-      <div class="wrapper">
+      <span class="wrapper">
         <span>Получить подарок</span>
-        <div class="circle circle-12"></div>
-        <div class="circle circle-11"></div>
-        <div class="circle circle-10"></div>
-        <div class="circle circle-9"></div>
-        <div class="circle circle-8"></div>
-        <div class="circle circle-7"></div>
-        <div class="circle circle-6"></div>
-        <div class="circle circle-5"></div>
-        <div class="circle circle-4"></div>
-        <div class="circle circle-3"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-1"></div>
-      </div>
-      <div class="advantages__backlight backlight"></div>
-      <div class="advantages__wheel">
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">п</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">д</div>
-          <div class="advantages__wheel-content">а</div>
-          <div class="advantages__wheel-content">р</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">к</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">•</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">п</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">д</div>
-          <div class="advantages__wheel-content">а</div>
-          <div class="advantages__wheel-content">р</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">к</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">•</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">п</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">д</div>
-          <div class="advantages__wheel-content">а</div>
-          <div class="advantages__wheel-content">р</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">к</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">•</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">п</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">д</div>
-          <div class="advantages__wheel-content">а</div>
-          <div class="advantages__wheel-content">р</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">к</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">•</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">п</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">д</div>
-          <div class="advantages__wheel-content">а</div>
-          <div class="advantages__wheel-content">р</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">к</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">•</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">п</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">д</div>
-          <div class="advantages__wheel-content">а</div>
-          <div class="advantages__wheel-content">р</div>
-          <div class="advantages__wheel-content">о</div>
-          <div class="advantages__wheel-content">к</div>
-        </div>
-        <div class="advantages__wheel-inner">
-          <div class="advantages__wheel-content">•</div>
-        </div>
-      </div>
+        <span class="circle circle-12"></span>
+        <span class="circle circle-11"></span>
+        <span class="circle circle-10"></span>
+        <span class="circle circle-9"></span>
+        <span class="circle circle-8"></span>
+        <span class="circle circle-7"></span>
+        <span class="circle circle-6"></span>
+        <span class="circle circle-5"></span>
+        <span class="circle circle-4"></span>
+        <span class="circle circle-3"></span>
+        <span class="circle circle-2"></span>
+        <span class="circle circle-1"></span>
+      </span>
+      <span class="advantages__backlight backlight"></span>
+      <span class="advantages__wheel">
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">п</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">д</span>
+          <span class="advantages__wheel-content">а</span>
+          <span class="advantages__wheel-content">р</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">к</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">•</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">п</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">д</span>
+          <span class="advantages__wheel-content">а</span>
+          <span class="advantages__wheel-content">р</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">к</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">•</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">п</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">д</span>
+          <span class="advantages__wheel-content">а</span>
+          <span class="advantages__wheel-content">р</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">к</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">•</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">п</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">д</span>
+          <span class="advantages__wheel-content">а</span>
+          <span class="advantages__wheel-content">р</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">к</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">•</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">п</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">д</span>
+          <span class="advantages__wheel-content">а</span>
+          <span class="advantages__wheel-content">р</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">к</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">•</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">п</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">д</span>
+          <span class="advantages__wheel-content">а</span>
+          <span class="advantages__wheel-content">р</span>
+          <span class="advantages__wheel-content">о</span>
+          <span class="advantages__wheel-content">к</span>
+        </span>
+        <span class="advantages__wheel-inner">
+          <span class="advantages__wheel-content">•</span>
+        </span>
+      </span>
     </button>
     <div class="advantages__card card">
       <h4 class="advantages__card-title subtitle">Гибкий график</h4>
@@ -235,47 +331,44 @@
 </section>
 
       <section class="coaching section-padding" id="coaching">
-  <div class="coaching__conteiner conteiner">
+  <article typeof="schema:Article" class="coaching__conteiner conteiner">
     <h3 class="coaching__title title">“коучинговый английский” что это?</h3>
     <div class="coaching__grid-box">
       <p class="coaching__text">Часто многие люди учат английский годами, понимают всю теорию, знают слова, но когда нужно заговорить с кем-то - ступор, страх, слова вылетают из головы, мыслей нет. Поэтому столько лет не понимают, в чем же сложность заговорить.</p>
-      <img class="coaching__wing-img" src="./images/wing.png" alt="Стрелка, указывающая на следующий текст">
+      <img src="./images/wing.png" class="coaching__wing-img" alt="Стрелка, указывающая на следующий текст">
       <p class="coaching__text">Именно для этого коучинг и нужен. В нашей академии есть коуч, который благодаря правильно заданным вопросам, помогает вам найти причину страха, научиться им управлять и с легкостью двигаться к цели.</p>
-      <img class="coaching__wing-img" src="./images/wing.png" alt="Стрелка, указывающая на следующий текст">
+      <img src="./images/wing.png" class="coaching__wing-img" alt="Стрелка, указывающая на следующий текст">
       <div class="coaching__image-box">
-        <img class="coaching__image" src="./images/persons.png" alt="Картина художника Луи Леопольд Буальи гримасы">
+        <img src="./images/test4.jpg"  class="coaching__image coaching__image_1" alt="Картина художника Луи Леопольд Буальи гримасы"
+        style="border-radius: 0 0 50% 50%;">
       </div>
       <div class="coaching__image-box">
-        <img class="coaching__image" src="./images/RomaWidthSister.png" alt="Картина художника Луи Леопольд Буальи гримасы">
+        <img src="./images/test2.jpg"  class="coaching__image coaching__image_2" alt="Картина художника Луи Леопольд Буальи гримасы"
+        style="border-radius: 0 50% 0 0;">
       </div>
       <div class="coaching__image-box">
-        <img class="coaching__image" src="./images/AlexandraFirecracker.png" alt="Картина художника Луи Леопольд Буальи гримасы">
+        <img src="./images/test3.jpg" class="coaching__image coaching__image_3" alt="Картина художника Луи Леопольд Буальи гримасы"
+        style="border-radius: 0 0 50% 0;">
       </div>
       <div class="coacing__box">
         <p class="coaching__text">Коуч также работает с нашими преподавателями, поэтому на наших занятиях легкая атмосфера, мы подаем английский комфортно и понятно, ищем причину ступора в языке, чтобы вы заговорили легко.</p>
         <p class="coaching__text">Сессия с коучем Академии входит в обучение.</p>
         <p class="coaching__text">*У вас есть возможность взять личную работу с коучем помимо обучения.</p>
       </div>
-      <!-- <a class="coaching__button-link" href="#appointment">
-        <button class="coaching__button type1">
-          <p class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</p>
-        </button>
-      </a> -->
-      <button class="coaching__button type1">
-        <p class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</p>
+      <button class="coaching__button button-hover">
+        <span class="coaching__button-text">Записаться на бесплатную ознакомительную встречу</span>
       </button>
     </div>
-    <!-- <button class="coaching__button">Записаться на бесплатную ознакомительную встречу</button> -->
-  </div>
+  </article>
 </section>
 
       <section class="founders" id="founders">
   <div class="founders__conteiner">
     <h3 class="founders__title title">Основатели Академии</h3>
-    <img class="founders__logo" src="./images/logo-w.png" alt="Логотип академии">
+    <img src="./images/logo-w.png" class="founders__logo" alt="Логотип академии">
     <div class="founders__box">
       <div class="founder__block-text">
-        <img class="founder__image" src="./images/founderRoman.jpg" alt="Фотография директора академии, Романа">
+        <img src="./images/founderRoman.jpg" class="founder__image" alt="Фотография директора академии, Романа">
         <div class="founder__block-about">
           <h4 class="founder__text-name">Роман Торони</h4>
           <p class="founder__text-role">Директор-коуч Академии</p>
@@ -284,15 +377,15 @@
         <p class="founder__text">Коуч ICF, основатель академии, более 8 лет опыта работы в продажах. Главное направление деятельности Романа коммуникация и понимание. Именно это создает ту атмосферу комфорта и стабильности в вашем обучении и нашей работе Академии</p>
       </div>
       <div class="founder__box-canyon">
-        <img class="founder__image-canyon" src="./images/canyon.jpg" alt="Пейзаж Каньона маслом">
+        <img src="./images/canyon.jpg" class="founder__image-canyon" alt="Пейзаж Каньона маслом">
       </div>
       <div class="founder__block-text">
-        <img class="founder__image" src="./images/founderAlex.jpg" alt="Фотография Александры">
+        <img src="./images/founderAlex.jpg" class="founder__image" alt="Фотография Александры">
         <div class="founder__block-about">
             <h4 class="founder__text-name">Александра Маврова</h4>
             <p class="founder__text-role">Дипломированный специалист-переводчик</p>
         </div>
-        <p class="founder__text"><span class="founder__text-span">Наш вдохновляющий лидер с богатым опытом в образовании и страстью к языку. Опыт работы переводчиком и опыт преподавания более 8 лет. Работала в международной компании KVINT, а также проходила стажировку в американской компании Linguatrip, работала переводчиком в разных сферах.</span></br><span class="founder__text-span">Команда Академии работает по методике обучения Александры, мы вместе составляем программу и корректируем её в процессе.</span></br><span class="founder__text-span">Она - та, кто помогает чтобы английский язык стал вашим
+        <p class="founder__text"><span class="founder__text-span">Наш вдохновляющий лидер с богатым опытом в образовании и страстью к языку. Опыт работы переводчиком и опыт преподавания более 8 лет. Работала в международной компании KVINT, а также проходила стажировку в американской компании Linguatrip, работала переводчиком в разных сферах.</span><br /><span class="founder__text-span">Команда Академии работает по методике обучения Александры, мы вместе составляем программу и корректируем её в процессе.</span><br /><span class="founder__text-span">Она - та, кто помогает чтобы английский язык стал вашим
           лучшим другом.</span></p>
       </div>
       <div class="founders__stars-box"></div>
@@ -302,50 +395,58 @@
   <div class="teachers__conteiner conteiner">
     <h3 class="teachers__title title">Наши преподаватели</h3>
     <ul class="teachers__cards-list">
-      <li class="teachers__card">
+<!-- карточка -->
+      <li class="teachers__card" style="background-image: url(&quot;./images/Christina.jpg&quot;);">
         <div class="teachers__content">
           <h4 class="teachers__subtitle subtitle">Христина</h4>
           <p class="teachers__text">Преподаватель и администратор Академии Light. Опыт работы более 2 лет в сфере переводов и преподавания. На уроках с ней ученики чувствуют поддержку, позитивные эмоции в момент обучения, что сразу помогает избавиться от страха и переживаний. На занятиях с Христиной вы сразу начинаете говорить на английском, практикуя его, и уходите с отличным настроением.</p>
         </div>
-        <div class="teachers__foto teachers__foto-hristina"></div>
+        <div class="teachers__foto"></div>
       </li>
-      <li class="teachers__card">
+<!-- карточка -->
+      <li class="teachers__card" style="background-image: url(&quot;./images/Juliana.jpg&quot;);">
         <div class="teachers__content teachers__content_rotate_right">
           <h4 class="teachers__subtitle subtitle">Юлиана</h4>
-          <p class="teachers__text">Опыт преподавания 4 года, любит преподавать в легкости, объяснять новый материал через ассоциации, рассказывать разные факты о языке. Общительная, веселая, понимающая</p>
+          <p class="teachers__text">Опыт преподавания 4 года, любит преподавать в легкости, объяснять новый материал через ассоциации, рассказывать разные факты о языке. Общительная, веселая, понимающая.</p>
         </div>
-        <div class="teachers__foto teachers__foto-juliana"></div>
+        <div class="teachers__foto teachers__foto-2"></div>
       </li>
-      <li class="teachers__card">
+<!-- карточка -->
+      <li class="teachers__card" style="background-image: url(&quot;./images/Sofia.jpg&quot;);">
         <div class="teachers__content">
           <h4 class="teachers__subtitle subtitle">Софья</h4>
           <p class="teachers__text">Софья, преподаватель английского и китайского с опытом работы более 3 лет. Делюсь своей энергией и страстью к языку и стараюсь делать так, что ученики смогут полюбить язык так же, как люблю его я. После занятия китайским дети подходят и говорят: “我爱中国”- wǒ  aì zhōngguó-  «я люблю Китай»</p>
         </div>
-        <div class="teachers__foto teachers__foto-sofia"></div>
+        <div class="teachers__foto teachers__foto-3"></div>
       </li>
-      <li class="teachers__card">
+<!-- карточка -->
+      <li class="teachers__card" style="background-image: url(&quot;./images/Natalya.jpg&quot;);">
         <div class="teachers__content teachers__content_rotate_right">
           <h4 class="teachers__subtitle subtitle">Наталья</h4>
           <p class="teachers__text">Дипломированный специалист-переводчик. У нее 17 лет изучения и искренней любви к языку, 2 года работы переводчиком в министерстве иностранных дел, 4 года преподавания. Может найти подход и составить программу студентам 14-60 лет. Поддерживает регулярное общение с носителем, поэтому часто в курсе новых трендов или фраз в языке. Умеет привить любовь к погружению в интересующие сферы жизни через английский язык и помогаю найти качественные источники информации и контента.</p>
         </div>
-        <div class="teachers__foto teachers__foto-natali"></div>
+        <div class="teachers__foto teachers__foto-4"></div>
       </li>
+
+
+
+
     </ul>
   </div>
 </section>
 
       <section class="format section-padding" id="format">
   <div class="format__conteiner conteiner">
-    <h3 class="format__title title">Формат работы</h4>
+    <h3 class="format__title title">Формат работы</h3>
     <div class="format__box-grid">
       <div class="format__box-content">
         <h4 class="format__subtitle subtitle">Консультация</h4>
         <p class="format__text">Проанализируем ваш уровень, определим пробелы, составим индивидуальную программу под вашу цель.</p>
         <p class="format__inscription">Мы не кусаемся!</p>
-        <img class="format__image" src="./images/workFormat-1.jpg" alt="пленочная касета">
+        <img src="./images/workFormat-1.jpg" class="format__image" alt="пленочная касета">
       </div>
       <div class="format__box-content">
-        <img class="format__image" src="./images/cassette.png" alt="пленочная касета">
+        <img src="./images/cassette.png" class="format__image" alt="пленочная касета">
         <div class="format__box-text">
           <h4 class="format__subtitle subtitle">Создание программы</h4>
           <p class="format__text">Строим индивидуальную программу под ваш запрос. Подбираем преподавателя под ваше время и график занятий</p>
@@ -357,16 +458,16 @@
         <p class="format__text">В нашей акаддемии предполагается комплексный подход к изучению языка, включающий в себя грамматику, разговорную практику, аудирование.
           Практика на занятиях расширит ваши представления о языке. А в разговорном клубе вы закрепите полученные знания и избавитесь от дискомфорта. Возможна корректировка курса клиентом раз в месяц</p>
         <p class="format__inscription">Не бойся говорить!</p>
-        <img class="format__image" src="./images/workFormat-3.jpg" alt="пленочная касета">
+        <img src="./images/workFormat-3.jpg" class="format__image" alt="пленочная касета">
       </div>
       <div class="format__box-content">
-        <img class="format__image" src="./images/workFormat-2.jpg" alt="пленочная касета">
+        <img src="./images/workFormat-2.jpg" class="format__image" alt="пленочная касета">
         <div class="format__box-text">
           <h4 class="format__subtitle subtitle">Контроль за прогрессом</h4>
           <p class="format__text">После обучения вы получаете <span class="format__certificate">сертификат</span> и можете продолжить изучать и закреплять свои знания в нашем разговорном клубе с преподавателем</p>
           <p class="format__inscription">Начинай!</p>
         </div>
-        <img class="format__image-photographic" src="./images/photographic2.png" alt="Фотоплёнка">
+        <img src="./images/photographic2.png" class="format__image-photographic" alt="Фотоплёнка">
       </div>
       <div class="scroll-line anim"></div>
     </div>
@@ -378,9 +479,9 @@
     <div class="services__backlight backlight"></div>
     <h3 class="services__title title">Услуги</h3>
     <ul class="services__list-service">
-      <li class="services__item-service">
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
         <div>
-          <h4 class="services__subtitle subtitle">Индивидуальные занятия</h4>
+          <h4 class="services__subtitle subtitle" itemprop="name">Индивидуальные занятия</h4>
           <ul class="services__list-filling">
             <li class="services__item-filling">
               Занятия с преподавателем
@@ -402,10 +503,14 @@
             </li>
           </ul>
         </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="20" />
+        </div>
       </li>
 
-      <li class="services__item-service">
-        <h4 class="services__subtitle subtitle">Курс Light English</h4>
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
+        <h4 class="services__subtitle subtitle" itemprop="name">Курс Light English</h4>
         <ul class="services__list-filling">
           <li class="services__item-filling">
             Вебинары с основателем
@@ -430,11 +535,15 @@
             Коуч сессия
           </li>
         </ul>
-        <img class="services__image-dance" src="./images/dance.png" alt="Луи Армстронг- американский джазист">
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="120" />
+        </div>
+        <img src="./images/dance.png" class="services__image-dance" alt="Луи Армстронг- американский джазист">
       </li>
 
-      <li class="services__item-service">
-        <h4 class="services__subtitle subtitle">Разговорный клуб</h4>
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
+        <h4 class="services__subtitle subtitle" itemprop="name">Разговорный клуб</h4>
         <ul class="services__list-filling">
           <li class="services__item-filling">
             С участием преподавателя или носителем языка
@@ -467,10 +576,14 @@
           </li>
         </ul>
         <p class="services__cost">10€ встреча</p>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="10" />
+        </div>
       </li>
 
-      <li class="services__item-service">
-        <h4 class="services__subtitle subtitle">Работа с Коучем</h4>
+      <li class="services__item-service" itemscope itemtype="http://schema.org/Service">
+        <h4 class="services__subtitle subtitle" itemprop="name">Работа с Коучем</h4>
         <ul class="services__list-filling">
           <li class="services__item-filling">
             Формирование запроса
@@ -482,7 +595,11 @@
         <a class="link_black link-hover-line" href="#coach">Подробнее</a>
         <p class="services__cost">ОТ 50€ сессия</p>
         <div class="services__notes"></div>
-        <img class="services__image" src="./images/jazzMusician.png" alt="Луи Армстронг- американский джазист">
+        <img src="./images/jazzMusician.png" class="services__image" alt="Луи Армстронг- американский джазист">
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <meta itemprop="price" content="50" />
+        </div>
       </li>
     </ul>
   </div>
@@ -510,10 +627,10 @@
     </div>
     <div class="coach__scheme">
       <div class="coach__backlight backlight"></div>
-      <img class="coach__start" src="./images/A.png" alt="Пункт А - старт">
+      <img src="./images/A.png" class="coach__start" alt="Пункт А - старт">
       <p class="coach__text-description">Движение из точки А, где я сейчас, к точке Б, где я хочу быть:</p>
       <div  class="coach__box-img-car">
-        <img class="coach__img-car" src="./images/car.png" alt="Ретро авто">
+        <img src="./images/car.png" class="coach__img-car" alt="Ретро авто">
       </div>
       <span class="coach__line"></span>
       <div class="coach__box-text">
@@ -521,10 +638,10 @@
         <p class="coach__text">В долгосрочной перспективе А >>> В</p>
         <p class="coach__text">В сессии А >>> В</p>
       </div>
-      <img class="coach__finish" src="./images/B.png" alt="Пункт В - финиш">
+      <img src="./images/B.png" class="coach__finish" alt="Пункт В - финиш">
     </div>
 
-    <button class="coach__button">Записаться на работу с Коучем</button>
+    <button class="coach__button button-hover">Записаться на работу с Коучем</button>
 
   </div>
 </section>
@@ -535,131 +652,240 @@
     <h3 class="reviews__title title">Что говорят наши ученики</h3>
     <div class="swiper sample-slider">
       <div class="swiper-wrapper">
+<!-- отзыв -->
         <div class="swiper-slide">
-          <div class="reviews__card slider__contents">
-            <div class="reviews__about">
-              <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-              <div>
-                <p class="reviews__name">Егор, Тайланд</p>
-                <p class="reviews__age">2023</p>
+          <div class="reviews__card slider__contents" vocab="http://schema.org/" typeof="Review">
+            <div class="reviews__about" property="author" typeof="Person">
+              <img src="./images/anonim.png" class="reviews__foto" alt="Фотография студента" property="image" style="max-width: 70px; max-height: 70px;">
+                <p class="reviews__name" property="name">
+                  Егор,Тайланд
+                </p>
+                <p class="reviews__age">
+                  2023
+                </p>
+            </div>
+            <div class="reviews__stars" property="reviewRating" typeof="Rating">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <meta property="ratingValue" content="5">
+              <meta property="bestRating" content="5">
+              <meta property="worstRating" content="1">
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Запрос:
+              </h5>
+              <p class="reviews__text">
+                Переехал по работе в другую страну, нужен английский для работы и жизни. Устал объясняться жестами, не понимать людей и пользоваться переводчиком.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Процесс:
+              </h5>
+              <p class="reviews__text">
+                Обучаем разговорному языку, в беседе, не нагружая сложными грамматическими конструкциями. Прокручиваем на занятиях жизненные ситуации.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle" property="headline">
+                Результат:
+              </h5>
+              <p class="reviews__text" property="reviewBody">
+                У нас уже прошло 12 занятий (месяц). Мужчина больше не боится делать ошибки и говорить сам, не пользуясь переводчиком. Теперь он понимает на работе 90% происходящего, что хотят от него и также может выразить свои мысли на английском языке. Дальше больше!
+              </p>
+            </div>
+            <img src="./images/record-2.png" id="1" alt="Виниловая пластинка" class="reviews__images">
+            <div property="itemReviewed" typeof="Product" class="reviews__display_none" style="display: none;">
+              <span property="name" class="visually-hidden">Отзыв студента о курсе</span>
+              <div property="aggregateRating" typeof="AggregateRating" class="visually-hidden reviews__display_none">
+                <meta property="ratingValue" content="5">
+                <meta property="reviewCount" content="1">
               </div>
             </div>
-            <div class="reviews__stars">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Запрос:</h5>
-              <p class="reviews__text">Переехал по работе в другую страну, нужен английский для работы и жизни. Устал объясняться жестами, не понимать людей и пользоваться переводчиком</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Процесс:</h5>
-              <p class="reviews__text">Обучаем разговорному языку, в беседе, не нагружая сложными грамматическими конструкциями. Прокручиваем на занятиях жизненные ситуации</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Результат:</h5>
-              <p class="reviews__text">У нас уже прошло 12 занятий (месяц). Мужчина больше не боится делать ошибки и говорить сам, не пользуясь переводчиком. Теперь он понимает на работе 90% происходящего, что хотят от него и также может выразить свои мысли на английском языке. Дальше больше!</p>
-            </div>
-            <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
           </div>
         </div>
+<!-- отзыв -->
         <div class="swiper-slide">
-          <div class="reviews__card slider__contents">
-            <div class="reviews__about">
-              <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-              <div>
-                <p class="reviews__name">Александр, Молдова</p>
-                <p class="reviews__age">2023</p>
+          <div class="reviews__card slider__contents" vocab="http://schema.org/" typeof="Review">
+            <div class="reviews__about" property="author" typeof="Person">
+              <img src="./images/anonim.png" class="reviews__foto" alt="Фотография студента" property="image">
+              <p class="reviews__name" property="name">
+                Александр, Молдова
+              </p>
+              <p class="reviews__age">
+                2023
+              </p>
+            </div>
+            <div class="reviews__stars" property="reviewRating" typeof="Rating">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <meta property="ratingValue" content="5">
+              <meta property="bestRating" content="5">
+              <meta property="worstRating" content="1">
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Запрос:
+              </h5>
+              <p class="reviews__text">
+                Говорить могу на бытовые темы, барьера и страха нет, но для работы нужно говорить более понятно и правильно. Необходимо знание языка для работы, нужных терминов и фраз.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Процесс:
+              </h5>
+              <p class="reviews__text">
+                На занятиях с учеником обсуждаем жизненные темы, беседуем и выявляем ошибки в грамматике и речи, сразу же их разбираем и учимся говорить правильно. Изучаем лексику для работы также в процессе общения. Все проходит интересно и на лайте.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle" property="headline">
+                Результат:
+              </h5>
+              <p class="reviews__text" property="reviewBody">
+                Спустя 8 занятий пофиксили недочеты в грамматике, сделали речь более легкой. Теперь мужчина общается по работе на английском больше, так как есть знание терминологии.
+              </p>
+            </div>
+            <img src="./images/record-2.png" id="2" alt="Виниловая пластинка" class="reviews__images">
+            <div property="itemReviewed" typeof="Product" class="reviews__display_none" style="display: none;">
+              <span property="name" class="visually-hidden">Отзыв студента о курсе</span>
+              <div property="aggregateRating" typeof="AggregateRating" class="visually-hidden reviews__display_none">
+                <meta property="ratingValue" content="5">
+                <meta property="reviewCount" content="1">
               </div>
             </div>
-            <div class="reviews__stars">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Запрос:</h5>
-              <p class="reviews__text">Говорить могу на бытовые темы, барьера и страха нет, но для работы нужно говорить более понятно и правильно. Необходимо знание языка для работы,
-                нужных терминов и фраз.</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Процесс:</h5>
-              <p class="reviews__text">На занятиях с учеником обсуждаем жизненные темы, беседуем и выявляем ошибки в грамматике и речи, сразу же их разбираем и учимся говорить правильно. Изучаем лексику для работы также в процессе общения. Все проходит интересно и на лайте.</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Результат:</h5>
-              <p class="reviews__text">Спустя 8 занятий пофиксили недочеты в грамматике, сделали речь более легкой. Теперь мужчина общается по работе на английском больше, так как есть знание терминологии.</p>
-            </div>
-            <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
           </div>
         </div>
+<!-- отзыв -->
         <div class="swiper-slide">
-          <div class="reviews__card slider__contents">
-            <div class="reviews__about">
-              <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-              <div>
-                <p class="reviews__name">Карина, Канада</p>
-                <p class="reviews__age">2023</p>
+          <div class="reviews__card slider__contents" vocab="http://schema.org/" typeof="Review">
+            <div class="reviews__about" property="author" typeof="Person">
+              <img src="./images/anonim.png" class="reviews__foto" alt="Фотография студента" property="image">
+              <p class="reviews__name" property="name">
+                Карина, Канада
+              </p>
+              <p class="reviews__age">
+                2023
+              </p>
+            </div>
+            <div class="reviews__stars" property="reviewRating" typeof="Rating">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <meta property="ratingValue" content="5">
+              <meta property="bestRating" content="5">
+              <meta property="worstRating" content="1">
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Запрос:
+              </h5>
+              <p class="reviews__text">
+                Переезд в другую страну. Поднять уровень языка для легкости в разговоре для жизни, работы и общения в англоязычной стране.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+
+              </h5>
+              <p class="reviews__text">
+
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle" property="headline">
+                Результат:
+              </h5>
+              <p class="reviews__text" property="reviewBody">
+                За 8 месяцев обучения поднялся уровень знания с А1 до Б1. Принимает участие в разговорном клубе с другими людьми, легче стало разговаривать, она уже использует более сложную лексику и конструкции. Стало более комфортно разговаривать на работе.
+              </p>
+            </div>
+            <img src="./images/record-2.png" id="3" alt="Виниловая пластинка" class="reviews__images">
+            <div property="itemReviewed" typeof="Product" class="reviews__display_none" style="display: none;">
+              <span property="name" class="visually-hidden">Отзыв студента о курсе</span>
+              <div property="aggregateRating" typeof="AggregateRating" class="visually-hidden reviews__display_none">
+                <meta property="ratingValue" content="5">
+                <meta property="reviewCount" content="1">
               </div>
             </div>
-            <div class="reviews__stars">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Запрос:</h5>
-              <p class="reviews__text">Переезд в другую страну. Поднять уровень языка для легкости в разговоре для жизни, работы и общения в англоязычной стране.</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Процесс:</h5>
-              <p class="reviews__text">не описан.</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Результат:</h5>
-              <p class="reviews__text">За 8 месяцев обучения поднялся уровень знания с А1 до Б1. Принимает участие в разговорном клубе с другими людьми, легче стало разговаривать, она уже использует более сложную лексику и конструкции. Стало более комфортно разговаривать на работе.</p>
-            </div>
-            <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
           </div>
         </div>
+<!-- отзыв -->
         <div class="swiper-slide">
-          <div class="reviews__card slider__contents">
-            <div class="reviews__about">
-              <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-              <div>
-                <p class="reviews__name">Роман, Молдова</p>
-                <p class="reviews__age">2023</p>
+          <div class="reviews__card slider__contents" vocab="http://schema.org/" typeof="Review">
+            <div class="reviews__about" property="author" typeof="Person">
+              <img src="./images/anonim.png" class="reviews__foto" alt="Фотография студента" property="image">
+              <p class="reviews__name" property="name">
+                Роман, Молдова
+              </p>
+              <p class="reviews__age">
+                2023
+              </p>
+            </div>
+            <div class="reviews__stars" property="reviewRating" typeof="Rating">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <img src="./images/star-1.png" class="reviews__star-item" alt="оценочная звезда">
+              <meta property="ratingValue" content="5">
+              <meta property="bestRating" content="5">
+              <meta property="worstRating" content="1">
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Запрос:
+              </h5>
+              <p class="reviews__text">
+                Есть немного знания базы грамматики и начальный словарный запас. Но в поездках и путешествиях все равно есть страх говорить, ошибиться или что неправильно поймут.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle">
+                Процесс:
+              </h5>
+              <p class="reviews__text">
+                Берем темы из учебника, понимаем их, слушаем носителей языка и прорабатываем данные темы на практике. Убираем страх ошибиться пониманием того, что носители языка нас и так поймут, а также они ошибаются сами.
+              </p>
+            </div>
+            <div class="reviews__box-text">
+              <h5 class="reviews__subtitle" property="headline">
+                Результат:
+              </h5>
+              <p class="reviews__text" property="reviewBody">
+                Спустя 9 занятий мужчина говорит более свободно на бытовые темы, страх ошибки сменился интересом к языку, а также пробовать новые темы и применять их на практике.
+              </p>
+            </div>
+            <img src="./images/record-2.png" id="4" alt="Виниловая пластинка" class="reviews__images">
+            <div property="itemReviewed" typeof="Product" class="reviews__display_none" style="display: none;">
+              <span property="name" class="visually-hidden">Отзыв студента о курсе</span>
+              <div property="aggregateRating" typeof="AggregateRating" class="visually-hidden reviews__display_none">
+                <meta property="ratingValue" content="5">
+                <meta property="reviewCount" content="1">
               </div>
             </div>
-            <div class="reviews__stars">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-              <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Запрос:</h5>
-              <p class="reviews__text">Есть немного знания базы грамматики и начальный словарный запас. Но в поездках и путешествиях все равно есть страх говорить, ошибиться или что неправильно поймут.</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Процесс:</h5>
-              <p class="reviews__text">Берем темы из учебника, понимаем их, слушаем носителей языка и прорабатываем данные темы на практике. Убираем страх ошибиться пониманием того, что носители языка нас и так поймут, а также они ошибаются сами.</p>
-            </div>
-            <div class="reviews__box-text">
-              <h5 class="reviews__subtitle">Результат:</h5>
-              <p class="reviews__text">Спустя 9 занятий мужчина говорит более свободно на бытовые темы, страх ошибки сменился интересом к языку, а также пробовать новые темы и применять их на практике.</p>
-            </div>
-            <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
           </div>
         </div>
+<!-- отзыв -->
+        <div class="swiper-slide">
+          <video class="reviews__video" style="max-width: 100vw;" controls playsinline>
+              <source src="./files/IMG_0175.mp4" type="video/mp4" style="max-width: 100vw;">
+          </video>
+        </div>
+
+
+
+
       </div>
       <div class="swiper-button-box">
         <div class="swiper-button-prev"></div>
@@ -667,156 +893,82 @@
         <div class="swiper-button-next"></div>
       </div>
     </div>
-
-    <!-- <div class="slider">
-      <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
-      <input type="radio" name="slider" title="slide2" class="slider__nav"/>
-      <input type="radio" name="slider" title="slide3" class="slider__nav"/>
-      <input type="radio" name="slider" title="slide4" class="slider__nav"/>
-      <div class="slider__inner">
-        <div class="reviews__card slider__contents">
-          <div class="reviews__about">
-            <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-            <div>
-              <p class="reviews__name">Егор, Тайланд</p>
-              <p class="reviews__age">2023</p>
-            </div>
-          </div>
-          <div class="reviews__stars">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Переехал по работе в другую страну, нужен английский для работы и жизни. Устал объясняться жестами, не понимать людей и пользоваться переводчиком</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">Обучаем разговорному языку, в беседе, не нагружая сложными грамматическими конструкциями. Прокручиваем на занятиях жизненные ситуации</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">У нас уже прошло 12 занятий (месяц). Мужчина больше не боится делать ошибки и говорить сам, не пользуясь переводчиком. Теперь он понимает на работе 90% происходящего, что хотят от него и также может выразить свои мысли на английском языке. Дальше больше!</p>
-          </div>
-          <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
-        </div>
-        <div class="reviews__card slider__contents">
-          <div class="reviews__about">
-            <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-            <div>
-              <p class="reviews__name">Александр, Молдова</p>
-              <p class="reviews__age">2023</p>
-            </div>
-          </div>
-          <div class="reviews__stars">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Говорить могу на бытовые темы, барьера и страха нет, но для работы нужно говорить более понятно и правильно. Необходимо знание языка для работы,
-              нужных терминов и фраз.</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">На занятиях с учеником обсуждаем жизненные темы, беседуем и выявляем ошибки в грамматике и речи, сразу же их разбираем и учимся говорить правильно. Изучаем лексику для работы также в процессе общения. Все проходит интересно и на лайте.</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">Спустя 8 занятий пофиксили недочеты в грамматике, сделали речь более легкой. Теперь мужчина общается по работе на английском больше, так как есть знание терминологии.</p>
-          </div>
-          <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
-        </div>
-        <div class="reviews__card slider__contents">
-          <div class="reviews__about">
-            <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-            <div>
-              <p class="reviews__name">Карина, Канада</p>
-              <p class="reviews__age">2023</p>
-            </div>
-          </div>
-          <div class="reviews__stars">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Переезд в другую страну. Поднять уровень языка для легкости в разговоре для жизни, работы и общения в англоязычной стране.</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">не описан.</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">За 8 месяцев обучения поднялся уровень знания с А1 до Б1. Принимает участие в разговорном клубе с другими людьми, легче стало разговаривать, она уже использует более сложную лексику и конструкции. Стало более комфортно разговаривать на работе.</p>
-          </div>
-          <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
-        </div>
-        <div class="reviews__card slider__contents">
-          <div class="reviews__about">
-            <img class="reviews__foto" src="./images/anonim.png" alt="Фотография ученика">
-            <div>
-              <p class="reviews__name">Роман, Молдова</p>
-              <p class="reviews__age">2023</p>
-            </div>
-          </div>
-          <div class="reviews__stars">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-            <img class="reviews__star-item" src="./images/star-1.png" alt="оценочная звезда">
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Запрос:</h5>
-            <p class="reviews__text">Есть немного знания базы грамматики и начальный словарный запас. Но в поездках и путешествиях все равно есть страх говорить, ошибиться или что неправильно поймут.</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Процесс:</h5>
-            <p class="reviews__text">Берем темы из учебника, понимаем их, слушаем носителей языка и прорабатываем данные темы на практике. Убираем страх ошибиться пониманием того, что носители языка нас и так поймут, а также они ошибаются сами.</p>
-          </div>
-          <div class="reviews__box-text">
-            <h5 class="reviews__subtitle">Результат:</h5>
-            <p class="reviews__text">Спустя 9 занятий мужчина говорит более свободно на бытовые темы, страх ошибки сменился интересом к языку, а также пробовать новые темы и применять их на практике.</p>
-          </div>
-          <img class="reviews__images" src="./images/record-2.png" alt="Виниловая пластинка">
-        </div>
-      </div>
-    </div> -->
   </div>
 </section>
 
       <section class="appointment section-padding" id="appointment">
   <div class="appointment__conteiner conteiner">
-    <img class="appointment__logo" src="./images/logo-b.png" alt="Логотип академии">
-    <h3 class="appointment__title title">Запишитесь</br> на консультацию</h3>
-    <form class="form" action="form" method="post">
-  <div class="form__box-input">
-    <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
-    <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-    <input class="form__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
-    <select class="form__select" id="option" name="option" required>
-      <option class="form__option" value="consultation">Консультация</option>
-      <option class="form__option" value="course1">Хочу подарок</option>
-      <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
-      <option class="form__option" value="course2">Интересует курс Light English</option>
-      <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
-      <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
-    </select>
+    <img src="./images/logo-b.png" class="appointment__logo" alt="Логотип академии" style="max-width: 110px;
+    max-height: 103px;">
+    <h3 class="appointment__title title">Запишитесь<br /> на консультацию</h3>
+    <!-- <form
+  class="form"
+  id="form"
+  autocomplete="off"
+  method="post"
+  novalidate> -->
+<form
+  class="form"
+  id="form"
+  autocomplete="off"
+  novalidate>
+  <div class="form__inputs-conteiner">
+    <label class="form__input-box">
+      <input
+        class="form__input req"
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Имя"
+        data-error-message="Введите имя."
+        minlength="1"
+        required>
+        <span class="form__input-error name-error"></span>
+    </label>
+    <label class="form__input-box">
+      <input
+        class="form__input req"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Номер телефона"
+        pattern="^[\d+]+$"
+        data-error-message="Номер должен состоять из цифр."
+        required>
+        <span class="form__input-error phone-error"></span>
+    </label>
+    <label class="form__input-box">
+      <input
+        class="form__input req"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Почта"
+        data-error-message="Введите корректный адрес электронной почты."
+        required>
+        <span class="form__input-error email-error"></span>
+    </label>
+    <label class="form__input-box">
+      <select
+        class="form__select form__input req"
+        id="select"
+        name="option"
+        data-error-message="Выберите свою цель."
+        required>
+        <option class="form__option" id="option-false" value="no_change">-- не выбрано --</option>
+        <option class="form__option" value="consultation">Консультация</option>
+        <option class="form__option" id="present" value="present">Хочу подарок</option>
+        <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
+        <option class="form__option" value="course2">Интересует курс Light English</option>
+        <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
+        <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
+      </select>
+      <span class="form__input-error select-error"></span>
+    </label>
   </div>
-  <button class="form__button" type="submit">Записаться</button>
+  <button class="form__button" id="btn" type="submit">Записаться</button>
   <p class="form__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
-    <a class="form__warning-link" href="#">политикой конфиденциальности</a>
+    <a class="form__warning-link" href="/privacy-policy">политикой конфиденциальности</a>
   </p>
 </form>
 
@@ -842,7 +994,7 @@
         <p class="faq__question-text">
           В чем отличие индивидуальных занятий и курса Light English?
         </p>
-        <p class="faq__answer-text">Индивидуальные занятия это занятия с преподавателем, где формат занятий и их программа готовится под ваш уровень языка и цель изучения английского. </br>Курс Light English же представляет собой Общий, базовый курс языка для тех, кто только начинает его изучать и хочет быстро заговорить либо для тех, кто продолжает изучение и в голове каша, а как говорить непонятно. В этом курсе обучение происходит на вебинарах с основателем Академии + практики в мини группах с преподавателем.</p>
+        <p class="faq__answer-text">Индивидуальные занятия это занятия с преподавателем, где формат занятий и их программа готовится под ваш уровень языка и цель изучения английского. <br />Курс Light English же представляет собой Общий, базовый курс языка для тех, кто только начинает его изучать и хочет быстро заговорить либо для тех, кто продолжает изучение и в голове каша, а как говорить непонятно. В этом курсе обучение происходит на вебинарах с основателем Академии + практики в мини группах с преподавателем.</p>
       </li>
       <li class="faq__question">
         <p class="faq__question-text">
@@ -886,12 +1038,12 @@
     <ul class="faq__list-social">
       <li class="faq__icon-social">
         <a class="faq__link-social" href="#" target="_blank">
-          <img class="icon-size icon" src="./images/whatsapp.png" alt="Иконка whatsapp">
+          <img src="./images/whatsapp.png" class="icon-size icon" alt="Иконка whatsapp">
         </a>
       </li>
       <li class="faq__icon-social">
         <a class="faq__link-social" href="https://t.me/light_english_admin" target="_blank">
-          <img class="icon-size icon" src="./images/telegramBlack.png" alt="Иконка телеграм">
+          <img src="./images/telegramBlack.png" class="icon-size icon" alt="Иконка телеграм">
         </a>
       </li>
     </ul>
@@ -904,24 +1056,75 @@
     <button class="popup__button-close"></button>
     <div class="popup__image"></div>
     <div class="popup__form">
-      <h3 class="popup__title title">Заполни форму и получи подарок!</h3>
-      <form class="form" action="form" method="post">
-  <div class="form__box-input">
-    <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
-    <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
-    <input class="form__input" type="email" id="email" name="email" placeholder="Ваша почта" required>
-    <select class="form__select" id="option" name="option" required>
-      <option class="form__option" value="consultation">Консультация</option>
-      <option class="form__option" value="course1">Хочу подарок</option>
-      <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
-      <option class="form__option" value="course2">Интересует курс Light English</option>
-      <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
-      <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
-    </select>
+      <h3 class="popup__title">Заполни форму и получи подарок!</h3>
+      <!-- <form
+  class="form"
+  id="form"
+  autocomplete="off"
+  method="post"
+  novalidate> -->
+<form
+  class="form"
+  id="form"
+  autocomplete="off"
+  novalidate>
+  <div class="form__inputs-conteiner">
+    <label class="form__input-box">
+      <input
+        class="form__input req"
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Имя"
+        data-error-message="Введите имя."
+        minlength="1"
+        required>
+        <span class="form__input-error name-error"></span>
+    </label>
+    <label class="form__input-box">
+      <input
+        class="form__input req"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Номер телефона"
+        pattern="^[\d+]+$"
+        data-error-message="Номер должен состоять из цифр."
+        required>
+        <span class="form__input-error phone-error"></span>
+    </label>
+    <label class="form__input-box">
+      <input
+        class="form__input req"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Почта"
+        data-error-message="Введите корректный адрес электронной почты."
+        required>
+        <span class="form__input-error email-error"></span>
+    </label>
+    <label class="form__input-box">
+      <select
+        class="form__select form__input req"
+        id="select"
+        name="option"
+        data-error-message="Выберите свою цель."
+        required>
+        <option class="form__option" id="option-false" value="no_change">-- не выбрано --</option>
+        <option class="form__option" value="consultation">Консультация</option>
+        <option class="form__option" id="present" value="present">Хочу подарок</option>
+        <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
+        <option class="form__option" value="course2">Интересует курс Light English</option>
+        <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
+        <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
+      </select>
+      <span class="form__input-error select-error"></span>
+    </label>
   </div>
-  <button class="form__button" type="submit">Записаться</button>
+  <button class="form__button" id="btn" type="submit">Записаться</button>
   <p class="form__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
-    <a class="form__warning-link" href="#">политикой конфиденциальности</a>
+    <a class="form__warning-link" href="/privacy-policy">политикой конфиденциальности</a>
   </p>
 </form>
 
@@ -930,16 +1133,42 @@
 </section>
 <section class="popup-img1 popup__hidden">
   <div class="popup-img1__overflow"></div>
-  <div class="popup-img1__box-img">
-    <button class="popup-img1__button-close"></button>
-    <img class="popup-img1__image" src="./images/certificate.jpg" alt="Сертификат" style="pointer-events: none;">
+  <div class="swiper sample-slider">
+    <div class="swiper-wrapper">
+<!-- Сертификат -->
+      <div class="swiper-slide">
+        <div class="popup__box-slide">
+          <button class="popup-img1__button-close"></button>
+          <div class="popup-img1__box-img">
+            <img src="./images/certificate.jpg" class="popup-img1__image" alt="Сертификат" style="pointer-events: none;">
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+    <div class="swiper-button-box swiper-button-box-popup">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </div>
 </section>
 <section class="popup-img2 popup__hidden">
   <div class="popup-img2__overflow"></div>
   <div class="popup-img2__box-img">
     <button class="popup-img2__button-close"></button>
-    <img class="popup-img2__image" src="./images/certificate2.jpg" alt="Сертификат" style="pointer-events: none;">
+    <img src="./images/certificate2.jpg" class="popup-img2__image" alt="Сертификат" style="pointer-events: none;">
+  </div>
+</section>
+<section class="popup-msg popup__hidden">
+  <div class="popup-msg__overflow"></div>
+  <div class="popup-msg__box">
+    <button class="popup-msg__button-close"></button>
+    <h5 class="popup-msg__message">Заявка принята!</h5>
   </div>
 </section>
 
@@ -947,7 +1176,7 @@
     </main>
     <footer class="footer">
   <div class="footer__conteiner conteiner">
-    <img class="footer__logo" src="./images/logo.png" alt="Логотип академии">
+    <img src="./images/logo-w.png" class="footer__logo" alt="Логотип академии">
     <nav class="footer__nav-box">
       <ul class="footer__navigation">
         <li class="footer__nav-link">
@@ -988,18 +1217,18 @@
     <div>
       <ul class="footer__list-contact" id="footer">
         <li class="footer__item-contact">
-          <img class="icon-size" src="./images/telegram.png" alt="Иконка телеграм">
+          <img src="./images/telegram.png" class="icon-size" alt="Иконка телеграм">
           <div class="footer__text-contact">
             <a class="link-hover-wite" href="https://t.me/light_english_admin" target="_blank">
-              <p class="footer__text">+37369310518</p>
+              <p class="footer__text" >+37369310518</p>
             </a>
             <a class="link-hover-wite" href="https://t.me/Roman_Toroni" target="_blank">
-              <p class="footer__text">+37368673443</p>
+              <p class="footer__text" >+37368673443</p>
             </a>
           </div>
         </li>
         <li class="footer__item-contact">
-          <img class="icon-size" src="./images/mail.png" alt="Иконка почта">
+          <img src="./images/mail.png" class="icon-size" alt="Иконка почта">
           <div class="footer__text-contact">
             <p class="footer__link">mavrova12@mail.ru</p>
             <p class="footer__link">toroniroma6@gmail.com</p>
@@ -1007,21 +1236,21 @@
         </li>
         <li class="footer__item-contact">
           <a href="https://www.instagram.com/mavrova_alexandra?igsh=MjY0b2lkanJ0dGN5&utm_source=qr" target="_blank">
-            <img class="icon-size icon" src="./images/instagram.png" alt="Иконка инстаграм">
+            <img src="./images/instagram.png" class="icon-size icon" alt="Иконка инстаграм">
           </a>
           <p class="footer__text">Александра</p>
         </li>
         <li class="footer__item-contact">
           <a href="https://www.instagram.com/roman.toroni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-            <img class="icon-size icon" src="./images/instagram.png" alt="Иконка инстаграм">
+            <img src="./images/instagram.png" class="icon-size icon" alt="Иконка инстаграм">
           </a>
           <a href="https://t.me/Roman_Toroni" target="_blank">
-            <img class="icon-size icon" src="./images/telegram.png" alt="Иконка телеграм">
+            <img src="./images/telegram.png" class="icon-size icon" alt="Иконка телеграм">
           </a>
           <p class="footer__text">Роман</p>
         </li>
       </ul>
-      <a class="footer__link-contact link link-hover-line" href="#" target="_blank">Политика конфиденциальности</a>
+      <a class="footer__link-contact link link-hover-line" href="/privacy-policy">Политика конфиденциальности</a>
     </div>
     <div class="footer__button-box">
       <a href="#header" class="button">
@@ -1034,7 +1263,6 @@
     </div>
   </div>
 </footer>
-
 
     <script src="./js/index.bundle.js" ></script>
   </body>
