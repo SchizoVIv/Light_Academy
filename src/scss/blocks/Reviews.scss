@@ -63,15 +63,29 @@
 }
 
 .reviews__about {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: about;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: flex;
+  // -webkit-box-align: center;
+  //     -ms-flex-align: center;
+  //         align-items: center;
+
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns:  1fr 2fr;
+  grid-template-columns:  1fr 2fr;
+  -ms-grid-rows: repeat(auto-fit, minmax(10px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+      grid-template-areas:
+      "picture nameText"
+      "picture ageText";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .reviews__backlight {
@@ -91,11 +105,14 @@
 .reviews__name {
   margin: 0 0 8px;
   font-weight: bold;
+  grid-area: nameText;
+}
+
+.reviews__age {
+  grid-area: ageText;
 }
 
 .reviews__stars {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: stars;
 }
 
@@ -106,6 +123,9 @@
 .reviews__foto {
   margin: 0 25px 0 0;
   border-radius: 50%;
+  grid-area: picture;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .reviews__video {
@@ -142,23 +162,20 @@
 }
 
 .reviews__box-text:nth-child(3) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: text1;
 }
 
 .reviews__box-text:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
   grid-area: text2;
 
   min-height: 160px;
 }
 
+.reviews__display_none {
+  display: none;
+}
+
 .reviews__box-text:nth-child(5) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: text3;
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -442,37 +459,6 @@
 
   .reviews__box-text {
     text-align: center;
-  }
-
-  .reviews__about{
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-
-  }
-
-  .reviews__stars{
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-
-  }
-
-  .reviews__box-text:nth-child(3){
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-
-  }
-
-  .reviews__box-text:nth-child(4){
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-
-  }
-
-  .reviews__box-text:nth-child(5){
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-
   }
 }
 

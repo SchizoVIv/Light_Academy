@@ -36,8 +36,12 @@ Options -Indexes
 </FilesMatch>
 
 # Кэширование файлов в браузере на 1 неделю
+# <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+#     Header set Cache-Control "max-age=604800, public"
+# </FilesMatch>
+
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-    Header set Cache-Control "max-age=604800, public"
+    Header set Cache-Control "max-age=0, no-store"
 </FilesMatch>
 
 # Включение сжатия файлов

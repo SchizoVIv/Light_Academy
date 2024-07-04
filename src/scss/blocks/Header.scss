@@ -421,18 +421,18 @@
 }
 
 @media (max-height: 600px) {
-  .header__navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 20px 0 50px;
-    gap: 20px;
-    overflow: auto;
-  }
+  // .header__navigation {
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  //   -webkit-box-orient: vertical;
+  //   -webkit-box-direction: normal;
+  //       -ms-flex-direction: column;
+  //           flex-direction: column;
+  //   margin: 20px 0 50px;
+  //   gap: 20px;
+  //   overflow: auto;
+  // }
 
   .header__contacts {
     margin: 0 0 20px 0;

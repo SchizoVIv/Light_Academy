@@ -62,10 +62,10 @@ gulp.task('sass', function() {
 
 gulp.task('img', function() {
   return gulp
-  .src('./src/images/**/*', { encoding: false })
+  .src('./src/**/*', { encoding: false })
   // .pipe(changed('./dist/images'))
   .pipe(imagemin({ verbose: true })) // сжатие картинок
-  .pipe(gulp.dest('./dist/images'))
+  .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('fonts', function() {
