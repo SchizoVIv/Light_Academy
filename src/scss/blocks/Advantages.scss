@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 
-.advantages__conteiner {
+.advantages__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -180,13 +180,13 @@
 }
 
 @media (max-width: 1300px) {
-  .advantages__conteiner {
+  .advantages__container {
     grid-gap: 40px;
   }
 }
 
 @media (max-width: 1000px) {
-  .advantages__conteiner {
+  .advantages__container {
     -ms-grid-columns: 1fr 40px 1fr;
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto 40px auto 40px auto 40px auto 40px auto 40px auto;
@@ -205,7 +205,7 @@
 }
 
 @media (max-width: 700px) {
-  .advantages__conteiner {
+  .advantages__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-rows: repeat(auto-fill, minmax(51px, 1fr));

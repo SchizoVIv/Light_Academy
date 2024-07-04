@@ -1,4 +1,4 @@
-import {enableScroll, disableScroll} from './scroll.js';
+import { enableScroll, disableScroll } from './scroll.js';
 
 const popupButtonClose = document.querySelector('.popup__button-close')
 const popupOverflow = document.querySelector('.popup__overflow')
@@ -13,16 +13,16 @@ const coachButton = document.querySelector('.coach__button')
 
 export function popupHandleClose(pop, overflow) {
   enableScroll()
-  pop.classList.add('popup__hidden')
+  pop.classList.add('popup-hidden')
   overflow.classList.remove('overflow-active')
 }
 
 export function popupHandleOpen(pop, overflow, e) {
   disableScroll()
-  pop.classList.remove('popup__hidden')
+  pop.classList.remove('popup-hidden')
   overflow.classList.add('overflow-active')
-  if(!e.classList.contains('founder__link') && !e.classList.contains('format__certificate')) {
-    if(e.classList.contains('advantages__wheel') || e.classList.contains('advantages__button') || e.classList.contains('advantages__wheel-content') || e.classList.contains('advantages__wheel-inner')) {
+  if (!e.classList.contains('founder__link') && !e.classList.contains('format__certificate')) {
+    if (e.classList.contains('advantages__wheel') || e.classList.contains('advantages__button') || e.classList.contains('advantages__wheel-content') || e.classList.contains('advantages__wheel-inner')) {
       popupTitle.textContent = 'Заполни форму и получи подарок!';
       pop.querySelector('.form__option_present').selected = true;
     } else {
@@ -67,7 +67,7 @@ popupButtonCloseImg1List.forEach((el) => {
 popupOverflowImg1.addEventListener('click', () => {
   popupHandleClose(popupImg1, popupOverflowImg1)
 })
-founderLink.addEventListener('click',  (e) => {
+founderLink.addEventListener('click', (e) => {
   popupHandleOpen(popupImg1, popupOverflowImg1, e.target)
 })
 
@@ -83,7 +83,7 @@ popupButtonCloseImg2.addEventListener('click', () => {
 popupOverflowImg2.addEventListener('click', () => {
   popupHandleClose(popupImg2, popupOverflowImg2)
 })
-formatLink.addEventListener('click',  (e) => {
+formatLink.addEventListener('click', (e) => {
   popupHandleOpen(popupImg2, popupOverflowImg2, e.target)
 })
 

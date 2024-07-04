@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-.form__inputs-conteiner {
+.form__inputs-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,7 +131,7 @@
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  background-color: none;
+  background-color: transparent;
   -webkit-transition: background-color 0s 600000s, color 0s 600000s !important;
   transition: background-color 0s 600000s, color 0s 600000s !important;
 }

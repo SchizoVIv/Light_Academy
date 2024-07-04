@@ -1,4 +1,4 @@
-import {enableScroll, disableScroll} from './scroll.js';
+import { enableScroll, disableScroll } from './scroll.js';
 
 const burgerToggle = document.querySelector('#menu-toggle')
 const burgerButton = document.querySelector('.header__button-container')
@@ -7,14 +7,14 @@ const navigation = document.querySelector('.header__nav-box')
 const contacts = document.querySelector('.header__contacts')
 
 function hendleOpenMenu() {
-  if(!burgerToggle.checked) {
-    burgerOverflow.classList.remove('overflow_hidden')
+  if (!burgerToggle.checked) {
+    burgerOverflow.classList.remove('overflow-hidden')
     navigation.classList.add('header__nav-box_active')
     contacts.classList.add('header__contacts_active')
     disableScroll();
   } else {
     enableScroll()
-    burgerOverflow.classList.add('overflow_hidden')
+    burgerOverflow.classList.add('overflow-hidden')
     navigation.classList.remove('header__nav-box_active')
     contacts.classList.remove('header__contacts_active')
   }
@@ -22,7 +22,7 @@ function hendleOpenMenu() {
 
 const anchorMenu = document.querySelector('.header__nav-box');
 
-anchorMenu.addEventListener('click', function(event) {
+anchorMenu.addEventListener('click', function (event) {
   // Проверяем, что клик был на ссылке
   if (event.target.tagName === 'A') {
     // Получаем атрибут href и проверяем, что это якорная ссылка
@@ -38,7 +38,7 @@ anchorMenu.addEventListener('click', function(event) {
         });
         // Закрываем бургерное меню, если оно открыто
         burgerToggle.checked = false;
-        burgerOverflow.classList.add('overflow_hidden')
+        burgerOverflow.classList.add('overflow-hidden')
         navigation.classList.remove('header__nav-box_active')
         contacts.classList.remove('header__contacts_active')
         // Предотвращаем стандартное действие якорной ссылки

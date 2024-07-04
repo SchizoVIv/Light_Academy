@@ -21,19 +21,19 @@ function handleResize() {
 }
 handleResize();
 
-document.addEventListener('mousemove', function(event) {
+document.addEventListener('mousemove', function (event) {
   x = event.clientX; // Координата X курсора
   y = event.clientY; // Координата Y курсора
 
 
-// показать header после стандартной позиции при наведении мыши
-  if(y < maxY && scrollPosition() > defaultOffset && conteinHide() && screenWidth > 991) {
+  // показать header после стандартной позиции при наведении мыши
+  if (y < maxY && scrollPosition() > defaultOffset && conteinHide() && screenWidth > 991) {
     header.classList.remove('header_hide')
     header.classList.add('header_border')
     headerLogo.classList.add('header__logo_size')
   }
-// скрыть header после стандартной позиции при наведении мыши
-  if(y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidth > 991) {
+  // скрыть header после стандартной позиции при наведении мыши
+  if (y > maxY && scrollPosition() > defaultOffset && !conteinHide() && screenWidth > 991) {
     header.classList.add('header_hide')
     headerLogo.classList.add('header__logo_size')
     header.classList.remove('header_border')
@@ -43,23 +43,23 @@ document.addEventListener('mousemove', function(event) {
 
 
 window.addEventListener('scroll', () => {
-// мобильная версия показывать header при скроле
-  if(scrollPosition() < lastScroll
+  // мобильная версия показывать header при скроле
+  if (scrollPosition() < lastScroll
     && conteinHide()
     && screenWidth < 992
     && scrollPosition() > 301
     && lastScroll > 301
-    ) {
+  ) {
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
     headerLogo.classList.add('header__logo_hide')
   }
-  if(scrollPosition() < lastScroll
+  if (scrollPosition() < lastScroll
     && !conteinHide()
     && screenWidth < 992
     && scrollPosition() < 301
     && lastScroll < 301
-    ) {
+  ) {
     headerLogo.classList.remove('header__logo_size')
     header.classList.remove('header_hide')
     header.classList.remove('header_border')
@@ -68,10 +68,10 @@ window.addEventListener('scroll', () => {
 
 
   // показать header в базовой позиции при скроле
-  if(scrollPosition() < lastScroll
-  && scrollPosition() < defaultOffset
-  && lastScroll < 201
-  && conteinHide()) {
+  if (scrollPosition() < lastScroll
+    && scrollPosition() < defaultOffset
+    && lastScroll < 201
+    && conteinHide()) {
     header.classList.remove('header_hide')
     headerLogo.classList.remove('header__logo_hide')
     headerLogo.classList.remove('header__logo_size')
@@ -79,7 +79,7 @@ window.addEventListener('scroll', () => {
   }
 
   // убрать header после базовой позиции при скроле
-  if(scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
+  if (scrollPosition() > lastScroll && !conteinHide() && scrollPosition() > defaultOffset) {
     header.classList.add('header_hide')
     // headerLogo.classList.add('header__logo_hide')
     header.classList.remove('header_border')
@@ -87,27 +87,27 @@ window.addEventListener('scroll', () => {
 
   // анимация диска промежутки
 
-  if(screenWidth > 1700 && scrollPosition() > 2099 && scrollPosition() < 2700) {
+  if (screenWidth > 1700 && scrollPosition() > 2099 && scrollPosition() < 2700) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  if(screenWidth < 1701 && scrollPosition() > 1920 && scrollPosition() < 2450) {
+  if (screenWidth < 1701 && scrollPosition() > 1920 && scrollPosition() < 2450) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  if(screenWidth < 1500 && scrollPosition() > 1720 && scrollPosition() < 2120) {
+  if (screenWidth < 1500 && scrollPosition() > 1720 && scrollPosition() < 2120) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  if(screenWidth < 1200 && scrollPosition() > 1600 && scrollPosition() < 1800) {
+  if (screenWidth < 1200 && scrollPosition() > 1600 && scrollPosition() < 1800) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  if(screenWidth < 712 && scrollPosition() > 2200 && scrollPosition() < 2400) {
+  if (screenWidth < 712 && scrollPosition() > 2200 && scrollPosition() < 2400) {
     requestsDisk.classList.add('requests__disk_anim')
     requestsCard.classList.add('requests__card_anim')
   }
-  if(screenWidth < 500 && scrollPosition() > 2350 && scrollPosition() < 2500) {
+  if (screenWidth < 500 && scrollPosition() > 2350 && scrollPosition() < 2500) {
     requestsDisk.classList.remove('requests__disk_anim')
     requestsCard.classList.remove('requests__card_anim')
   }
