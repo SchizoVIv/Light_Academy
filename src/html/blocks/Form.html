@@ -6,7 +6,7 @@
   novalidate> -->
 <form
   class="form"
-  id="form"
+  name="form"
   autocomplete="off"
   novalidate>
   <div class="form__inputs-conteiner">
@@ -14,7 +14,6 @@
       <input
         class="form__input req"
         type="text"
-        id="name"
         name="name"
         placeholder="Имя"
         data-error-message="Введите имя."
@@ -26,7 +25,6 @@
       <input
         class="form__input req"
         type="tel"
-        id="phone"
         name="phone"
         placeholder="Номер телефона"
         pattern="^[\d+]+$"
@@ -38,7 +36,6 @@
       <input
         class="form__input req"
         type="email"
-        id="email"
         name="email"
         placeholder="Почта"
         data-error-message="Введите корректный адрес электронной почты."
@@ -48,22 +45,22 @@
     <label class="form__input-box">
       <select
         class="form__select form__input req"
-        id="select"
         name="option"
         data-error-message="Выберите свою цель."
         required>
-        <option class="form__option" id="option-false" value="no_change">-- не выбрано --</option>
+        <option class="form__option form__option_false" value=""  disabled selected>-- не выбрано --</option>
         <option class="form__option" value="consultation">Консультация</option>
-        <option class="form__option" id="present" value="present">Хочу подарок</option>
+        <option class="form__option form__option_present" value="present">Хочу подарок</option>
         <option class="form__option" value="course1">Интересуют индивидуальные занятия</option>
         <option class="form__option" value="course2">Интересует курс Light English</option>
         <option class="form__option" value="just_ask">Интересует разговорный клуб</option>
         <option class="form__option" value="just_ask">Интересуют занятия с Коучем</option>
       </select>
-      <span class="form__input-error select-error"></span>
+      <span class="form__input-error option-error"></span>
     </label>
   </div>
-  <button class="form__button" id="btn" type="submit">Записаться</button>
+  <button class="form__button" type="submit">Записаться</button>
+  <!-- <button class="form__button" id="btn" type="submit">Записаться</button> -->
   <p class="form__warning">Нажимая на кнопку “Записаться”, вы соглашаетесь с
     <a class="form__warning-link" href="/privacy-policy">политикой конфиденциальности</a>
   </p>

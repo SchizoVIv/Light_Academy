@@ -11,117 +11,21 @@ popupButtonCloseMsg.addEventListener('click', () => {
 popupOverflowMsg.addEventListener('click', () => {
   popupHandleClose(popupMsg, popupOverflowMsg)
 })
-// formButton.addEventListener('click',  () => {
-//   popupHandleOpen(popupMsg, popupOverflowMsg)
-// })
-
-
-
-// const justValidate = require("./just-validate.min");
-// // const Inputmask = require("./inputmask.min");
-// const submitButton = document.querySelector(".form__button");
-
-// let selector = document.querySelector('#phone')
-// let im = new Inputmask('+373 99999999')
-
-// im.mask(selector)
-
-// const formList = document.querySelectorAll('.form');
-
-// // formList.forEach((form) => {
-// //   console.log(form.classList)
-// // })
-// let validation = new justValidate('form')
-// validation.addField('#name', [
-//   {
-//     rule: 'required',
-//     errorMessage: 'Введите имя!'
-//   },
-//   {
-//     rule: 'minLength',
-//     value: 2,
-//     errorMessage: 'Минимум 2 символа!'
-//   },
-// ])
-//   .addField('#phone', [
-//     {
-//       validator: (value) => {
-//         const phone = selector.inputmask.unmaskedvalue()
-//         return Boolean(Number(phone) && phone.length > 0)
-//       },
-//       errorMessage: 'Введите телефон'
-//     },
-//     {
-//       validator: (value) => {
-//         const phone = selector.inputmask.unmaskedvalue()
-//         return Boolean(Number(phone) && phone.length === 8)
-//       },
-//       errorMessage: 'Введите телефон полностью'
-//     }
-//   ])
-//   .addField('#select', [
-//     {
-//       validator: (value) => {
-//         const option = document.querySelector('#option-false');
-//         console.log(option.value)
-//         return Boolean(value !== option.value)
-//       },
-//       errorMessage: 'Выберите цель'
-//     }
-//   ])
-
-//   .addField('#email', [
-//     {
-//       rule: 'required',
-//       errorMessage: 'Введите почту!'
-//     },
-//     {
-//       rule: 'email',
-//       errorMessage: 'Некорректный адрес почты!'
-//     },
-//   ]).onSuccess(async function () {
-//     let data = {
-//       name: document.getElementById("name").value,
-//       tel: selector.inputmask.unmaskedvalue(),
-//       email: document.getElementById("email").value,
-//       orientation: document.getElementById("select"),
-//     }
-//     console.log(data)
-
-//     let response = await fetch("../mail.php", {
-//       method: "POST",
-//       body: JSON.stringify(data),
-//       headers: {
-//         "Content-Type": "application/json; charset=UTF-8"
-//       }
-//     })
-
-//     let result = await response.text()
-
-//     if(response.ok) {
-//       popupHandleOpen(popupMsg, popupOverflowMsg)
-//     }
-
-//     alert(result)
-//   })
-
-
-
-  //
 
 const formElement = document.querySelector('.form');
 
 const formInput = formElement.querySelector('.form__input');
-const formError = formElement.querySelector(`.${formInput.id}-error`);
+// const formError = formElement.querySelector(`.${formInput.id}-error`);
 const showInputError = (formElement, inputElement, errorMessage) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
   inputElement.classList.add('form__input_type_error');
   errorElement.textContent = errorMessage;
   errorElement.classList.add('form__input-error_active');
 };
 
 const hideInputError = (formElement, inputElement) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  console.log(inputElement.name)
+  const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
   inputElement.classList.remove('form__input_type_error');
   errorElement.classList.remove('form__input-error_active');
   errorElement.textContent = '';
@@ -145,8 +49,8 @@ const isValid = (formElement, inputElement) => {
     hideInputError(formElement, inputElement);
   }
 
-  if(inputElement.id === 'select') {
-    const option = formElement.querySelector('#option-false');
+  if(inputElement.name === 'option') {
+    const option = formElement.querySelector('.form__option_false');
     if(inputElement.value === option.value) {
       showInputError(formElement, inputElement, 'Выберите свою цель.');
     } else {
@@ -159,8 +63,8 @@ const isValid = (formElement, inputElement) => {
 const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => {
 
-    if(inputElement.id === 'select') {
-      const option = formElement.querySelector('#option-false');
+    if(inputElement.name === 'option') {
+      const option = formElement.querySelector('.form__option_false');
       if(inputElement.value === option.value) {
         return true
       }

@@ -24,10 +24,10 @@ export function popupHandleOpen(pop, overflow, e) {
   if(!e.classList.contains('founder__link') && !e.classList.contains('format__certificate')) {
     if(e.classList.contains('advantages__wheel') || e.classList.contains('advantages__button') || e.classList.contains('advantages__wheel-content') || e.classList.contains('advantages__wheel-inner')) {
       popupTitle.textContent = 'Заполни форму и получи подарок!';
-      pop.querySelector('#present').selected = true;
+      pop.querySelector('.form__option_present').selected = true;
     } else {
       popupTitle.textContent = 'Запишитесь на консультацию';
-      pop.querySelector('#option-false').selected = true;
+      pop.querySelector('.form__option_false').selected = true;
     }
   }
 }
