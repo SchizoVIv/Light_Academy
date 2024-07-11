@@ -38,7 +38,7 @@ https://github.com/SchizoVIv/Light_Academy.git
 npm i
 
 ```
-1. Run the project:
+3. Run the project:
 ```javascript
 gulp
 
